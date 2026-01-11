@@ -4,13 +4,11 @@
 
 ## ガイド
 
-| ページ | 内容 |
-|--------|------|
-| [確定申告チェックリスト](tax-filing.md) | 申告要否の判定・手順 |
-| [副業の税金](side-business.md) | 雑所得・事業所得の計算 |
-| [株式投資](toushi/index.md) | 譲渡益・配当・NISA |
-| [ふるさと納税](hometown-tax.md) | 寄附金控除 |
-| [複式簿記](double-entry-bookkeeping.md) | 青色申告の帳簿 |
+1. **[確定申告チェックリスト](tax-filing.md)**: 申告要否の判定・手順。
+2. **[副業の税金](side-business.md)**: 雑所得・事業所得の計算。
+3. **[株式投資](toushi/)**: 譲渡益・配当・NISA。
+4. **[ふるさと納税](hometown-tax.md)**: 寄附金控除。
+5. **[複式簿記](double-entry-bookkeeping.md)**: 青色申告の帳簿。
 
 ## 法令
 
