@@ -1,7 +1,35 @@
 site_name: Know
+site_url: https://KAFKA2306.github.io/know/
+repo_url: https://github.com/KAFKA2306/know
+repo_name: KAFKA2306/know
+
 theme:
   name: material
   language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
 nav:
   - Home: index.md
   - Bookmarks:
@@ -13,3 +41,8 @@ nav:
       - Game: bookmarks/Game/index.md
       - Life: bookmarks/Life/index.md
       - Media: bookmarks/Media/index.md
+  - Life:
+      - Tax: life/tax/tax-filing.md
+  - Dev:
+      - Agent: dev/agent/index.md
+      - WSL: dev/wsl/index.md

@@ -3,8 +3,8 @@ version: '3'
 tasks:
   dev:
     desc: Serve docs locally
-    cmd: python3 -m http.server 8000 --directory docs
+    cmd: uv run mkdocs serve
 
   build:
-    desc: No build needed for Docsify
-    cmd: echo "Docsify is a static site generator - no build step required!"
+    desc: Build static site
+    cmd: uv run mkdocs build
