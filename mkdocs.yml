@@ -27,6 +27,10 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+
 plugins:
   - search
 
