@@ -10,3 +10,4 @@
   - [税金](life/tax/)
 - **Work**
   - [Work](work/)
+- [Bookmarks](bookmarks/)
