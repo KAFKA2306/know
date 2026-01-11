@@ -13,7 +13,6 @@
 - [VRChat Home](https://vrchat.com/home)
 - [VRChat Event Calendar](https://vrceve.com/)
 - [Resonite Event Calendar](https://resonite.love/ja/event.html)
-- [Virtual Desktop Troubleshooting (ChatGPT)](https://chatgpt.com/c/69353fe6-06c8-8324-aa57-e92324e410a8)
 - [BOOTH (VRChat Items)](https://booth.pm/ja/browse/3D%20Models)
 - [VRChat World Search](https://vrchat.com/home/worlds)
 - [VRChat Safety & Trust](https://docs.vrchat.com/docs/safety-system)

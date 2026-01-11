@@ -44,7 +44,3 @@
 - [Hugging Face](https://huggingface.co/)
 - [Claude Code](https://claude.ai/code)
 - [AI Programmer](https://aiprogrammer.hashlab.jp/v2)
-
-## Articles & News
-- [Japanese Text Summarization](https://chat.openai.com/?model=gpt-4-code-interpreter)
-- [政府向けAI契約$890M獲得 AIP導入企業数四半期比55%増](https://www.perplexity.ai/search/palantir-pltr-https-finance-ya-4VdgHGLETseu9.vvKRf3CA)
