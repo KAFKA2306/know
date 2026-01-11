@@ -45,7 +45,9 @@ nav:
       - Life: bookmarks/Life/index.md
       - Media: bookmarks/Media/index.md
   - Life:
-      - Tax: life/tax/tax-filing.md
+      - Top: life/index.md
+      - Tax: life/tax/index.md
   - Dev:
+      - Top: dev/index.md
       - Agent: dev/agent/index.md
       - WSL: dev/wsl/index.md
