@@ -3,11 +3,26 @@ site_url: https://KAFKA2306.github.io/know/
 repo_url: https://github.com/KAFKA2306/know
 repo_name: KAFKA2306/know
 
+site_description: Multi-Knowledge Base for Life, Dev, and more.
+site_author: KAFKA2306
+copyright: Copyright &copy; 2026 KAFKA2306
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/KAFKA2306
+
+validation:
+  links:
+    absolute_links: warn
+    anchors: warn
+
 theme:
   name: material
   language: ja
   features:
     - navigation.instant
+    - navigation.tracking
     - navigation.sections
     - navigation.tabs
     - navigation.top
@@ -33,7 +48,10 @@ theme:
     code: Roboto Mono
 
 plugins:
-  - search
+  - search:
+      lang: 
+        - en
+        - ja
   - tags
 
 markdown_extensions:
@@ -53,7 +71,6 @@ nav:
   - Bookmarks:
       - Top: bookmarks/index.md
       - AI: bookmarks/AI/index.md
-      - Academic: bookmarks/Academic/index.md
       - Dev: bookmarks/Dev/index.md
       - Finance: bookmarks/Finance/index.md
       - Game: bookmarks/Game/index.md
@@ -61,6 +78,7 @@ nav:
       - Media: bookmarks/Media/index.md
   - Life:
       - Top: life/index.md
+      - Money: life/money/credit-card-investment-2026.md
       - Tax: life/tax/index.md
   - Dev:
       - Top: dev/index.md
