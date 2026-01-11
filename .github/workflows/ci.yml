@@ -10,12 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: uv sync --python 3.12
+        run: uv pip install --system mkdocs mkdocs-material
       - name: Deploy
         run: |
           git config user.name ci-bot

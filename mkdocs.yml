@@ -81,7 +81,13 @@ nav:
       - life/tax/index.md
       - life/tax/kakuteishinkoku.md
       - life/tax/fukugyou.md
-      - life/tax/toushi.md
+      - 株式投資:
+        - life/tax/toushi/index.md
+        - life/tax/toushi/zeiritsu.md
+        - life/tax/toushi/koza.md
+        - life/tax/toushi/soneki.md
+        - life/tax/toushi/haitou.md
+        - life/tax/toushi/nisa.md
       - life/tax/furusato.md
       - life/tax/fukushiki-boki.md
   - Work:
