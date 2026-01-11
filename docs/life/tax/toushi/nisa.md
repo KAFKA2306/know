@@ -58,7 +58,14 @@ NISA口座: -500,000円（損失）
 | 一般NISA | 課税口座に移管（新NISAに移管不可） |
 | つみたてNISA | 課税口座に移管（新NISAに移管不可） |
 
+## 2025年確定申告の注意
+
+- 新NISA利益は原則**確定申告不要**
+- 配当金は「株式数比例配分方式」以外で受取ると**課税対象**
+- NISA口座の損失は他口座と**損益通算不可**
+
 ## 参照
 
 - [No.1475 NISA(ニーサ)](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1475.htm)
 - [金融庁 新しいNISA](https://www.fsa.go.jp/policy/nisa2/about/nisa2024/index.html)
+

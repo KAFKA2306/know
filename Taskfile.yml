@@ -8,3 +8,7 @@ tasks:
   build:
     desc: Build static site
     cmd: uv run mkdocs build
+
+  deploy:
+    desc: Deploy to GitHub Pages
+    cmd: uv run mkdocs gh-deploy --force

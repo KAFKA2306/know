@@ -1,11 +1,21 @@
 # Data Storage
 
-Vector databases for semantic search.
+ベクトルDBによるセマンティック検索。
+
+## 比較
+
+| DB | 特徴 | 推奨用途 |
+|----|------|----------|
+| Qdrant | Rust製高速、強力フィルタリング | プロダクション、高スループット |
+| Pinecone | フルマネージド、自動スケーリング | エンタープライズ |
+| Weaviate | ハイブリッド検索、GraphQL | ナレッジグラフ |
+| Chroma | 軽量、Python-first | プロトタイプ、ローカル開発 |
+| MongoDB | NoSQL + ベクトル検索 | 既存MongoDB環境 |
 
 ## Tools
 
-1. **[Chroma](chroma.md)**: Open-source embedding database.
-2. **[MongoDB](mongodb.md)**: NoSQL database with vector search capabilities.
-3. **[Pinecone](pinecone.md)**: Managed vector database service.
-4. **[Qdrant](qdrant.md)**: Vector similarity search engine.
-5. **[Weaviate](weaviate.md)**: Open-source vector database.
+1. **[Qdrant](qdrant.md)**: 高速ベクトル検索エンジン
+2. **[Pinecone](pinecone.md)**: マネージドベクトルDB
+3. **[Weaviate](weaviate.md)**: オープンソースベクトルDB
+4. **[Chroma](chroma.md)**: 軽量エンベディングDB
+5. **[MongoDB](mongodb.md)**: NoSQL + ベクトル検索

@@ -7,11 +7,14 @@ theme:
   name: material
   language: ja
   features:
+    - navigation.instant
     - navigation.sections
+    - navigation.tabs
     - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
+    - toc.follow
   palette:
     - scheme: default
       primary: teal
@@ -25,13 +28,20 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-
   font:
     text: Noto Sans JP
     code: Roboto Mono
 
 plugins:
   - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
 
 nav:
   - Home: index.md

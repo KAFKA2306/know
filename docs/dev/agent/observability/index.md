@@ -1,10 +1,19 @@
 # Observability
 
-Tracing and monitoring execution flows.
+LLMアプリケーションのトレーシング・モニタリング。
+
+## 比較
+
+| ツール | 特徴 | 推奨用途 |
+|--------|------|----------|
+| LangSmith | LangChain統合、詳細トレース | LangChainエコシステム |
+| Langfuse | OSS、セルフホスト可、コスト追跡 | コスト重視、柔軟性 |
+| Arize | ドリフト検出、RAG特化 | MLモデル監視、RAG |
+| Traceloop | OpenTelemetryベース | 標準準拠 |
 
 ## Tools
 
-1. **[Arize](arize.md)**: ML observability platform.
-2. **[Langfuse](langfuse.md)**: Open source LLM engineering platform.
-3. **[LangSmith](langsmith.md)**: Platform for building production-grade LLM applications.
-4. **[Traceloop](traceloop.md)**: OpenLLMetry-based observability.
+1. **[LangSmith](langsmith.md)**: LangChain向けオブザーバビリティ
+2. **[Langfuse](langfuse.md)**: オープンソースLLMエンジニアリング
+3. **[Arize](arize.md)**: MLオブザーバビリティ
+4. **[Traceloop](traceloop.md)**: OpenLLMetryベース

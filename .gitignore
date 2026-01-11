@@ -4,18 +4,16 @@ __pycache__/
 *$py.class
 *.so
 .env
-venv/
 .venv/
-env/
 
 # MkDocs
 site/
+.cache/
 
 # OS
 .DS_Store
 Thumbs.db
 
+# Temporary
 *temp*
-site/
-.cache/
 temporaries/
