@@ -48,11 +48,33 @@ nav:
     - dev/index.md
     - Agent:
       - dev/agent/index.md
-      - dev/agent/data-storage.md
-      - dev/agent/observability.md
-      - dev/agent/evaluation.md
-      - dev/agent/orchestration.md
-      - dev/agent/memory.md
+      - Data Storage:
+        - dev/agent/data-storage/index.md
+        - dev/agent/data-storage/qdrant.md
+        - dev/agent/data-storage/pinecone.md
+        - dev/agent/data-storage/chroma.md
+        - dev/agent/data-storage/weaviate.md
+        - dev/agent/data-storage/mongodb.md
+      - Observability:
+        - dev/agent/observability/index.md
+        - dev/agent/observability/langfuse.md
+        - dev/agent/observability/langsmith.md
+        - dev/agent/observability/arize.md
+        - dev/agent/observability/traceloop.md
+      - Evaluation:
+        - dev/agent/evaluation/index.md
+        - dev/agent/evaluation/ragas.md
+        - dev/agent/evaluation/galileo.md
+      - Orchestration:
+        - dev/agent/orchestration/index.md
+        - dev/agent/orchestration/langchain.md
+        - dev/agent/orchestration/crewai.md
+        - dev/agent/orchestration/haystack.md
+        - dev/agent/orchestration/llamaindex.md
+      - Memory:
+        - dev/agent/memory/index.md
+        - dev/agent/memory/letta.md
+        - dev/agent/memory/mem0.md
   - Life:
     - life/index.md
   - Work:

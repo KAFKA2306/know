@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  dev:
+    desc: Run local development server
+    cmd: uv run mkdocs serve -a 0.0.0.0:8000
+
+  build:
+    desc: Build the site
+    cmd: uv run mkdocs build
