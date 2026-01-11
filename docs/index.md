@@ -1,15 +1,13 @@
 # Know
 
-### ルール
+### Rules
 
 **すべての記事は公式ドキュメントを参照し、日本語で正確・簡潔に書く**
 
-詳細: [執筆ルール](rules.md)
+- [Writing Rules](rules.md)
 
-## カテゴリ
+## Categories
 
-| カテゴリ                    | 内容                 |
-| :-------------------------- | :------------------- |
-| [Dev](dev/index.md)         | 開発・プログラミング |
-| [Life](life/tax/index.md)   | 生活・個人           |
-
+1. **[Bookmarks](bookmarks/)**: 厳選されたリソース・リンク集。
+2. **[Dev](dev/)**: 開発・プログラミング (Agent, WSL)。
+3. **[Life](life/)**: 生活・個人 (Tax)。

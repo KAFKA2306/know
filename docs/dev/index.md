@@ -2,9 +2,7 @@
 
 開発・プログラミングに関する技術ナレッジ。
 
-## カテゴリ
+## Categories
 
-- [**Agent**](agent/index.md)
-    - AIエージェント、自律システムに関するドキュメント
-- [**WSL (Windows Subsystem for Linux)**](wsl/index.md)
-    - 環境構築、トラブルシューティング
+1. **[Agent](agent/)**: AIエージェント、自律システムに関するドキュメント。
+2. **[WSL](wsl/)**: Windows Subsystem for Linuxの環境構築とトラブルシューティング。
