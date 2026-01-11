@@ -11,3 +11,4 @@
 ## Use Cases
 
 - [**給与所得者×投資**](usecase-salary-investor.md): 会社員で特定口座の確定申告判定
+- [**給与所得者×投資×副業**](usecase-salary-investor-side.md): 副業収入がある場合の確定申告判定

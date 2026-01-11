@@ -31,6 +31,12 @@ description: ナレッジ記事作成の基本ルール
 ## テンプレート
 
 ```markdown
+---
+tags:
+  - タグ1
+  - タグ2
+---
+
 # タイトル
 
 概要（1-2文）
@@ -49,3 +55,18 @@ description: ナレッジ記事作成の基本ルール
 
 - [公式ドキュメント](URL)
 ```
+
+## タグ運用ルール
+
+| カテゴリ | タグ例 |
+|---------|--------|
+| 技術領域 | `agent`, `rag`, `llm`, `vector-db` |
+| ライフ | `tax`, `health`, `finance` |
+| ステータス | `wip`, `deprecated` |
+
+## 新規ドキュメント追加チェックリスト
+
+- [ ] frontmatter に `tags` を記載した
+- [ ] 公式ドキュメントへのリンクを含めた
+- [ ] `mkdocs.yml` の `nav` に追加した（必要な場合）
+- [ ] ローカルで `uv run mkdocs build --strict` が通る
