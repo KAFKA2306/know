@@ -1,24 +1,24 @@
 # Know
 
-A personal knowledge base and bookmark manager built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
+[MkDocs Material](https://squidfunk.github.io/mkdocs-material/) で構築された個人のナレッジベースおよびブックマークマネージャーです。
 
-## Contents
+## コンテンツ
 
-- **[Bookmarks](docs/bookmarks/index.md)**: Curated resources for AI, Dev, Finance, Games, Life, Media, and Academics.
-- **[Dev](docs/dev/index.md)**: Technical knowledge base (AI Agents, WSL).
-- **[Life](docs/life/index.md)**: Personal life management (Tax, Investments).
+- **[Bookmarks](docs/bookmarks/index.md)**: AI, Dev, Finance, Game, Life, Media, Academic などの厳選リソース集。
+- **[Dev](docs/dev/index.md)**: 技術ナレッジベース (AI Agent, WSL)。
+- **[Life](docs/life/index.md)**: 生活・個人管理 (税金, 投資)。
 
-## Setup
+## セットアップ
 
-This project uses [`uv`](https://docs.astral.sh/uv/) for dependency management and [`task`](https://taskfile.dev/) for command automation.
+このプロジェクトでは、依存関係の管理に [`uv`](https://docs.astral.sh/uv/)、タスクランナーとして [`task`](https://taskfile.dev/) を使用しています。
 
-### Prerequisites
+### 前提条件
 
-- Python 3.12+
+- Python 3.12以上
 - [uv](https://github.com/astral-sh/uv)
 - [Task](https://taskfile.dev/installation/)
 
-### Installation
+### インストール
 
 ```bash
 git clone https://github.com/KAFKA2306/know.git
@@ -26,29 +26,29 @@ cd know
 uv sync
 ```
 
-## Usage
+## 使い方
 
-### Run Locally
+### ローカルでの実行
 
-Start the live-reloading development server:
+ライブリロード対応の開発サーバーを起動します:
 
 ```bash
 task dev
-# OR directly via uv
+# または uv を直接使用
 uv run mkdocs serve
 ```
 
-Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
+ブラウザで [http://127.0.0.1:8000](http://127.0.0.1:8000) を開いてください。
 
-### Build
+### ビルド
 
-Build the static site:
+静的サイトをビルドします:
 
 ```bash
 task build
 ```
 
-## Deployment
+## デプロイ
 
-The site is automatically deployed to GitHub Pages via GitHub Actions on push to the `main` branch.
+`main` ブランチへのプッシュ時に、GitHub Actions 経由で GitHub Pages に自動デプロイされます。
 URL: [https://KAFKA2306.github.io/know/](https://KAFKA2306.github.io/know/)
