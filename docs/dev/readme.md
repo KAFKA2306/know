@@ -1,9 +1,9 @@
-# Dev
+# 開発
 
-Development & Programming knowledge.
+開発・プログラミングに関するナレッジ。
 
-## Topics
+## トピック
 
-- Languages
-- Tools
-- Frameworks
+- 言語
+- ツール
+- フレームワーク

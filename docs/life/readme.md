@@ -1,9 +1,9 @@
-# Life
+# 生活
 
-Life & Personal knowledge.
+生活・個人に関するナレッジ。
 
-## Topics
+## トピック
 
-- Health
-- Learning
-- Hobbies
+- 健康
+- 学習
+- 趣味

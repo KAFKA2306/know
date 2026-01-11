@@ -1,9 +1,9 @@
-# Work
+# 仕事
 
-Work & Projects knowledge.
+仕事・プロジェクトに関するナレッジ。
 
-## Topics
+## トピック
 
-- Projects
-- Processes
-- References
+- プロジェクト
+- プロセス
+- リファレンス
