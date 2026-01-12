@@ -1,7 +1,7 @@
 # Social
 
-- [movok通話用](https://discordapp.com)
-- [i done it](https://discord.com)
+- [Discord (movok)](https://discordapp.com)
+- [Discord (i done it)](https://discord.com)
 - [タイムライン | にりらみすきー部](https://misskey.niri.la)
 - [ぶいちゃ.social | ぶいちゃ.social](https://buicha.social)
 - [タイムライン | Metaskey / めたすきー](https://metaskey.net)
