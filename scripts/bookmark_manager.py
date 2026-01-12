@@ -213,30 +213,41 @@ def cmd_dead_links():
 
 def cmd_export():
     header = """<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<!-- This is an automatically generated file.
+     It will be read and overwritten.
+     DO NOT EDIT! -->
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>Bookmarks</TITLE><H1>Bookmarks</H1><DL><p>
+<TITLE>Bookmarks</TITLE>
+<H1>Bookmarks</H1>
+<DL><p>
 """
     footer = "</DL><p>\n"
     
     def build_links(path):
         if not os.path.exists(path):
-            return ""
+            return []
         with open(path, 'r', encoding='utf-8') as f:
-            links = re.findall(r'- \[(.*?)\]\((http.*?)\)', f.read())
-        return "".join(f'<DT><A HREF="{u}">{t}</A>' for t, u in links)
+            return re.findall(r'- \[(.*?)\]\((http.*?)\)', f.read())
+    
+    def format_links(links, indent):
+        return "".join(f'{indent}<DT><A HREF="{u}">{t}</A>\n' for t, u in links)
     
     def build(cat):
         cat_path = os.path.join(DOCS_DIR, cat, 'index.md')
         subdirs = CATEGORY_STRUCTURE.get(cat, [])
-        content = build_links(cat_path)
+        links = build_links(cat_path)
+        lines = [f'    <DT><H3>{cat}</H3>\n', '    <DL><p>\n']
+        lines.append(format_links(links, '        '))
         for sub in subdirs:
             sub_path = os.path.join(DOCS_DIR, cat, sub, 'index.md')
-            sub_content = build_links(sub_path)
-            if sub_content:
-                content += f'<DT><H3>{sub}</H3><DL><p>{sub_content}</DL><p>'
-        if not content:
-            return ""
-        return f'<DT><H3>{cat}</H3><DL><p>{content}</DL><p>'
+            sub_links = build_links(sub_path)
+            if sub_links:
+                lines.append(f'        <DT><H3>{sub}</H3>\n')
+                lines.append('        <DL><p>\n')
+                lines.append(format_links(sub_links, '            '))
+                lines.append('        </DL><p>\n')
+        lines.append('    </DL><p>\n')
+        return "".join(lines)
     
     html = header + "".join(build(c) for c in CATEGORIES) + footer
     os.makedirs('temporaries', exist_ok=True)

@@ -70,13 +70,37 @@ nav:
   - Home: index.md
   - Bookmarks:
       - Top: bookmarks/index.md
-      - Dev: bookmarks/Dev/index.md
-      - Game: bookmarks/Game/index.md
-      - Finance: bookmarks/Finance/index.md
-      - Service: bookmarks/Service/index.md
-      - Media: bookmarks/Media/index.md
-      - Academic: bookmarks/Academic/index.md
-      - Life: bookmarks/Life/index.md
+      - Dev:
+          - Top: bookmarks/Dev/index.md
+          - AI: bookmarks/Dev/AI/index.md
+          - Data: bookmarks/Dev/Data/index.md
+          - Tool: bookmarks/Dev/Tool/index.md
+      - Game:
+          - Top: bookmarks/Game/index.md
+          - VR: bookmarks/Game/VR/index.md
+          - Board: bookmarks/Game/Board/index.md
+          - Digital: bookmarks/Game/Digital/index.md
+      - Finance:
+          - Top: bookmarks/Finance/index.md
+          - Bank: bookmarks/Finance/Bank/index.md
+          - Market: bookmarks/Finance/Market/index.md
+          - Crypto: bookmarks/Finance/Crypto/index.md
+      - Service:
+          - Top: bookmarks/Service/index.md
+          - Cloud: bookmarks/Service/Cloud/index.md
+          - Social: bookmarks/Service/Social/index.md
+      - Media:
+          - Top: bookmarks/Media/index.md
+          - Video: bookmarks/Media/Video/index.md
+          - Music: bookmarks/Media/Music/index.md
+      - Academic:
+          - Top: bookmarks/Academic/index.md
+          - Library: bookmarks/Academic/Library/index.md
+          - Research: bookmarks/Academic/Research/index.md
+      - Life:
+          - Top: bookmarks/Life/index.md
+          - Shopping: bookmarks/Life/Shopping/index.md
+          - Utility: bookmarks/Life/Utility/index.md
       - Other: bookmarks/Other/index.md
   - Life:
       - Top: life/index.md
