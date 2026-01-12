@@ -70,15 +70,16 @@ nav:
   - Home: index.md
   - Bookmarks:
       - Top: bookmarks/index.md
-      - AI: bookmarks/AI/index.md
       - Dev: bookmarks/Dev/index.md
-      - Finance: bookmarks/Finance/index.md
       - Game: bookmarks/Game/index.md
-      - Life: bookmarks/Life/index.md
+      - Finance: bookmarks/Finance/index.md
+      - Service: bookmarks/Service/index.md
       - Media: bookmarks/Media/index.md
+      - Academic: bookmarks/Academic/index.md
+      - Life: bookmarks/Life/index.md
+      - Other: bookmarks/Other/index.md
   - Life:
       - Top: life/index.md
-      - Money: life/money/credit-card-investment-2026.md
       - Tax: life/tax/index.md
   - Dev:
       - Top: dev/index.md

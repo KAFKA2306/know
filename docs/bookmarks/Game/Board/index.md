@@ -1,0 +1,18 @@
+# Board
+
+- [カフカさんがお気に入りのボードゲーム 105個【ボドゲーマ】](https://bodoge.hoobby.net)
+- [ボドゲのミカタ](https://rule-scribe-games.vercel.app)
+- [ボドゲのミカタ | AIでルールを瞬時に要約。インスト時間を短縮](https://bodoge-no-mikata.vercel.app)
+- [The Unofficial Agricola Compendium](https://m.alavigne.net)
+- [ふつうのドミニオンセレクタ - highemerly.net](http://highemerly.net)
+- [Dominion Online](https://dominion.games)
+- [BGA全カード一覧 | BGAアグリコラ攻略wiki - ゲームウィキ.jp](https://bgagricola.gamewiki.jp)
+- [Pistol Starのゲーム履歴 • Board Game Arena](https://boardgamearena.com)
+- [BeerBrick](https://beerbrick.com)
+- [人狼](https://ja.boardgamearena.com)
+- [Yucata](https://www.yucata.de)
+- [Browse Board Games | BoardGameGeek](https://boardgamegeek.com)
+- [Everdell | Board Game | Zatu Games UK](https://www.board-game.co.uk)
+- [エバーデール 完全日本語版 | ArclightGames Official](https://arclightgames.jp)
+- [真・倉敷ボードゲーム会 - TwiPla](https://twipla.jp)
+- [リアル脱出ゲームのスケジュールが一覧できる！スクラップチケットカレンダー](https://www.scrapmagazine.com)

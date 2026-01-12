@@ -5,6 +5,7 @@ __pycache__/
 *.so
 .env
 .venv/
+*lock
 
 # MkDocs
 site/
@@ -17,3 +18,4 @@ Thumbs.db
 # Temporary
 *temp*
 temporaries/
+*Log*
