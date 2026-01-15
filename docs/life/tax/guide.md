@@ -51,8 +51,11 @@ e-Tax（電子申告）を利用するための環境を整えます。
 
 ### 経費・控除証明
 - **[経費] PC購入証憑**: PC（Frontier等）の領収書・購入明細（約32万円）。減価償却費の計算根拠として保存が必要です ([国税庁 No.2100](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2100.htm))。
-- **ふるさと納税（寄附金受領証明書）**: Amazonでの寄附（徳島・京都・山梨・宮城など）。AmazonはXML発行に完全対応していない場合があるため、自治体から送付された**紙の証明書**を必ず保管してください ([国税庁 No.1155](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm))。
-    - **重要**: 確定申告を行うと「ワンストップ特例」は全て無効になります。ワンストップ申請済みの分も含め、全件申告書に記載してください ([国税庁 ワンストップ特例](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm))。
+- **ふるさと納税（寄附金受領証明書）**: Amazonでの寄附（徳島・京都・山梨・宮城など）。
+    - 基本は、自治体から送付された**紙の証明書**を保管・使用します ([国税庁 No.1155](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm))。
+    - *便利ツール*: 「**自治体マイページ**」等のアプリでXML集計が可能な自治体は、XMLを利用しても構いません ([自治体マイページ](https://mypage.furusato-nouzei.jp/))。
+        - *注意*: Amazon経由の寄附は連携が不完全な場合（調査回答が必要など）があるため、XML発行できない分は「紙」で補完してください。
+    - **重要**: 確定申告を行うと「ワンストップ特例」は全て無効になります。全件申告書に記載してください ([国税庁 ワンストップ特例](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm))。
 - **社会保険料控除証明書**: 国民年金や国民健康保険を支払った場合の証明書（給与天引き以外にある場合）。
 - **医療費控除**: 年間10万円以下等の場合、対象外のため準備不要です ([国税庁 No.1120](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1120.htm))。
 
