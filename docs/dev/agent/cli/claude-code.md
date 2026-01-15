@@ -237,7 +237,75 @@ AI モデルと外部データソース（GitHub, Slack, Database, Google Drive 
 
 ---
 
-## 7. 設定とカスタマイズ (`config.json`)
+## 7. 高度なカスタマイズ: Configuration Directory (`.claude/`)
+
+Claude Code の真骨頂は、プロジェクト固有の `.claude/` ディレクトリによる拡張性にあります。単なる設定ファイル (`config.json`) を超えて、エージェントの振る舞い、能力 (Skills)、役割 (Agents) を自由に定義できます。
+
+### 7.1 ディレクトリ構造
+
+```text
+.claude/
+├── config.json       # 基本設定
+├── rules/            # ルール定義 (旧 CLAUDE.md の分割・高度化)
+│   ├── basic.md      # 基本的なコーディング規約
+│   └── test.md       # テスト作成時の特記事項
+├── skills/           # カスタムスキル (外部ツール連携)
+│   ├── linear.py     # チケット管理システム連携スクリプト
+│   └── deploy.sh     # デプロイスクリプト
+├── agents/           # カスタムエージェント定義
+│   ├── reviewer.yml  # レビュー特化エージェント
+│   └── architect.yml # 設計特化エージェント
+└── commands/         # カスタムスラッシュコマンド
+    └── deploy.sh     # /deploy で呼び出せるコマンド
+```
+
+### 7.2 Custom Skills (`.claude/skills/`)
+Claude に「新しい能力」を与えるためのスクリプト置き場です。
+ここにある実行可能ファイルは、自動的に Claude のツールとして認識され、必要に応じて呼び出されます。
+
+**例: `.claude/skills/fetch_ticket.py`**
+```python
+#!/usr/bin/env python3
+"""
+Description: Linear のチケット情報を取得するスキル
+Usage: fetch_ticket.py <ticket_id>
+"""
+import sys
+# ... (APIを叩く処理)
+print(f"Ticket: {sys.argv[1]} - Title: Fix Login Bug")
+```
+Claude はファイルの冒頭コメント (Description/Usage) を読み取り、「チケットの内容を確認して」と言われた時にこのスクリプトを自律的に実行します。
+
+### 7.3 Custom Agents (`.claude/agents/`)
+特定のタスクに特化した「専門家エージェント」を定義します。
+システムプロンプト、使用可能なスキル、参照すべきルールをプリセットとして保存できます。
+
+**例: `.claude/agents/reviewer.yml`**
+```yaml
+name: Reviewer
+description: コードレビューを行う厳格なエージェント
+model: claude-3-7-sonnet
+temperature: 0.1
+system_prompt: |
+  あなたはシニアエンジニアです。
+  セキュリティ、パフォーマンス、可読性の観点から厳しくレビューしてください。
+  肯定的なコメントは不要です。問題点のみを列挙してください。
+skills:
+  - git_diff
+  - run_linter
+rules:
+  - rules/security.md
+```
+
+使用時: `claude --agent reviewer`
+
+### 7.4 Rules (`.claude/rules/`)
+`CLAUDE.md` が肥大化した場合、このディレクトリに分割して管理できます。
+ファイル名自体がカテゴリとして認識され、コンテキストに応じて適切なルールが参照されます。
+
+---
+
+## 8. 設定とカスタマイズ (`config.json`)
 
 `~/.claude/config.json` で詳細な挙動を制御できます。
 

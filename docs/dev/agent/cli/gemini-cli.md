@@ -273,7 +273,29 @@ gemini "この論文の革新的な点はどこ？ 日本語で3つの箇条書�
 
 ---
 
-## 7. トラブルシューティング
+## 7. カスタムツール拡張 (Function Calling)
+
+Gemini CLI は、標準機能だけでなくユーザー定義のスクリプトを「ツール」として利用することができます。
+
+### 7.1 `tools/` ディレクトリ
+プロジェクトのルートに `tools/` ディレクトリを作成し、そこにスクリプトを配置します。
+
+```bash
+# tools/weather.sh
+#!/bin/bash
+# Description: 指定された都市の天気を取得する
+# Usage: weather.sh <city>
+curl -s "wttr.in/$1?format=3"
+```
+
+Gemini はこれらのスクリプトを発見し、会話の中で「東京の天気は？」と聞かれると、自律的に `tools/weather.sh Tokyo` を実行して回答を生成します。
+
+### 7.2 Python Function Support
+Python スクリプト内に関数を定義し、`@gemini.tool` デコレータを付けることで、より高度な構造化データのやり取りも可能です。
+
+---
+
+## 8. トラブルシューティング
 
 ### Q. `Quota exceeded` エラーが出ます。
 **A.** 無料枠 (Free Tier) の制限 (60 RPM) を超えました。少し待つか、Google AI Studio で課金設定を行い、API Key 利用に切り替えてください。

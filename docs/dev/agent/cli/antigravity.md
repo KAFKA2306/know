@@ -46,6 +46,13 @@ Antigravity には、Chromium ベースのヘッドレス（またはヘッド�
 - **Task Artifact**: 進捗管理のためのチェックリスト。
 - **Preview Artifact**: 実装中の画面プレビューや、動作検証の録画ビデオ。
 
+### 2.5 Custom Skills & Agents
+Antigravity は拡張性も極めて高く、`.antigravity/` ディレクトリでエージェントの能力を拡張できます。
+
+- **Custom Skills**: Python や TypeScript で書かれた関数を `skills/` に配置すると、エージェントのツールボックスに自動追加されます。
+    - 例: `skills/query_bigquery.py` を置けば、エージェントが「BigQuery から先月の売上データを取ってきて」という指示を実行できるようになります。
+- **Agent Personas**: `agents/` に定義ファイル (YAML) を置くことで、特定の役割を持ったエージェント（例: `QA-Engineer`, `Security-Auditor`）を作成し、Mission Control から呼び出せるようになります。
+
 ---
 
 ## 3. インストールとセットアップ
