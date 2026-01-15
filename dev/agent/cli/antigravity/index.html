@@ -2042,6 +2042,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#25-custom-skills-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Custom Skills &amp; Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2308,6 +2319,15 @@
 - <strong>Plan Artifact</strong>: 「これからこういう手順で実装します」という計画書。<br />
 - <strong>Task Artifact</strong>: 進捗管理のためのチェックリスト。<br />
 - <strong>Preview Artifact</strong>: 実装中の画面プレビューや、動作検証の録画ビデオ。</p>
+<h3 id="25-custom-skills-agents">2.5 Custom Skills &amp; Agents<a class="headerlink" href="#25-custom-skills-agents" title="Permanent link">&para;</a></h3>
+<p>Antigravity は拡張性も極めて高く、<code>.antigravity/</code> ディレクトリでエージェントの能力を拡張できます。</p>
+<ul>
+<li><strong>Custom Skills</strong>: Python や TypeScript で書かれた関数を <code>skills/</code> に配置すると、エージェントのツールボックスに自動追加されます。<ul>
+<li>例: <code>skills/query_bigquery.py</code> を置けば、エージェントが「BigQuery から先月の売上データを取ってきて」という指示を実行できるようになります。</li>
+</ul>
+</li>
+<li><strong>Agent Personas</strong>: <code>agents/</code> に定義ファイル (YAML) を置くことで、特定の役割を持ったエージェント（例: <code>QA-Engineer</code>, <code>Security-Auditor</code>）を作成し、Mission Control から呼び出せるようになります。</li>
+</ul>
 <hr />
 <h2 id="3">3. インストールとセットアップ<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>Antigravity は現在、<strong>Public Preview</strong> (招待制/ウェイティングリスト) ステータスです。</p>

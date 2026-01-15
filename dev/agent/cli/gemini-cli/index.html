@@ -2282,15 +2282,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
+  <a href="#7-function-calling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. トラブルシューティング
+        7. カスタムツール拡張 (Function Calling)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. トラブルシューティング">
+    <nav class="md-nav" aria-label="7. カスタムツール拡張 (Function Calling)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 tools/ ディレクトリ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-python-function-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Python Function Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. トラブルシューティング
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. トラブルシューティング">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2332,7 +2371,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
+  <a href="#8_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         8. まとめ
@@ -2622,7 +2661,21 @@ UI のスクリーンショットからコードを生成したり、エラー�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>gemini<span class="w"> </span><span class="s2">&quot;この論文の革新的な点はどこ？ 日本語で3つの箇条書きにして&quot;</span><span class="w"> </span>--file<span class="w"> </span>paper.pdf
 </code></pre></div>
 <hr />
-<h2 id="7">7. トラブルシューティング<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h2 id="7-function-calling">7. カスタムツール拡張 (Function Calling)<a class="headerlink" href="#7-function-calling" title="Permanent link">&para;</a></h2>
+<p>Gemini CLI は、標準機能だけでなくユーザー定義のスクリプトを「ツール」として利用することができます。</p>
+<h3 id="71-tools">7.1 <code>tools/</code> ディレクトリ<a class="headerlink" href="#71-tools" title="Permanent link">&para;</a></h3>
+<p>プロジェクトのルートに <code>tools/</code> ディレクトリを作成し、そこにスクリプトを配置します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># tools/weather.sh</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1">#!/bin/bash</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1"># Description: 指定された都市の天気を取得する</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Usage: weather.sh &lt;city&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>curl<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;wttr.in/</span><span class="nv">$1</span><span class="s2">?format=3&quot;</span>
+</code></pre></div>
+<p>Gemini はこれらのスクリプトを発見し、会話の中で「東京の天気は？」と聞かれると、自律的に <code>tools/weather.sh Tokyo</code> を実行して回答を生成します。</p>
+<h3 id="72-python-function-support">7.2 Python Function Support<a class="headerlink" href="#72-python-function-support" title="Permanent link">&para;</a></h3>
+<p>Python スクリプト内に関数を定義し、<code>@gemini.tool</code> デコレータを付けることで、より高度な構造化データのやり取りも可能です。</p>
+<hr />
+<h2 id="8">8. トラブルシューティング<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <h3 id="q-quota-exceeded">Q. <code>Quota exceeded</code> エラーが出ます。<a class="headerlink" href="#q-quota-exceeded" title="Permanent link">&para;</a></h3>
 <p><strong>A.</strong> 無料枠 (Free Tier) の制限 (60 RPM) を超えました。少し待つか、Google AI Studio で課金設定を行い、API Key 利用に切り替えてください。</p>
 <h3 id="q">Q. 回答が途中で切れます。<a class="headerlink" href="#q" title="Permanent link">&para;</a></h3>
@@ -2630,7 +2683,7 @@ UI のスクリーンショットからコードを生成したり、エラー�
 <h3 id="q_1">Q. ファイルを読み込めません。<a class="headerlink" href="#q_1" title="Permanent link">&para;</a></h3>
 <p><strong>A.</strong> 対応していないフォーマットか、ファイルサイズが大きすぎます (通常 20MB 程度まで)。テキストファイルであれば分割して渡すか、PDF に変換して渡すとうまくいくことがあります。</p>
 <hr />
-<h2 id="8">8. まとめ<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<h2 id="8_1">8. まとめ<a class="headerlink" href="#8_1" title="Permanent link">&para;</a></h2>
 <p>Gemini CLI は、Google の AI 技術の結晶を手元のターミナルに凝縮したツールです。<br />
 特に <strong>Google Search Grounding</strong> は、他のコーディングエージェントにはない強力な武器です。「最新の情報」に基づいたコーディングを行いたい場合、Gemini CLI は最強の選択肢となるでしょう。</p>
 <p>まずは <code>npx @google/gemini-cli</code> で、その "Grounding" の威力を体感してください。</p>
