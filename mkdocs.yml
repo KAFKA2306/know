@@ -26,6 +26,7 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.top
+    - navigation.expand
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -104,11 +105,8 @@ nav:
           - Utility: bookmarks/Life/Utility/index.md
       - Other: bookmarks/Other/index.md
   - Life:
-      - Top: life/index.md
       - Tax: life/tax/index.md
+      - Money: life/money/credit-card-investment-2026.md
   - Dev:
-      - Top: dev/index.md
-      - Agent: 
-          - Top: dev/agent/index.md
-          - CLI: dev/agent/cli/index.md
+      - Agent: dev/agent/index.md
       - WSL: dev/wsl/index.md

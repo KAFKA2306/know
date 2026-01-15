@@ -1,6 +1,6 @@
-# 生活ナレッジ
+# 生活ナレッジ (Life)
 
-- **資産運用 (Money)**
-    - [クレジットカード投信積立 (2026)](money/credit-card-investment-2026.md) - 証券会社比較 (条件なし推奨のみ)
-- **税金 (Tax)**
-    - [ふるさと納税](tax/hometown-tax.md) - 制度ガイド
+- **[税金 (Tax)](tax/index.md)**
+    - 確定申告ガイド、節税対策など。
+- **[資産運用 (Money)](money/credit-card-investment-2026.md)**
+    - クレジットカード投信積立など。

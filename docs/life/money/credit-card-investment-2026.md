@@ -34,3 +34,12 @@ dカード積立（月額上限10万円）のポイント還元率は、積立�
 ## 非対応
 
 moomoo証券、Wise、ソニー銀行
+
+## 参照 (公式情報)
+
+- **マネックス証券**: [dカード積立](https://info.monex.co.jp/fund/tsumitate/dcard/index.html)
+- **PayPay証券**: [クレジットつみたて](https://www.paypay-sec.co.jp/service/credit/index.html)
+- **auカブコム証券**: [au PAY カード決済](https://kabu.com/item/fund/tsumitate/aupay_card.html)
+- **楽天証券**: [楽天カードクレジット決済](https://www.rakuten-sec.co.jp/web/fund/saving/creditcard.html)
+- **SBI証券**: [三井住友カードつみたて投資](https://www.sbisec.co.jp/ETGate/WPLETmgR001Control/WPLETmgR001Sdtl/0/user/fund/saving/credit/index.html)
+- **tsumiki証券**: [エポスカードでつみたて](https://www.tsumiki-sec.com/product/)
