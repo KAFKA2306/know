@@ -12,8 +12,9 @@
 
 ## Core Layers
 
-1. **[Data Storage](data-storage/)**: ベクトルDB（Qdrant, Pinecone）
-2. **[Observability](observability/)**: トレーシング・モニタリング（LangSmith, Langfuse）
-3. **[Evaluation](evaluation/)**: 評価（Ragas, Galileo）
-4. **[Orchestration](orchestration/)**: ワークフロー管理（LangChain, CrewAI）
-5. **[Memory](memory/)**: 状態永続化（Mem0, Letta）
+1. **[CLI](cli/)**: コーディングエージェント（Codex, Claude Code, Gemini CLI）
+2. **[Data Storage](data-storage/)**: ベクトルDB（Qdrant, Pinecone）
+3. **[Observability](observability/)**: トレーシング・モニタリング（LangSmith, Langfuse）
+4. **[Evaluation](evaluation/)**: 評価（Ragas, Galileo）
+5. **[Orchestration](orchestration/)**: ワークフロー管理（LangChain, CrewAI）
+6. **[Memory](memory/)**: 状態永続化（Mem0, Letta）

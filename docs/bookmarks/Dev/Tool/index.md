@@ -21,4 +21,4 @@
 - [学術系VRイベントカレンダー](https://calendar.google.com)
 - [BTOパソコン通販のFRONTIER商品検索(並び順：新着順)](https://www.frontier-direct.jp)
 - [20年中東理科](https://www.nier.go.jp)
-- [【RVC】全新Al变声器一键训练包发布！10分钟训练，创作门槛大幅降低！_哔哩哔哩_bilibili](https://www.bilibili.com)
+- [【RVC】全新Al变声器一键训练包发布！10分钟训练，创作门槛大幅降低！](https://www.bilibili.com)

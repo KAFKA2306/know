@@ -168,6 +168,7 @@ source = { editable = "." }
 dependencies = [
     { name = "mkdocs" },
     { name = "mkdocs-material" },
+    { name = "requests" },
 ]
 
 [package.dev-dependencies]
@@ -179,6 +180,7 @@ dev = [
 requires-dist = [
     { name = "mkdocs" },
     { name = "mkdocs-material" },
+    { name = "requests", specifier = ">=2.32.5" },
 ]
 
 [package.metadata.requires-dev]

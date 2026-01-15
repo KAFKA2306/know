@@ -107,5 +107,7 @@ nav:
       - Tax: life/tax/index.md
   - Dev:
       - Top: dev/index.md
-      - Agent: dev/agent/index.md
+      - Agent: 
+          - Top: dev/agent/index.md
+          - CLI: dev/agent/cli/index.md
       - WSL: dev/wsl/index.md
