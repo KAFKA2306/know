@@ -2429,7 +2429,7 @@
 <hr />
 <h2 id="1">1. 概要と哲学<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="11-cli">1.1 背景: CLI エージェントの台頭<a class="headerlink" href="#11-cli" title="Permanent link">&para;</a></h3>
-<p>従来の「AI Coding Assistant」は、主に IDE のプラグイン（Copilot 等）として提供され、コード補完（Autocomplete）やチャット（Chat）を主機能としていました。しかし、これらはあくまで「人間がコードを書くのを助ける」ツールに過ぎませんでした。
+<p>従来の「AI Coding Assistant」は、主に IDE のプラグイン（Copilot 等）として提供され、コード補完（Autocomplete）やチャット（Chat）を主機能としていました。しかし、これらはあくまで「人間がコードを書くのを助ける」ツールに過ぎませんでした。<br />
 Codex CLI はこのパラダイムを転換し、<strong>「AI が主体的にコードを書き、ツールを実行し、検証する」</strong> という <strong>Agentic Workflow</strong> を実現するために設計されました。</p>
 <h3 id="12-design-philosophy">1.2 設計思想 (Design Philosophy)<a class="headerlink" href="#12-design-philosophy" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2507,13 +2507,13 @@ Codex CLI はこのパラダイムを転換し、<strong>「AI が主体的に�
 </code></pre></div>
 <h3 id="23-shell-completion">2.3 シェル補完 (Shell Completion)<a class="headerlink" href="#23-shell-completion" title="Permanent link">&para;</a></h3>
 <p>コマンド入力の効率化のため、タブ補完を有効にすることを強く推奨します。</p>
-<p><strong>Zsh:</strong>
+<p><strong>Zsh:</strong><br />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>codex<span class="w"> </span>completion<span class="w"> </span>zsh<span class="w"> </span>&gt;<span class="w"> </span>~/.zsh/functions/_codex
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;fpath=(~/.zsh/functions $fpath)&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;autoload -U compinit &amp;&amp; compinit&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
 </code></pre></div></p>
-<p><strong>Bash:</strong>
+<p><strong>Bash:</strong><br />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>codex<span class="w"> </span>completion<span class="w"> </span>bash<span class="w"> </span>&gt;<span class="w"> </span>/etc/bash_completion.d/codex
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">source</span><span class="w"> </span>/etc/bash_completion.d/codex
 </code></pre></div></p>
@@ -2523,12 +2523,12 @@ Codex CLI はこのパラダイムを転換し、<strong>「AI が主体的に�
 <h3 id="31-chatgpt">3.1 ChatGPT アカウント連携 (推奨)<a class="headerlink" href="#31-chatgpt" title="Permanent link">&para;</a></h3>
 <p>ChatGPT Plus, Team, Enterprise プランのユーザー向け。<strong>API 従量課金なし</strong> で、プランに含まれる利用枠内で CLI を利用できます。</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>codex<span class="w"> </span>login
-</code></pre></div>
-1. コマンドを実行すると、ブラウザが起動し <code>https://files.oaiusercontent.com/...</code> のような認証ページが開きます。
+</code></pre></div><br />
+1. コマンドを実行すると、ブラウザが起動し <code>https://files.oaiusercontent.com/...</code> のような認証ページが開きます。<br />
 2. "Authorize" をクリックすると、ローカルにトークンが保存されます (<code>~/.openai/auth.json</code>)。</p>
-<p><strong>メリット:</strong>
-- API Key 管理の手間がない
-- ChatGPT の高度なモデル (o1-preview 等) がそのまま使える
+<p><strong>メリット:</strong><br />
+- API Key 管理の手間がない<br />
+- ChatGPT の高度なモデル (o1-preview 等) がそのまま使える<br />
 - 企業プランの場合、データ学習への利用をオプトアウト設定が引き継がれる</p>
 <h3 id="32-api-key">3.2 API Key 認証 (開発者向け)<a class="headerlink" href="#32-api-key" title="Permanent link">&para;</a></h3>
 <p>API Key を使用して、トークン単位で課金管理を行いたい場合や、Organization を切り替えて利用する場合に使用します。</p>
@@ -2566,7 +2566,7 @@ Codex CLI はこのパラダイムを転換し、<strong>「AI が主体的に�
 <h2 id="5-knowledge-injection">5. プロジェクトコンテキスト (Knowledge Injection)<a class="headerlink" href="#5-knowledge-injection" title="Permanent link">&para;</a></h2>
 <p>AI に「ここがどこで、何をするプロジェクトなのか」を教えるための仕組みです。</p>
 <h3 id="51-agentsmd-">5.1 <code>AGENTS.md</code> - エージェントへの指示書<a class="headerlink" href="#51-agentsmd-" title="Permanent link">&para;</a></h3>
-<p>プロジェクトのルートディレクトリに <code>AGENTS.md</code> を配置すると、Codex CLI は起動時にこれを読み込み、システムプロンプトに統合します。
+<p>プロジェクトのルートディレクトリに <code>AGENTS.md</code> を配置すると、Codex CLI は起動時にこれを読み込み、システムプロンプトに統合します。<br />
 このファイルには、プロジェクト固有のルールやコンテキストを記述します。</p>
 <p><strong><code>AGENTS.md</code> の構成例:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gh"># Agent Configurations</span>
@@ -2595,8 +2595,8 @@ Codex CLI はこのパラダイムを転換し、<strong>「AI が主体的に�
 <a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="k">3.</span> コミットメッセージは [<span class="nt">Conventional Commits</span>](<span class="na">https://www.conventionalcommits.org/</span>) に従うこと（例: <span class="sb">`feat: add user login`</span>）。
 </code></pre></div>
 <h3 id="52-rag">5.2 自動コンテキスト収集 (RAG)<a class="headerlink" href="#52-rag" title="Permanent link">&para;</a></h3>
-<p>Codex CLI は、大規模なコードベースを扱うために、簡易的な RAG (Retrieval-Augmented Generation) 機能を内蔵しています。
-- <code>.gitignore</code> に記載されたファイルは自動的に無視されます。
+<p>Codex CLI は、大規模なコードベースを扱うために、簡易的な RAG (Retrieval-Augmented Generation) 機能を内蔵しています。<br />
+- <code>.gitignore</code> に記載されたファイルは自動的に無視されます。<br />
 - 初期起動時にファイルツリーをスキャンし、重要そうなファイル（<code>README.md</code>, <code>package.json</code>, <code>pyproject.toml</code> 等）の要約をメモリに保持します。</p>
 <hr />
 <h2 id="6-command-reference">6. コマンドリファレンス (Command Reference)<a class="headerlink" href="#6-command-reference" title="Permanent link">&para;</a></h2>

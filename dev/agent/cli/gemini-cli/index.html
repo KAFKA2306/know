@@ -2363,12 +2363,12 @@
 
 
 <h1 id="google-gemini-cli">Google Gemini CLI: 完全ガイド<a class="headerlink" href="#google-gemini-cli" title="Permanent link">&para;</a></h1>
-<p><strong>Gemini CLI</strong> (<code>@google/gemini-cli</code>) は、Google が提供する最新のマルチモーダル AI モデル "Gemini" (Gemini 2.5 / 3.0 Pro, Flash) を、開発者のターミナルワークフローに直接統合するためのオープンソース・ツールキットです。
+<p><strong>Gemini CLI</strong> (<code>@google/gemini-cli</code>) は、Google が提供する最新のマルチモーダル AI モデル "Gemini" (Gemini 2.5 / 3.0 Pro, Flash) を、開発者のターミナルワークフローに直接統合するためのオープンソース・ツールキットです。<br />
 Google の強みである <strong>検索 (Search Grounding)</strong>、<strong>マルチモーダル理解 (Multimodal)</strong>、<strong>巨大なコンテキストウィンドウ (1M+ Tokens)</strong> をコマンドラインから手軽に、かつパワフルに活用できるように設計されています。</p>
 <hr />
 <h2 id="1-gemini-cli">1. 概要: なぜ Gemini CLI なのか<a class="headerlink" href="#1-gemini-cli" title="Permanent link">&para;</a></h2>
 <h3 id="11-vibe-coding-grounding">1.1 "Vibe Coding" と "Grounding"<a class="headerlink" href="#11-vibe-coding-grounding" title="Permanent link">&para;</a></h3>
-<p>Gemini CLI は、近年提唱されている "Vibe Coding"（雰囲気や自然言語でざっくり指示してコードを書かせるスタイル）に最適化されています。しかし、単にコードを生成するだけではありません。
+<p>Gemini CLI は、近年提唱されている "Vibe Coding"（雰囲気や自然言語でざっくり指示してコードを書かせるスタイル）に最適化されています。しかし、単にコードを生成するだけではありません。<br />
 Google Search Grounding 機能により、<strong>「今、世界で起きていること」</strong> や <strong>「最新のライブラリの破壊的変更」</strong> をリアルタイムに検索・学習してから回答します。これにより、従来の LLM の弱点であった「知識のカットオフ（古い情報しか知らない）」や「ハルシネーション（嘘）」を劇的に改善しています。</p>
 <h3 id="12">1.2 マルチモーダルネイティブ<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <p>Gemini モデルは最初からマルチモーダルとして学習されています。Gemini CLI はこの特性を活かし、テキストだけでなく、画像、音声、動画、PDF、CSV など、あらゆる形式のファイルをパイプや引数として受け取り、解析・コード化することができます。</p>
@@ -2398,12 +2398,12 @@ Google Search Grounding 機能により、<strong>「今、世界で起きてい
 <h3 id="23-authentication">2.3 認証設定 (Authentication)<a class="headerlink" href="#23-authentication" title="Permanent link">&para;</a></h3>
 <p>Gemini CLI は複数のバックエンドに対応しています。利用シーンに合わせて選択してください。</p>
 <h4 id="1-google-oauth-">1. Google アカウント (OAuth) - 個人開発者向け<a class="headerlink" href="#1-google-oauth-" title="Permanent link">&para;</a></h4>
-<p>個人の Google アカウントでログインするだけで利用できます。
-<strong>特典</strong>: Gemini API の <strong>Free Tier</strong> (無料枠) が適用されます。
-- <strong>レート制限</strong>: 15 RPM (Requests Per Minute), 1,500 RPD (Requests Per Day) ※執筆時点
+<p>個人の Google アカウントでログインするだけで利用できます。<br />
+<strong>特典</strong>: Gemini API の <strong>Free Tier</strong> (無料枠) が適用されます。<br />
+- <strong>レート制限</strong>: 15 RPM (Requests Per Minute), 1,500 RPD (Requests Per Day) ※執筆時点<br />
 - <strong>モデル</strong>: Gemini 2.5 Flash / Pro (一部制限あり)</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gemini<span class="w"> </span>auth<span class="w"> </span>login
-</code></pre></div>
+</code></pre></div><br />
 ブラウザが開くので、Google アカウントでログインし、「Allow」をクリックします。認証情報はローカルのセキュアストレージに保存されます。</p>
 <h4 id="2-api-key-google-ai-studio-">2. API Key (Google AI Studio) - ヘビーユーザー向け<a class="headerlink" href="#2-api-key-google-ai-studio-" title="Permanent link">&para;</a></h4>
 <p><a href="https://aistudio.google.com/">Google AI Studio</a> で API キーを発行して利用します。Pay-as-you-go (従量課金) プランを利用したい場合や、CI/CD 環境での利用に適しています。</p>
@@ -2427,17 +2427,17 @@ Google Search Grounding 機能により、<strong>「今、世界で起きてい
 <h2 id="3">3. コア機能詳細<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h3 id="31-grounding-with-google-search">3.1 Grounding with Google Search (検索連携)<a class="headerlink" href="#31-grounding-with-google-search" title="Permanent link">&para;</a></h3>
 <p>Gemini CLI のキラー機能です。回答を生成する前に Google 検索を実行し、その結果をモデルに「事実」として与えます。</p>
-<p><strong>使用例:</strong>
+<p><strong>使用例:</strong><br />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>gemini<span class="w"> </span><span class="s2">&quot;Next.js 14 の Server Actions で、フォームバリデーションを行う最新のベストプラクティスコードを書いて。Zod を使って。&quot;</span><span class="w"> </span>--grounding
 </code></pre></div></p>
-<p><strong>内部動作:</strong>
-1. プロンプトから検索クエリを生成 (例: "Next.js 14 Server Actions Zod validation best practices")
-2. Google Search API を叩き、上位の検索結果（公式ドキュメントや主要な技術ブログ）を取得
-3. 取得したテキストをコンテキストに追加してプロンプト再構築
+<p><strong>内部動作:</strong><br />
+1. プロンプトから検索クエリを生成 (例: "Next.js 14 Server Actions Zod validation best practices")<br />
+2. Google Search API を叩き、上位の検索結果（公式ドキュメントや主要な技術ブログ）を取得<br />
+3. 取得したテキストをコンテキストに追加してプロンプト再構築<br />
 4. 回答生成（情報源のリンクを脚注に追加）</p>
 <p>この機能により、「1年前の知識で書かれた古いコード」ではなく、「昨日リリースされた新機能を使ったコード」が出力されます。</p>
 <h3 id="32-multimodal-input">3.2 マルチモーダル入力 (Multimodal Input)<a class="headerlink" href="#32-multimodal-input" title="Permanent link">&para;</a></h3>
-<p><strong>画像 (Vision):</strong>
+<p><strong>画像 (Vision):</strong><br />
 UI のスクリーンショットからコードを生成したり、エラー画面のスクショから原因を特定したりできます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># ローカルファイル</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>gemini<span class="w"> </span><span class="s2">&quot;このデザインを HTML/Tailwind CSS で実装して&quot;</span><span class="w"> </span>--image<span class="w"> </span>./design/mockup.png
@@ -2445,11 +2445,11 @@ UI のスクリーンショットからコードを生成したり、エラー�
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># URL指定</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>gemini<span class="w"> </span><span class="s2">&quot;このグラフは何を表している？&quot;</span><span class="w"> </span>--image<span class="w"> </span>https://example.com/chart.jpg
 </code></pre></div>
-<p><strong>PDF / ドキュメント:</strong>
+<p><strong>PDF / ドキュメント:</strong><br />
 長い仕様書や論文を読み込ませることができます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>gemini<span class="w"> </span><span class="s2">&quot;この仕様書に基づき、API の OpenAPI (Swagger) 定義ファイルを作成して&quot;</span><span class="w"> </span>--file<span class="w"> </span>./specs/api_v2.pdf
 </code></pre></div>
-<p><strong>動画 / 音声:</strong>
+<p><strong>動画 / 音声:</strong><br />
 会議の録画データなどを処理することも可能です（モデルの制限による）。</p>
 <h3 id="33-geminimd">3.3 コンテキスト管理と <code>GEMINI.md</code><a class="headerlink" href="#33-geminimd" title="Permanent link">&para;</a></h3>
 <p>プロジェクト固有の知識を固定化するために、<code>GEMINI.md</code> をプロジェクトルートに配置します。</p>
@@ -2631,7 +2631,7 @@ UI のスクリーンショットからコードを生成したり、エラー�
 <p><strong>A.</strong> 対応していないフォーマットか、ファイルサイズが大きすぎます (通常 20MB 程度まで)。テキストファイルであれば分割して渡すか、PDF に変換して渡すとうまくいくことがあります。</p>
 <hr />
 <h2 id="8">8. まとめ<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
-<p>Gemini CLI は、Google の AI 技術の結晶を手元のターミナルに凝縮したツールです。
+<p>Gemini CLI は、Google の AI 技術の結晶を手元のターミナルに凝縮したツールです。<br />
 特に <strong>Google Search Grounding</strong> は、他のコーディングエージェントにはない強力な武器です。「最新の情報」に基づいたコーディングを行いたい場合、Gemini CLI は最強の選択肢となるでしょう。</p>
 <p>まずは <code>npx @google/gemini-cli</code> で、その "Grounding" の威力を体感してください。</p>
 

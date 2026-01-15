@@ -2295,9 +2295,9 @@
 <hr />
 <h2 id="1-the-agentic-shift">1. 概念と特徴: The "Agentic" Shift<a class="headerlink" href="#1-the-agentic-shift" title="Permanent link">&para;</a></h2>
 <h3 id="11-unix-philosophy">1.1 Unix Philosophy への回帰<a class="headerlink" href="#11-unix-philosophy" title="Permanent link">&para;</a></h3>
-<p>Claude Code の設計思想は「Unix 哲学」に深く根ざしています。
-- <strong>Text Streams</strong>: 標準入力 (stdin) と標準出力 (stdout) を介して、他のコマンドとシームレスに連携できます。
-- <strong>Small Tools</strong>: <code>grep</code>, <code>ls</code>, <code>git</code> などの既存の小さなツールを、AI 自身が必要に応じて呼び出し、組み合わせることで大きなタスクを解決します。
+<p>Claude Code の設計思想は「Unix 哲学」に深く根ざしています。<br />
+- <strong>Text Streams</strong>: 標準入力 (stdin) と標準出力 (stdout) を介して、他のコマンドとシームレスに連携できます。<br />
+- <strong>Small Tools</strong>: <code>grep</code>, <code>ls</code>, <code>git</code> などの既存の小さなツールを、AI 自身が必要に応じて呼び出し、組み合わせることで大きなタスクを解決します。<br />
 - <strong>Composability</strong>: パイプライン処理に対応しており、スクリプトの一部として組み込むことができます。</p>
 <h3 id="12-react">1.2 "ReAct" ループの実装<a class="headerlink" href="#12-react" title="Permanent link">&para;</a></h3>
 <p>Claude Code は単なる応答生成器ではなく、<strong>Reasoning + Acting (ReAct)</strong> ループを回す自律エージェントです。ユーザーのゴールを達成するために、以下のような動的な思考プロセスを実行します。</p>
@@ -2322,7 +2322,7 @@
 <h4 id="a-native-installer">A. Native Installer (推奨: 最速)<a class="headerlink" href="#a-native-installer" title="Permanent link">&para;</a></h4>
 <p>環境依存を解決し、最適なバージョンをインストールします。</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://claude.ai/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
-</code></pre></div>
+</code></pre></div><br />
 インストール後、自動的にパスが通され <code>claude</code> コマンドが利用可能になります。</p>
 <h4 id="b-homebrew-macos">B. Homebrew (macOSユーザー向け)<a class="headerlink" href="#b-homebrew-macos" title="Permanent link">&para;</a></h4>
 <p>管理を一元化したい場合に最適です。</p>
@@ -2340,7 +2340,7 @@
 <ol>
 <li><strong>Claude Pro / Team / Enterprise サブスクリプション</strong></li>
 <li>ブラウザ版 Claude.ai の有料プラン契約者は、追加料金なしで利用可能な場合があります（※プレビュー期間等の条件による）。</li>
-<li>コマンドを実行:
+<li>コマンドを実行:<br />
      <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>claude<span class="w"> </span>login
 </code></pre></div></li>
 <li>
@@ -2350,7 +2350,7 @@
 <p><strong>Anthropic API Console (Credits)</strong></p>
 </li>
 <li>API キーを用いた従量課金モデル。企業での利用や、流量制限を個別に管理したい場合に推奨。</li>
-<li>API キーを環境変数にセット:
+<li>API キーを環境変数にセット:<br />
      <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-ant-...&quot;</span>
 </code></pre></div></li>
 </ol>
@@ -2385,12 +2385,12 @@
 <a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="k">-</span><span class="w"> </span>非同期処理のエラーハンドリングはミドルウェアに委譲すること。
 </code></pre></div>
 <h3 id="32">3.2 自動コンテキスト探索<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p><code>CLAUDE.md</code> がない場合でも、Claude Code は自律的に探索を行います。
-- <code>find . -maxdepth 2 -not -path '*/.*'</code> を実行し、ファイル構造を把握。
-- <code>package.json</code> や <code>Cargo.toml</code> を読み、依存関係を理解。
+<p><code>CLAUDE.md</code> がない場合でも、Claude Code は自律的に探索を行います。<br />
+- <code>find . -maxdepth 2 -not -path '*/.*'</code> を実行し、ファイル構造を把握。<br />
+- <code>package.json</code> や <code>Cargo.toml</code> を読み、依存関係を理解。<br />
 - <code>.gitignore</code> を読み、無視すべきファイルを学習。</p>
 <h3 id="33-compact">3.3 コンテキストウィンドウの管理 (/compact)<a class="headerlink" href="#33-compact" title="Permanent link">&para;</a></h3>
-<p>会話が長くなると、トークン上限（現在は約200kトークン）に近づきます。動作が遅くなったり、コストが嵩む原因になります。
+<p>会話が長くなると、トークン上限（現在は約200kトークン）に近づきます。動作が遅くなったり、コストが嵩む原因になります。<br />
 Claude Code は <strong><code>/compact</code></strong> コマンドを提供しています。</p>
 <ul>
 <li><strong>動作</strong>: これまでの会話履歴（思考プロセスやツールの出力）を要約し、重要な決定事項と現状だけを残してメモリを圧縮します。</li>
@@ -2401,7 +2401,7 @@ Claude Code は <strong><code>/compact</code></strong> コマンドを提供し�
 <h2 id="4-mcp-model-context-protocol">4. MCP (Model Context Protocol) 連携<a class="headerlink" href="#4-mcp-model-context-protocol" title="Permanent link">&para;</a></h2>
 <p>Claude Code は、Anthropic が提唱する <strong>Model Context Protocol (MCP)</strong> のクライアントとして動作します。これにより、ローカルファイル以外の「外部コンテキスト」を AI に提供できます。</p>
 <h3 id="41-mcp">4.1 MCP とは<a class="headerlink" href="#41-mcp" title="Permanent link">&para;</a></h3>
-<p>AI モデルと外部データソース（GitHub, Slack, Database, Google Drive 等）を接続するための標準プロトコルです。
+<p>AI モデルと外部データソース（GitHub, Slack, Database, Google Drive 等）を接続するための標準プロトコルです。<br />
 従来は「各ツールごとのプラグイン」が必要でしたが、MCP により統一的なインターフェースで接続可能になりました。</p>
 <h3 id="42">4.2 設定方法<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
 <p><code>~/.claude/claude_mcp_config.json</code> にサーバー情報を記述します。</p>
@@ -2497,12 +2497,12 @@ Claude Code は <strong><code>/compact</code></strong> コマンドを提供し�
 <h3 id="61-tdd">6.1 TDD (テスト駆動開発) の完全自動化<a class="headerlink" href="#61-tdd" title="Permanent link">&para;</a></h3>
 <p><strong>目標</strong>: 新しいユーティリティ関数 <code>parseDate</code> を実装する。まずはテストから書く。</p>
 <ol>
-<li><strong>指示</strong>:
+<li><strong>指示</strong>:<br />
    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>claude<span class="w"> </span><span class="s2">&quot;src/utils/date.ts に parseDate 関数を追加したい。まずはすべてのエッジケース（無効な日付、フォーマット違い）を網羅したテストケースを src/utils/date.test.ts に作成して。まだ実装はしなくていい。&quot;</span>
 </code></pre></div></li>
 <li><strong>AI動作</strong>: 既存のテストファイルの書き方を学習し、テストコードを作成。</li>
 <li><strong>確認</strong>: <code>npm test</code> を実行させ、テストが失敗することを確認（Red）。</li>
-<li><strong>実装指示</strong>:
+<li><strong>実装指示</strong>:<br />
    <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>claude<span class="w"> </span><span class="s2">&quot;テストが通るように実装を行って。date-fns ライブラリを使用して。&quot;</span>
 </code></pre></div></li>
 <li><strong>AI動作</strong>: 実装を行い、再度テストを実行。</li>
@@ -2512,7 +2512,7 @@ Claude Code は <strong><code>/compact</code></strong> コマンドを提供し�
 <p><strong>目標</strong>: プロジェクト全体の CSS を、生の CSS Modules から Tailwind CSS に移行する。</p>
 <ol>
 <li><strong>準備</strong>: <code>CLAUDE.md</code> に移行ルール（クラス名の変換規則など）を追記。</li>
-<li><strong>指示</strong>:
+<li><strong>指示</strong>:<br />
    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>claude<span class="w"> </span><span class="s2">&quot;src/components/Button ディレクトリ内のコンポーネントを Tailwind CSS に書き換えて。CSSファイルは削除し、tsxファイルにクラスを直接書いて。1つずつ順番にやって。&quot;</span>
 </code></pre></div></li>
 <li><strong>対話的実行</strong>: Claude は1ファイルずつ修正・確認を求めてくる。</li>
@@ -2521,7 +2521,7 @@ Claude Code は <strong><code>/compact</code></strong> コマンドを提供し�
 <h3 id="63-debug-loop">6.3 エラー調査と自動修正 (Debug Loop)<a class="headerlink" href="#63-debug-loop" title="Permanent link">&para;</a></h3>
 <p><strong>目標</strong>: 本番環境で発生した謎のエラーを修正する。</p>
 <ol>
-<li><strong>ログ流し込み</strong>:
+<li><strong>ログ流し込み</strong>:<br />
    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cat<span class="w"> </span>server.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>claude<span class="w"> </span><span class="s2">&quot;この &#39;Connection reset&#39; エラーの原因を特定し、再発防止策を実装して&quot;</span>
 </code></pre></div></li>
 <li><strong>推論</strong>: Claude はログのタイムスタンプとスタックトレースを読み、DB接続プールのタイムアウト設定が怪しいと推論。</li>
@@ -2561,7 +2561,7 @@ Claude Code は <strong><code>/compact</code></strong> コマンドを提供し�
 </ol>
 <hr />
 <h2 id="9">9. まとめ<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
-<p>Claude Code は、開発者から「単純作業」を奪い、「意思決定」に集中させるためのツールです。
+<p>Claude Code は、開発者から「単純作業」を奪い、「意思決定」に集中させるためのツールです。<br />
 コマンドラインという、開発者が最も長く過ごす場所に AI を住まわせることで、コンテキストスイッチを減らし、Flow 状態を維持したまま開発を進めることができます。</p>
 <p>まずはインストールし、<code>CLAUDE.md</code> を書き、小さなバグ修正から任せてみてください。すぐに、もうこれ無しの開発には戻れなくなるでしょう。</p>
 

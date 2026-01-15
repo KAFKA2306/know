@@ -2288,25 +2288,25 @@
 <h2 id="2">2. アーキテクチャとコンポーネント<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>Antigravity は、大きく分けて以下の4つのコアコンポーネントで構成されています。</p>
 <h3 id="21-autonomous-agents">2.1 Autonomous Agents (自律エージェント)<a class="headerlink" href="#21-autonomous-agents" title="Permanent link">&para;</a></h3>
-<p>システムの主役です。Gemini 3 Pro / Deep Think モデルを脳として持ち、以下の能力を有します。
-- <strong>Perception (知覚)</strong>: プロジェクト全体のファイル構造、依存関係、Git の履歴、現在の開いているファイル、カーソル位置などをリアルタイムに認識。
-- <strong>Planning (計画)</strong>: 複雑なタスクを「調査」「設計」「実装」「検証」といったサブタスクに分解し、実行計画 (Implementation Plan) を立案。
+<p>システムの主役です。Gemini 3 Pro / Deep Think モデルを脳として持ち、以下の能力を有します。<br />
+- <strong>Perception (知覚)</strong>: プロジェクト全体のファイル構造、依存関係、Git の履歴、現在の開いているファイル、カーソル位置などをリアルタイムに認識。<br />
+- <strong>Planning (計画)</strong>: 複雑なタスクを「調査」「設計」「実装」「検証」といったサブタスクに分解し、実行計画 (Implementation Plan) を立案。<br />
 - <strong>Tool Use (道具の使用)</strong>: ファイル編集、シェルコマンド実行、ブラウザ操作、LSP (Language Server Protocol) の呼び出しなどを自律的に行う。</p>
 <h3 id="22-the-editor-ai-native-editor">2.2 The Editor (AI-Native Editor)<a class="headerlink" href="#22-the-editor-ai-native-editor" title="Permanent link">&para;</a></h3>
-<p>Visual Studio Code (VS Code) をベースにフォークされていますが、以下の点が AI 向けに改造されています。
-- <strong>Stream Editing</strong>: エージェントが超高速でコードを生成・編集するための専用パイプライン。人間が見ていなくてもバックグラウンドで編集が進む。
-- <strong>Semantic Indexing</strong>: プロジェクト全体をベクトル化し、エージェントが「あの認証ロジックどこだっけ？」を一瞬で検索できるようにする常駐インデックス。
+<p>Visual Studio Code (VS Code) をベースにフォークされていますが、以下の点が AI 向けに改造されています。<br />
+- <strong>Stream Editing</strong>: エージェントが超高速でコードを生成・編集するための専用パイプライン。人間が見ていなくてもバックグラウンドで編集が進む。<br />
+- <strong>Semantic Indexing</strong>: プロジェクト全体をベクトル化し、エージェントが「あの認証ロジックどこだっけ？」を一瞬で検索できるようにする常駐インデックス。<br />
 - <strong>Diff View</strong>: エージェントによる変更を人間が瞬時に理解し、Accept/Reject を判断するための高度な差分表示 UI。</p>
 <h3 id="23-browser-subagent">2.3 Browser Subagent (ブラウザサブエージェント)<a class="headerlink" href="#23-browser-subagent" title="Permanent link">&para;</a></h3>
-<p>Antigravity には、Chromium ベースのヘッドレス（またはヘッドあり）ブラウザが統合されています。
-エージェントはこれを操作して、以下のタスクを実行できます。
-- <strong>E2E Testing</strong>: ローカルサーバーを立ち上げ、実際にボタンをクリックし、遷移を確認する。
-- <strong>User Simulation</strong>: 「ユーザーとして新規登録フローを通す」といったシナリオを実行。
+<p>Antigravity には、Chromium ベースのヘッドレス（またはヘッドあり）ブラウザが統合されています。<br />
+エージェントはこれを操作して、以下のタスクを実行できます。<br />
+- <strong>E2E Testing</strong>: ローカルサーバーを立ち上げ、実際にボタンをクリックし、遷移を確認する。<br />
+- <strong>User Simulation</strong>: 「ユーザーとして新規登録フローを通す」といったシナリオを実行。<br />
 - <strong>Visual Debugging</strong>: 画面のスクリーンショットを撮り、CSS 崩れや配置ミスを画像認識で特定する。</p>
 <h3 id="24-artifacts-system">2.4 Artifacts System (成果物システム)<a class="headerlink" href="#24-artifacts-system" title="Permanent link">&para;</a></h3>
-<p>エージェントとのコミュニケーションは、チャットのテキストだけでなく、構造化された「成果物」を通じて行われます。
-- <strong>Plan Artifact</strong>: 「これからこういう手順で実装します」という計画書。
-- <strong>Task Artifact</strong>: 進捗管理のためのチェックリスト。
+<p>エージェントとのコミュニケーションは、チャットのテキストだけでなく、構造化された「成果物」を通じて行われます。<br />
+- <strong>Plan Artifact</strong>: 「これからこういう手順で実装します」という計画書。<br />
+- <strong>Task Artifact</strong>: 進捗管理のためのチェックリスト。<br />
 - <strong>Preview Artifact</strong>: 実装中の画面プレビューや、動作検証の録画ビデオ。</p>
 <hr />
 <h2 id="3">3. インストールとセットアップ<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
@@ -2323,7 +2323,7 @@
 <li><strong>Account</strong>: Google Cloud Platform (GCP) が有効な Google アカウント。</li>
 </ul>
 <h3 id="33">3.3 認証<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
-<p>起動時に Google アカウントでのサインインが求められます。
+<p>起動時に Google アカウントでのサインインが求められます。<br />
 企業利用の場合、IAM ポリシーに基づき、Antigravity がアクセスできるリポジトリやリソースを制限することが可能です。</p>
 <hr />
 <h2 id="4">4. 実践ワークフロー: 機能実装の全貌<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
@@ -2336,43 +2336,43 @@
 <h3 id="step-2-planning-research">Step 2: Planning &amp; Research (調査と計画)<a class="headerlink" href="#step-2-planning-research" title="Permanent link">&para;</a></h3>
 <p>エージェントはまずコードベースをスキャンし、現状の Pinia ストアや商品ページのコンポーネント構成を把握します。そして <strong>Implementation Plan Artifact</strong> を生成し、人間に提示します。</p>
 <blockquote>
-<p><strong>Agent</strong>: 「以下の計画を立てました。
-1. <code>stores/cart.ts</code> を作成し、カート状態ロジックを実装。
-2. <code>components/ProductDetail.vue</code> にボタン追加。
-3. <code>components/Header.vue</code> にバッジ表示ロジック追加。
-4. ブラウザテストで動作確認。
+<p><strong>Agent</strong>: 「以下の計画を立てました。<br />
+1. <code>stores/cart.ts</code> を作成し、カート状態ロジックを実装。<br />
+2. <code>components/ProductDetail.vue</code> にボタン追加。<br />
+3. <code>components/Header.vue</code> にバッジ表示ロジック追加。<br />
+4. ブラウザテストで動作確認。<br />
 これで進めて良いですか？」</p>
 <p><strong>User</strong>: 「OK。ただし、カートに入れた時はトースト通知も出して。」</p>
 </blockquote>
 <p>エージェントは計画を修正し、実行フェーズに入ります。</p>
 <h3 id="step-3-execution">Step 3: Execution (実装)<a class="headerlink" href="#step-3-execution" title="Permanent link">&para;</a></h3>
-<p>エージェントはエディタを操作し、猛烈なスピードでコーディングを開始します。
-- <code>stores/cart.ts</code> を作成...
-- <code>Header.vue</code> を修正...
+<p>エージェントはエディタを操作し、猛烈なスピードでコーディングを開始します。<br />
+- <code>stores/cart.ts</code> を作成...<br />
+- <code>Header.vue</code> を修正...<br />
 - 途中で TypeScript の型エラーが発生。エージェントは自律的に <code>tsc</code> を実行してエラー内容を確認し、型定義を修正します。これが「自律修復」です。</p>
 <h3 id="step-4-verification">Step 4: Verification (検証)<a class="headerlink" href="#step-4-verification" title="Permanent link">&para;</a></h3>
-<p>コーディングが完了すると、エージェントはブラウザサブエージェントを起動します。
-1. ローカル開発サーバー (<code>npm run dev</code>) を起動。
-2. <code>http://localhost:3000/product/1</code> にアクセス。
-3. 「カートに入れる」ボタンをクリック。
+<p>コーディングが完了すると、エージェントはブラウザサブエージェントを起動します。<br />
+1. ローカル開発サーバー (<code>npm run dev</code>) を起動。<br />
+2. <code>http://localhost:3000/product/1</code> にアクセス。<br />
+3. 「カートに入れる」ボタンをクリック。<br />
 4. トースト通知が表示されたか、ヘッダーのバッジが増えたかを確認（DOM解析 + 画像認識）。</p>
 <p>エージェントは検証の様子を録画し、<strong>Verification Video Artifact</strong> としてレポートします。</p>
 <h3 id="step-5-review-merge">Step 5: Review &amp; Merge (レビューとマージ)<a class="headerlink" href="#step-5-review-merge" title="Permanent link">&para;</a></h3>
-<p>人間はレポートとビデオを見て、問題なければコードの差分 (Diff) を最終確認します。
+<p>人間はレポートとビデオを見て、問題なければコードの差分 (Diff) を最終確認します。<br />
 「Merge」ボタンを押すと、Git コミットとプッシュが行われます。</p>
 <hr />
 <h2 id="5">5. 高度な機能<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <h3 id="51-project-memory">5.1 Project Memory (プロジェクトメモリ)<a class="headerlink" href="#51-project-memory" title="Permanent link">&para;</a></h3>
-<p>Antigravity は、過去のエージェントの活動を記憶しています。「先週の実装で、認証周りのバグをどうやって直したっけ？」と聞けば、過去のコンテキストから回答を引き出せます。
+<p>Antigravity は、過去のエージェントの活動を記憶しています。「先週の実装で、認証周りのバグをどうやって直したっけ？」と聞けば、過去のコンテキストから回答を引き出せます。<br />
 また、<code>AGENTS.md</code> などの設定ファイルを通じて、チーム固有の知識（「うちはこのライブラリ禁止」等）を持続的に学習させることができます。</p>
 <h3 id="52-parallel-agents">5.2 Parallel Agents (並列エージェント)<a class="headerlink" href="#52-parallel-agents" title="Permanent link">&para;</a></h3>
-<p>一人の開発者が複数のエージェントを同時に使うことができます。
-- <strong>Agent A</strong>: 新機能の実装（メインタスク）
-- <strong>Agent B</strong>: 裏でライブラリのアップデートと移行検証
+<p>一人の開発者が複数のエージェントを同時に使うことができます。<br />
+- <strong>Agent A</strong>: 新機能の実装（メインタスク）<br />
+- <strong>Agent B</strong>: 裏でライブラリのアップデートと移行検証<br />
 - <strong>Agent C</strong>: ドキュメントの整備と翻訳</p>
 <p>これらを Mission Control で並行して走らせることで、生産性を数倍に引き上げます。</p>
 <h3 id="53-cross-file-refactoring">5.3 Cross-File Refactoring<a class="headerlink" href="#53-cross-file-refactoring" title="Permanent link">&para;</a></h3>
-<p>「プロジェクト内のすべての <code>var</code> を <code>const</code> に変え、古いロギング関数を新しいものに置換する」
+<p>「プロジェクト内のすべての <code>var</code> を <code>const</code> に変え、古いロギング関数を新しいものに置換する」<br />
 このような単純だが広範囲にわたる修正は、Antigravity の得意分野です。数千ファイル規模でも、エージェントは諦めずに最後までやり遂げます。</p>
 <hr />
 <h2 id="6-gemini-cli">6. Gemini CLI との使い分け<a class="headerlink" href="#6-gemini-cli" title="Permanent link">&para;</a></h2>
@@ -2416,7 +2416,7 @@
 <p><strong>結論</strong>: 日々のガッツリした開発は Antigravity で行い、ターミナル作業中や CI パイプラインでの自動化には Gemini CLI を使う、という併用が最強のスタイルです。</p>
 <hr />
 <h2 id="7">7. まとめ<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>Google Antigravity は、IDE の再発明です。それは「文字を打つ道具」から「意図を形にする工場」への進化です。
+<p>Google Antigravity は、IDE の再発明です。それは「文字を打つ道具」から「意図を形にする工場」への進化です。<br />
 エージェントファースト開発に慣れると、もう以前の「手入力」スタイルの開発には戻れないかもしれません。AI をパートナーではなく、<strong>有能な部下</strong>として指揮する新しい開発体験へようこそ。</p>
 <hr />
 <h2 id="_1">参照<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
