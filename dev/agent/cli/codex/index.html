@@ -1,0 +1,2831 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Multi-Knowledge Base for Life, Dev, and more.">
+      
+      
+        <meta name="author" content="KAFKA2306">
+      
+      
+        <link rel="canonical" href="https://KAFKA2306.github.io/know/dev/agent/cli/codex/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>OpenAI Codex CLI: 完全ガイド - Know</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#openai-codex-cli" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../../../.." title="Know" class="md-header__button md-logo" aria-label="Know" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Know
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OpenAI Codex CLI: 完全ガイド
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KAFKA2306/know" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KAFKA2306/know
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../bookmarks/" class="md-tabs__link">
+          
+  
+  
+  Bookmarks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../life/" class="md-tabs__link">
+          
+  
+  
+  Life
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+  Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Know" class="md-nav__button md-logo" aria-label="Know" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Know
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KAFKA2306/know" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KAFKA2306/know
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bookmarks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bookmarks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Dev/AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Dev/Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Dev/Tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Game
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Game
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Game/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Game/VR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Game/Board/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Game/Digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Finance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Finance/Bank/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Finance/Market/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Market
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Finance/Crypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crypto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Service
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Service
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Service/Cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Service/Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Media
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Media/Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Media/Music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Music
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Academic
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Academic
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Academic/Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Academic/Research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Life
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Life
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Life/Shopping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shopping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Life/Utility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bookmarks/Other/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Life
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Life
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../life/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../life/tax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dev
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WSL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 概要と哲学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 概要と哲学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 背景: CLI エージェントの台頭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-design-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 設計思想 (Design Philosophy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. インストールと環境構築
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. インストールと環境構築">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 システム要件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 インストール方法 (詳細)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 インストール方法 (詳細)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. npm によるグローバルインストール (標準)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-homebrew-macoslinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Homebrew (macOS/Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. バイナリ直接配置 (CI/CD, 制限環境)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-shell-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 シェル補完 (Shell Completion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 認証とプラン管理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 認証とプラン管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 ChatGPT アカウント連携 (推奨)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 API Key 認証 (開発者向け)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. コア機能と承認モード
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. コア機能と承認モード">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-3-approval-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 3つの承認モード (Approval Modes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 3つの承認モード (Approval Modes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-suggest-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Suggest Mode (デフォルト, 安全重視)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auto-edit-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Auto Edit Mode (バランス型)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-full-auto-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Full Auto Mode (自律型)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-knowledge-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. プロジェクトコンテキスト (Knowledge Injection)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. プロジェクトコンテキスト (Knowledge Injection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-agentsmd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 AGENTS.md - エージェントへの指示書
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 自動コンテキスト収集 (RAG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-command-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. コマンドリファレンス (Command Reference)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. コマンドリファレンス (Command Reference)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 基本コマンド
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 主要なフラグ (Flags)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 便利なショートカット
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-advanced-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 高度な使用例 (Advanced Scenarios)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 高度な使用例 (Advanced Scenarios)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        シナリオ1: レガシーコードのリファクタリング
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ui-design-to-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        シナリオ2: 画像からの UI 実装 (Design to Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        シナリオ3: エラーログからのバグ修正
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. トラブルシューティングとFAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. トラブルシューティングとFAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. モデルがファイルを見つけてくれません。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-context-window-exceeded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. "Context Window Exceeded" エラーが出ます。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. 「シェルコマンドを実行できません」と拒否されます。
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4. 企業内プロキシ環境で使えますか？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. セキュリティとプライバシー
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. まとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="openai-codex-cli">OpenAI Codex CLI: 完全ガイド<a class="headerlink" href="#openai-codex-cli" title="Permanent link">&para;</a></h1>
+<p><strong>OpenAI Codex CLI</strong> は、OpenAI が提供する最先端の推論モデル（o1, o3, o4 シリーズなど）を、開発者のローカルターミナル環境に直接統合するためのオープンソース・コマンドラインインターフェースです。クラウド上の巨大な計算資源と、ローカルのセキュアな開発環境を安全かつ効率的にブリッジし、"Agentic Coding"（エージェント主導型コーディング）を実現します。</p>
+<p>本ドキュメントでは、Codex CLI のインストールから高度な設定、プロンプトエンジニアリングの極意、トラブルシューティングに至るまで、あらゆる側面を網羅的に解説します。</p>
+<hr />
+<h2 id="1">1. 概要と哲学<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11-cli">1.1 背景: CLI エージェントの台頭<a class="headerlink" href="#11-cli" title="Permanent link">&para;</a></h3>
+<p>従来の「AI Coding Assistant」は、主に IDE のプラグイン（Copilot 等）として提供され、コード補完（Autocomplete）やチャット（Chat）を主機能としていました。しかし、これらはあくまで「人間がコードを書くのを助ける」ツールに過ぎませんでした。
+Codex CLI はこのパラダイムを転換し、<strong>「AI が主体的にコードを書き、ツールを実行し、検証する」</strong> という <strong>Agentic Workflow</strong> を実現するために設計されました。</p>
+<h3 id="12-design-philosophy">1.2 設計思想 (Design Philosophy)<a class="headerlink" href="#12-design-philosophy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Local First, Cloud Powered</strong>: コードベースはローカルに保持し、必要なコンテキストのみをセキュアに送信する。</li>
+<li><strong>Unix Philosophy</strong>: テキストストリームを入出力とし、パイプライン処理 (<code>|</code>) で他のツールと連携可能にする。</li>
+<li><strong>Safe Autonomy</strong>: 「人間参加型（Human-in-the-loop）」の承認プロセスを核とし、AIの自律性と安全性を両立させる。</li>
+<li><strong>Model Agnostic Interface</strong>: 将来のモデル（GPT-5, o5 等）が登場しても、CLI 自体のインターフェースを変えずに恩恵を受けられる抽象化層を持つ。</li>
+</ul>
+<hr />
+<h2 id="2">2. インストールと環境構築<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 システム要件<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>Codex CLI はクロスプラットフォームで動作しますが、最適なパフォーマンスを得るための推奨環境があります。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>最小要件</th>
+<th>推奨要件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OS</strong></td>
+<td>macOS 12+, Linux (Ubuntu 20.04+), Windows 10</td>
+<td>macOS 14+ (Apple Silicon), Ubuntu 22.04+, Windows 11 (WSL2)</td>
+</tr>
+<tr>
+<td><strong>CPU</strong></td>
+<td>x86_64, arm64</td>
+<td>Apple M-series, Modern AMD/Intel</td>
+</tr>
+<tr>
+<td><strong>RAM</strong></td>
+<td>4GB</td>
+<td>8GB以上 (大規模コンテキスト処理用)</td>
+</tr>
+<tr>
+<td><strong>Runtime</strong></td>
+<td>Node.js 18+</td>
+<td>Node.js 20 LTS</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>10Mbps+</td>
+<td>低遅延な光回線 (ストリーミング応答のため)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2 インストール方法 (詳細)<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4 id="a-npm">A. npm によるグローバルインストール (標準)<a class="headerlink" href="#a-npm" title="Permanent link">&para;</a></h4>
+<p>Node.js 環境が整っている場合、これが最も手軽で更新も容易です。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># インストール</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@openai/codex
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># バージョン確認</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>codex<span class="w"> </span>--version
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Output: @openai/codex v1.2.3</span>
+</code></pre></div>
+<h4 id="b-homebrew-macoslinux">B. Homebrew (macOS/Linux)<a class="headerlink" href="#b-homebrew-macoslinux" title="Permanent link">&para;</a></h4>
+<p>システム管理されたパッケージとして導入したい場合に使用します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>brew<span class="w"> </span>tap<span class="w"> </span>openai/codex
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>brew<span class="w"> </span>install<span class="w"> </span>codex
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># アップデート</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>brew<span class="w"> </span>upgrade<span class="w"> </span>codex
+</code></pre></div>
+<h4 id="c-cicd">C. バイナリ直接配置 (CI/CD, 制限環境)<a class="headerlink" href="#c-cicd" title="Permanent link">&para;</a></h4>
+<p>Node.js をインストールできない環境（CIランナーやセキュリティ制限のあるサーバー）では、コンパイル済みのバイナリを使用します。</p>
+<ol>
+<li><a href="https://github.com/openai/codex/releases">GitHub Releases</a> から <code>codex-linux-x64</code> などをダウンロード。</li>
+<li>実行権限を付与してパスの通った場所に配置。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>codex-linux-x64
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>mv<span class="w"> </span>codex-linux-x64<span class="w"> </span>/usr/local/bin/codex
+</code></pre></div>
+<h3 id="23-shell-completion">2.3 シェル補完 (Shell Completion)<a class="headerlink" href="#23-shell-completion" title="Permanent link">&para;</a></h3>
+<p>コマンド入力の効率化のため、タブ補完を有効にすることを強く推奨します。</p>
+<p><strong>Zsh:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>codex<span class="w"> </span>completion<span class="w"> </span>zsh<span class="w"> </span>&gt;<span class="w"> </span>~/.zsh/functions/_codex
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;fpath=(~/.zsh/functions $fpath)&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;autoload -U compinit &amp;&amp; compinit&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div></p>
+<p><strong>Bash:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>codex<span class="w"> </span>completion<span class="w"> </span>bash<span class="w"> </span>&gt;<span class="w"> </span>/etc/bash_completion.d/codex
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">source</span><span class="w"> </span>/etc/bash_completion.d/codex
+</code></pre></div></p>
+<hr />
+<h2 id="3">3. 認証とプラン管理<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>Codex CLI のバックエンドには OpenAI の API が使用されます。利用形態に応じて2つの認証方法があります。</p>
+<h3 id="31-chatgpt">3.1 ChatGPT アカウント連携 (推奨)<a class="headerlink" href="#31-chatgpt" title="Permanent link">&para;</a></h3>
+<p>ChatGPT Plus, Team, Enterprise プランのユーザー向け。<strong>API 従量課金なし</strong> で、プランに含まれる利用枠内で CLI を利用できます。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>codex<span class="w"> </span>login
+</code></pre></div>
+1. コマンドを実行すると、ブラウザが起動し <code>https://files.oaiusercontent.com/...</code> のような認証ページが開きます。
+2. "Authorize" をクリックすると、ローカルにトークンが保存されます (<code>~/.openai/auth.json</code>)。</p>
+<p><strong>メリット:</strong>
+- API Key 管理の手間がない
+- ChatGPT の高度なモデル (o1-preview 等) がそのまま使える
+- 企業プランの場合、データ学習への利用をオプトアウト設定が引き継がれる</p>
+<h3 id="32-api-key">3.2 API Key 認証 (開発者向け)<a class="headerlink" href="#32-api-key" title="Permanent link">&para;</a></h3>
+<p>API Key を使用して、トークン単位で課金管理を行いたい場合や、Organization を切り替えて利用する場合に使用します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-proj-...&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_ORG_ID</span><span class="o">=</span><span class="s2">&quot;org-...&quot;</span><span class="w"> </span><span class="c1"># オプション</span>
+</code></pre></div>
+<p><code>.env</code> ファイルに記述して読み込ませることも可能です（<code>codex</code> コマンド実行時のカレントディレクトリの <code>.env</code> が優先されます）。</p>
+<hr />
+<h2 id="4">4. コア機能と承認モード<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>Codex CLI の最大の特徴は、AI の行動に対する「人間による制御（Agency Control）」の粒度を調整できる点です。</p>
+<h3 id="41-3-approval-modes">4.1 3つの承認モード (Approval Modes)<a class="headerlink" href="#41-3-approval-modes" title="Permanent link">&para;</a></h3>
+<p>起動時に <code>--approval-mode</code> フラグで指定するか、設定ファイルでデフォルトを指定できます。</p>
+<h4 id="1-suggest-mode">1. Suggest Mode (デフォルト, 安全重視)<a class="headerlink" href="#1-suggest-mode" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>動作</strong>: AI は「計画」と「変更案」を提示するだけです。</li>
+<li><strong>実行</strong>: ユーザーが明示的に <code>y</code> (Yes) を入力しない限り、ファイルダンプもコマンド実行も行われません。</li>
+<li><strong>ユースケース</strong>: クリティカルな本番環境、学習目的でのコードレビュー、慎重なリファクタリング。</li>
+</ul>
+<h4 id="2-auto-edit-mode">2. Auto Edit Mode (バランス型)<a class="headerlink" href="#2-auto-edit-mode" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>動作</strong>: ファイルの編集（<code>write_file</code>, <code>replace_string</code>）は自動的に承認されます。</li>
+<li><strong>制限</strong>: シェルコマンドの実行（<code>run_command</code>）、特に不可逆な操作（<code>rm</code>, <code>git push</code>）や外部通信（<code>curl</code>）はユーザーの承認を求めます。</li>
+<li><strong>ユースケース</strong>: 通常の機能開発、テスト駆動開発 (TDD)。最も推奨されるモードです。</li>
+</ul>
+<h4 id="3-full-auto-mode">3. Full Auto Mode (自律型)<a class="headerlink" href="#3-full-auto-mode" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>動作</strong>: 全てのアクションが自動承認されます。AI はゴールに到達するか、エラーで停止するまで動き続けます。</li>
+<li><strong>ユースケース</strong>: 新規プロジェクトの足場作成 (Scaffolding)、完全に分離されたサンドボックス環境での実験、CI/CD パイプライン内での自動修復。</li>
+<li><strong>危険性</strong>: ファイルの消失や意図しないシステム変更のリスクがあるため、Git 管理下での利用を強く推奨します。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># モード指定の例</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>codex<span class="w"> </span>--approval-mode<span class="w"> </span>full-auto<span class="w"> </span><span class="s2">&quot;React + Vite の新規プロジェクトを作成して&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="5-knowledge-injection">5. プロジェクトコンテキスト (Knowledge Injection)<a class="headerlink" href="#5-knowledge-injection" title="Permanent link">&para;</a></h2>
+<p>AI に「ここがどこで、何をするプロジェクトなのか」を教えるための仕組みです。</p>
+<h3 id="51-agentsmd-">5.1 <code>AGENTS.md</code> - エージェントへの指示書<a class="headerlink" href="#51-agentsmd-" title="Permanent link">&para;</a></h3>
+<p>プロジェクトのルートディレクトリに <code>AGENTS.md</code> を配置すると、Codex CLI は起動時にこれを読み込み、システムプロンプトに統合します。
+このファイルには、プロジェクト固有のルールやコンテキストを記述します。</p>
+<p><strong><code>AGENTS.md</code> の構成例:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gh"># Agent Configurations</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="gu">## Identity &amp; Tone</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">-</span><span class="w"> </span>あなたは Google のシニアソフトウェアエンジニアレベルのスキルを持つ Python エキスパートです。
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">-</span><span class="w"> </span>回答は簡潔に、コード中心で行ってください。
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">-</span><span class="w"> </span>日本語で応答してください。
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="gu">## Architecture Overview</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Frontend**</span>: Next.js 14 (App Router), Tailwind CSS
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Backend**</span>: FastAPI (Python 3.11), SQLAlchemy
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Database**</span>: PostgreSQL
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Infrastructure**</span>: AWS (Terraform)
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="gu">## Coding Standards</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Python**</span>: PEP 8 準拠。Type Hint は必須。Docstring は Google Style。
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="k">-</span><span class="w"> </span><span class="gs">**TypeScript**</span>: Strict mode enabled. <span class="sb">`any`</span> 型の使用禁止。
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="k">-</span><span class="w"> </span><span class="gs">**Testing**</span>:
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Backend: <span class="sb">`pytest`</span> を使用。カバレッジ 80% 以上維持。
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>Frontend: <span class="sb">`vitest`</span> を使用。
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="gu">## Workflow Rules</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="k">1.</span> 変更を加える前に必ずテストを実行し、現状を確認すること。
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="k">2.</span> コード変更後はテストを再実行し、リグレッションがないか確認すること。
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="k">3.</span> コミットメッセージは [<span class="nt">Conventional Commits</span>](<span class="na">https://www.conventionalcommits.org/</span>) に従うこと（例: <span class="sb">`feat: add user login`</span>）。
+</code></pre></div>
+<h3 id="52-rag">5.2 自動コンテキスト収集 (RAG)<a class="headerlink" href="#52-rag" title="Permanent link">&para;</a></h3>
+<p>Codex CLI は、大規模なコードベースを扱うために、簡易的な RAG (Retrieval-Augmented Generation) 機能を内蔵しています。
+- <code>.gitignore</code> に記載されたファイルは自動的に無視されます。
+- 初期起動時にファイルツリーをスキャンし、重要そうなファイル（<code>README.md</code>, <code>package.json</code>, <code>pyproject.toml</code> 等）の要約をメモリに保持します。</p>
+<hr />
+<h2 id="6-command-reference">6. コマンドリファレンス (Command Reference)<a class="headerlink" href="#6-command-reference" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 基本コマンド<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>codex</code></td>
+<td>対話モード (REPL) を開始。</td>
+</tr>
+<tr>
+<td><code>codex "prompt"</code></td>
+<td>ワンショット実行。タスク完了後終了。</td>
+</tr>
+<tr>
+<td><code>codex login</code></td>
+<td>ChatGPT アカウントでログイン。</td>
+</tr>
+<tr>
+<td><code>codex logout</code></td>
+<td>ログアウトし、APIキーを削除。</td>
+</tr>
+<tr>
+<td><code>codex version</code></td>
+<td>バージョン情報を表示。</td>
+</tr>
+<tr>
+<td><code>codex check</code></td>
+<td>環境診断（API接続、権限確認）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-flags">6.2 主要なフラグ (Flags)<a class="headerlink" href="#62-flags" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>フラグ</th>
+<th>短縮形</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--model &lt;name&gt;</code></td>
+<td><code>-m</code></td>
+<td>使用するモデルを指定 (<code>o1</code>, <code>gpt-4o</code>, <code>gpt-3.5-turbo</code>)。デフォルトは最適化されたモデル。</td>
+</tr>
+<tr>
+<td><code>--file &lt;path&gt;</code></td>
+<td><code>-f</code></td>
+<td>コンテキストとしてファイルを明示的に読み込む。複数指定可。</td>
+</tr>
+<tr>
+<td><code>--image &lt;path&gt;</code></td>
+<td><code>-i</code></td>
+<td>画像ファイルを読み込む（マルチモーダル）。</td>
+</tr>
+<tr>
+<td><code>--approval-mode</code></td>
+<td><code>-a</code></td>
+<td><code>suggest</code> / <code>auto-edit</code> / <code>full-auto</code></td>
+</tr>
+<tr>
+<td><code>--verbose</code></td>
+<td><code>-v</code></td>
+<td>デバッグ用の詳細ログを出力。プロンプトの内容も確認可能。</td>
+</tr>
+<tr>
+<td><code>--quiet</code></td>
+<td><code>-q</code></td>
+<td>余計な出力を抑制。スクリプト実行用。</td>
+</tr>
+<tr>
+<td><code>--path &lt;dir&gt;</code></td>
+<td><code>-C</code></td>
+<td>実行ディレクトリを変更して起動。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63">6.3 便利なショートカット<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<p>対話モード中には、以下の「スラッシュコマンド」が利用可能です。</p>
+<ul>
+<li><code>/clear</code> または <code>/reset</code>: 会話履歴を消去し、コンテキストウィンドウを解放する。トークン節約に有効。</li>
+<li><code>/diff</code>: 現在の未コミットの変更を表示する。</li>
+<li><code>/undo</code>: 直前の AI による変更（ファイル編集）を取り消す。</li>
+<li><code>/copy</code>: 直前の回答コードをクリップボードにコピーする。</li>
+<li><code>/exit</code> または <code>/quit</code>: 終了する。</li>
+</ul>
+<hr />
+<h2 id="7-advanced-scenarios">7. 高度な使用例 (Advanced Scenarios)<a class="headerlink" href="#7-advanced-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="1_1">シナリオ1: レガシーコードのリファクタリング<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p><strong>状況</strong>: テストがなく、ドキュメントもない古い Python スクリプト (<code>legacy_script.py</code>) を解析し、最新の Modern Python に書き換えたい。</p>
+<p><strong>手順</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 1. 解析とテスト作成</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>codex<span class="w"> </span>-a<span class="w"> </span>auto-edit<span class="w"> </span><span class="s2">&quot;legacy_script.py を解析して。まず現在の挙動を保証する単体テストを pytest で作成して。テストファイル名は tests/test_legacy.py にして&quot;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># 2. テストパス確認</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># (AI が pytest を実行し、パスすることを確認する)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># 3. リファクタリング実行</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>codex<span class="w"> </span>-a<span class="w"> </span>auto-edit<span class="w"> </span><span class="s2">&quot;テストが通ることを維持しながら、legacy_script.py を以下の要件でリファクタリングして：</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="s2">1. クラスベースの設計に変更</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="s2">2. Type Hint を全関数に追加</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="s2">3. 変数名をわかりやすく変更 (snake_case)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="s2">4. グローバル変数を廃止&quot;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="c1"># 4. ドキュメント生成</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>codex<span class="w"> </span><span class="s2">&quot;legacy_script.py の仕様書を MARKDOWN 形式で docs/spec.md に書き出して&quot;</span>
+</code></pre></div>
+<h3 id="2-ui-design-to-code">シナリオ2: 画像からの UI 実装 (Design to Code)<a class="headerlink" href="#2-ui-design-to-code" title="Permanent link">&para;</a></h3>
+<p><strong>状況</strong>: デザイナーから渡された画面デザイン (<code>design_mockup.png</code>) を元に、React コンポーネントを実装したい。</p>
+<p><strong>手順</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>codex<span class="w"> </span>-m<span class="w"> </span>gpt-4o<span class="w"> </span>--image<span class="w"> </span>design_mockup.png<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="s2">&quot;この画像を元に、React + Tailwind CSS でコンポーネントを実装して。</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="s2">  ファイルは src/components/UserProfile.tsx に保存して。</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="s2">  アイコンには lucide-react を使用して。&quot;</span>
+</code></pre></div>
+<h3 id="3_1">シナリオ3: エラーログからのバグ修正<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># パイプ入力によるデバッグ</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>cat<span class="w"> </span>/var/log/app/error.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>codex<span class="w"> </span><span class="s2">&quot;このスタックトレースを分析し、原因と修正案を教えて。修正案はコードブロックで出力して。&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="8-faq">8. トラブルシューティングとFAQ<a class="headerlink" href="#8-faq" title="Permanent link">&para;</a></h2>
+<h3 id="q1">Q1. モデルがファイルを見つけてくれません。<a class="headerlink" href="#q1" title="Permanent link">&para;</a></h3>
+<p><strong>A.</strong> Codex CLI は <code>.gitignore</code> を尊重します。対象ファイルが無視されていないか確認してください。また、明示的に <code>--file &lt;path&gt;</code> で渡すことで確実に見せることができます。また、<code>ls -R</code> コマンドを実行させてファイル構造を再認識させるのも手です。</p>
+<h3 id="q2-context-window-exceeded">Q2. "Context Window Exceeded" エラーが出ます。<a class="headerlink" href="#q2-context-window-exceeded" title="Permanent link">&para;</a></h3>
+<p><strong>A.</strong> <code>/clear</code> コマンドで履歴をリセットしてください。また、不要なファイルを読み込みすぎている可能性があります。<code>AGENTS.md</code> で読み込む範囲を制限するか、具体的なタスクに分割して指示してください。</p>
+<h3 id="q3">Q3. 「シェルコマンドを実行できません」と拒否されます。<a class="headerlink" href="#q3" title="Permanent link">&para;</a></h3>
+<p><strong>A.</strong> <code>Suggest Mode</code> になっている可能性があります。<code>--approval-mode auto-edit</code> または <code>full-auto</code> を試してください。または、プロンプトで「コマンドを実行して」と強く指示してみてください。</p>
+<h3 id="q4">Q4. 企業内プロキシ環境で使えますか？<a class="headerlink" href="#q4" title="Permanent link">&para;</a></h3>
+<p><strong>A.</strong> <code>HTTP_PROXY</code>, <code>HTTPS_PROXY</code> 環境変数を参照します。認証が通らない場合は、自社証明書を <code>NODE_EXTRA_CA_CERTS</code> に設定する必要があるかもしれません。</p>
+<hr />
+<h2 id="9">9. セキュリティとプライバシー<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<p>Codex CLI はローカルで動作するため、基本的にはセキュアですが、以下の点に注意してください。</p>
+<ol>
+<li><strong>データ送信</strong>: プロンプトに含まれるファイルの内容や指示は、OpenAI API に送信されます。機密情報（パスワード、APIキー、PII）が含まれないように注意してください。<code>gitleaks</code> 等のツールと併用することを推奨します。</li>
+<li><strong>学習利用</strong>: ChatGPT Enterprise / Team アカウントでログインしている場合、データはモデルの学習に使用されません。Personal Plus プランの場合は設定によります。</li>
+<li><strong>サンドボックス</strong>: <code>Full Auto Mode</code> は強力ですが、誤って <code>rm -rf /</code> のようなコマンドを実行するリスクがゼロではありません（AIは通常拒否しますが）。Docker コンテナや VM 内での実行を推奨します。</li>
+</ol>
+<hr />
+<h2 id="10">10. まとめ<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<p>OpenAI Codex CLI は、開発者の「手」を増やすだけでなく、「脳」の一部を外部化し、並列処理を可能にする強力なツールです。使いこなすための鍵は、<strong>「明確な指示 (Prompting)」「適切なコンテキスト設定 (AGENTS.md)」「自律レベルの制御 (Modes)」</strong> の3点にあります。</p>
+<p>これらをマスターすることで、あなたの生産性は 10x にもなり得ます。Happy Coding!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 KAFKA2306
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/KAFKA2306" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
