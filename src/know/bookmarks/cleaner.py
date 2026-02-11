@@ -4,8 +4,6 @@ from pathlib import Path
 from typing import List, NamedTuple, Optional
 import requests
 from urllib.parse import urlparse
-
-# Constants for cleanup
 TITLE_REMOVALS = [
     r"\s*-\s*YouTube$",
     r"\s*\|\s*Qiita$",
@@ -83,31 +81,26 @@ TITLE_REMOVALS = [
     r"\s*\|\s*Board Game\s*\|\s*Zatu Games UK$",
     r"\s*\|\s*Board Game\s*\|\s*Zatu Games$",
 ]
-
 class Bookmark(NamedTuple):
     line_no: int
     original_line: str
     title: str
     url: str
     indent: str
-
     @property
     def markdown(self) -> str:
         return f"{self.indent}- [{self.title}]({self.url})"
-
 def parse_line(line: str, line_no: int) -> Optional[Bookmark]:
     match = re.match(r"^(\s*)-\s*\[(.*?)\]\((.*?)\)\s*$", line)
     if match:
         return Bookmark(line_no, line, match.group(2), match.group(3), match.group(1))
     return None
-
 def clean_title(title: str) -> str:
     cleaned = title
     for pattern in TITLE_REMOVALS:
         cleaned = re.sub(pattern, "", cleaned, flags=re.IGNORECASE)
     cleaned = cleaned.strip()
     return cleaned
-
 def check_link(url: str, timeout: int = 5) -> bool:
     if not url.startswith(("http://", "https://")):
         return True
@@ -116,55 +109,39 @@ def check_link(url: str, timeout: int = 5) -> bool:
         return response.status_code < 400
     except requests.RequestException:
         return False
-
 def process_file(file_path: Path, check_links: bool = False, dry_run: bool = False) -> None:
     print(f"Processing: {file_path}")
     content = file_path.read_text(encoding="utf-8")
     lines = content.splitlines()
     new_lines = []
     modified = False
-
     for i, line in enumerate(lines):
         bookmark = parse_line(line, i)
         if bookmark:
             new_title = clean_title(bookmark.title)
-            
-            # Simple heuristic to detect if title is just the site name or very generic
-            # This is hard to do automatically without risk, so we just clean the obvious suffixes
-            
             if new_title != bookmark.title:
                 print(f"  Refined: '{bookmark.title}' -> '{new_title}'")
                 modified = True
-                
             if check_links:
                 if not check_link(bookmark.url):
                     print(f"  Dead Link Found: {bookmark.url}")
-                    # In dry run, we just report. In actual run, we might want to comment it out or mark it.
-                    # For now just reporting.
-            
             new_lines.append(f"{bookmark.indent}- [{new_title}]({bookmark.url})")
         else:
             new_lines.append(line)
-
     if modified and not dry_run:
         file_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
         print("  Saved changes.")
-
 def main():
     if len(sys.argv) < 2:
         print("Usage: python cleaner.py <directory> [--check-links] [--dry-run]")
         sys.exit(1)
-
     root_dir = Path(sys.argv[1])
     check_links = "--check-links" in sys.argv
     dry_run = "--dry-run" in sys.argv
-
     if not root_dir.exists():
         print(f"Directory not found: {root_dir}")
         sys.exit(1)
-
     for md_file in root_dir.glob("**/*.md"):
         process_file(md_file, check_links=check_links, dry_run=dry_run)
-
 if __name__ == "__main__":
     main()
