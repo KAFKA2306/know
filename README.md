@@ -2,75 +2,118 @@
 
 # 🧠 Know
 
-**Curated Knowledge Base & Bookmark Manager**
+**The Second Brain for Developers & Investors**
 
-[![Built with MkDocs](https://img.shields.io/badge/Built_with-MkDocs-blue?style=for-the-badge&logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
-[![Python 3.11](https://img.shields.io/badge/Python-3.11-yellow?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Built with MkDocs](https://img.shields.io/badge/Built_with-MkDocs-009485?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://www.python.org/)
+[![Managed by uv](https://img.shields.io/badge/Managed_by-uv-DE5FE6?style=for-the-badge&logo=python&logoColor=white)](https://docs.astral.sh/uv/)
+[![AI Native](https://img.shields.io/badge/AI-Native-FF6F00?style=for-the-badge&logo=google-gemini&logoColor=white)](.agent/workflows/)
 
 <br />
 
 ## 🚀 **[Explore the Knowledge Base](https://kafka2306.github.io/know/)** 🚀
 
-開発、生活、資産運用のための統合ナレッジリポジトリ。
-洗練された情報管理を、ここに。
+**Dev Architecture • AI Ecosystems • Financial Strategy • Life Hacks**
+<br>
+A curated, living repository optimized for modern knowledge workers.
 
 </div>
 
 ---
 
-## 📚 Contents
+## 🌌 Universe of Knowledge
 
-### 🔖 **[Bookmarks](https://kafka2306.github.io/know/bookmarks/)**
-厳選されたリソースコレクション。
-- **Dev**: AI, Data, Tools
-- **Finance**: Crypto, Markets, Banking
-- **Life & Media**: Utility, Shopping, Music, Video
+### 🛠️ **Dev Engineering**
+Cutting-edge technical documentation and architectural deep dives.
 
-### 🛠️ **[Dev Knowledge](https://kafka2306.github.io/know/dev/)**
-モダンな技術スタックの深掘り。
-- **AI Agents**: CLI tools, Orchestration (LangChain, LlamaIndex)
-- **Data Storage**: Vector DBs (Chroma, Pinecone)
-- **Observability**: LangSmith, LangFuse
-- **System**: WSL configuration & troubleshooting
+- **🤖 AI Agent Ecosystem**
+    - **Orchestration**: LangChain, LlamaIndex, CrewAI, Haystack
+    - **Memory & Storage**: Letta, Mem0, Chroma, Pinecone, Qdrant
+    - **Observability**: LangSmith, LangFuse, Arize, Traceloop
+    - **Evaluation**: Ragas, Galileo
+    - **CLI Tools**: Claude Code, Gemini CLI, OpenInterpreter
+- **📐 Deep Dive & Architecture**
+    - **Foundations**: Data structures, Network (HTTP), Database/SQL
+    - **Design**: Zero-Fat Architecture, MCP Ecosystem, Typing Systems
+    - **Workflow**: AI Pipelines, Persona Quality Control
+- **💻 System**: WSL configuration & troubleshooting
 
-### 🌱 **[Life & Finance](https://kafka2306.github.io/know/life/)**
-個人の生活と資産を最適化する実践ガイド。
-- **Tax**: 確定申告, 税金ガイド
-- **Investment**: NISA, 配当金, 資産管理
+### 🌱 **Life & Finance Strategy**
+Practical guides for asset management and personal optimization.
+
+- **💰 Money Management**: Credit Card strategies, Points maximization (2026 Edition)
+- **📈 Investment**: NISA, High-Dividend Stocks, Asset Allocation
+- **Taxation**: Comprehensive Tax Guide, Filing procedures (Kakutei Shinkoku)
+
+### 🔖 **Curated Bookmarks**
+A strictly vetted collection of high-quality resources.
+
+| Category | Highlights |
+| :--- | :--- |
+| **Dev** | AI, Data Science, Tools & Utilities |
+| **Finance** | Crypto, Stock Markets, Banking Services |
+| **Life** | Smart Shopping, Utility Services |
+| **Media** | Music, Video, Streaming |
+| **Academic** | Research Papers, Digital Libraries |
+| **Game** | VR, Board Games, Digital Entertainment |
+
+---
+
+## 🤖 AI-Powered Operations
+
+This repository is not just static text; it's maintained by AI agents.
+
+- **Workflow Automation**:
+    - [`add-knowledge`](.agent/workflows/add-knowledge.md): Streamlined ingestion of new information.
+    - [`maintain-quality`](.agent/workflows/maintain-quality.md): Automated consistency checks.
+    - [`update-content`](.agent/workflows/update-content.md): Periodic refreshing of stale data.
+- **Scripts**:
+    - `bookmark_manager.py`: Automated link rot detection and categorization cleanup.
 
 ---
 
 ## ⚡ Quick Start
 
 ### Prerequisites
-- Python 3.11+
-- [uv](https://docs.astral.sh/uv/)
-- [Task](https://taskfile.dev/)
+- **Python 3.11+**
+- **[uv](https://docs.astral.sh/uv/)** (Fast Python package installer)
+- **[Task](https://taskfile.dev/)** (Build tool)
 
-### Setup & Run
+### Installation & Run
 
 ```bash
-# Clone
+# 1. Clone the repository
 git clone https://github.com/KAFKA2306/know.git
 cd know
 
-# Install
+# 2. Sync dependencies using uv
 uv sync
 
-# Run
-task dev      # 🟢 http://127.0.0.1:8000
+# 3. Start the local development server
+task dev
+# 🟢 Access at http://127.0.0.1:8000
 ```
 
-### Commands
+### Development Commands
 
-| Command | Description |
+| Command | Action |
 | :--- | :--- |
-| `task dev` | ローカル開発サーバー起動 |
-| `task build` | 静的サイトのビルド |
-| `task deploy` | GitHub Pages へデプロイ |
+| `task dev` | Start local Dev server with hot-reload |
+| `task build` | Build static site for production |
+| `task deploy` | Deploy to GitHub Pages |
+| `task clean` | Remove temporary build artifacts |
+
+---
+
+## 📝 Policy
+
+**Zero-Fat & Reliability**
+We adhere to a strict "Zero-Fat" policy—eliminating redundancy and focusing on actionable, high-density information. All entries must cite primary sources.
+
+- [Writing Rules & Guidelines](docs/rules.md)
 
 ---
 
 <div align="center">
-  <sub>Maintained by <a href="https://github.com/KAFKA2306">KAFKA2306</a></sub>
+  <sub>Copyright © 2026 KAFKA2306. All rights reserved.</sub>
 </div>
