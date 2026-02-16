@@ -1,39 +1,66 @@
 # AGENTS.md (引継書)
 
-このファイルは、本リポジトリ `know` を管理・運用する未来のAIエージェント（および人間）のための引継書です。
+**`know` リポジトリの唯一の真実**
 
-## リポジトリの目的
-- **Multi-Knowledge Base**: 開発(Dev)と生活(Life)に関する知識を集約する。
-- **Source of Truth**: 常に最新かつ正確な情報を保つ。
+> [!IMPORTANT]
+> グローバルルール [.agent/AGENTS.md](file:///home/kafka/projects/.agent/AGENTS.md) を継承。差分のみ記載。
 
-## 運用ルール (Constitution)
-すべての操作は **`.agent/workflows/writing-rules.md`** に従ってください。
-- **公式ドキュメント至上主義**: 一次情報を必ず参照する。
-- **シンプルイズベスト**: 冗長な記述は削除する。
-- **正確性**: 曖昧な推測を書かない。
+## 目的
 
-## ワークフロー (Workflows)
-作業を開始する前に、以下の対応するワークフローを確認してください。
+Multi-Knowledge Base。開発(Dev)・生活(Life)の知識を集約し、常に最新かつ正確に保つ。
 
-| 目的 | 参照ファイル | コマンド例 |
-| :--- | :--- | :--- |
-| **新規知識の追加** | [add-knowledge.md](.agent/workflows/add-knowledge.md) | `/add-knowledge` |
-| **品質維持・メンテ** | [maintain-quality.md](.agent/workflows/maintain-quality.md) | `/maintain-quality` |
-| **既存情報の更新** | [update-content.md](.agent/workflows/update-content.md) | `/update-content` |
+## 技術スタック
 
-## 技術スタック & コマンド
+| 要素 | 値 |
+|------|-----|
+| プラットフォーム | MkDocs Material |
+| 環境管理 | uv, Python 3.11+ |
+| タスクランナー | Taskfile.yml |
+| デプロイ | GitHub Pages (GitHub Actions) |
 
-- **環境**: Python 3.11, `uv`, `mkdocs-material`
-- **必須コマンド**:
+## コマンド（Taskfile 経由必須）
 
 ```bash
-# 開発サーバー起動 (プレビュー)
-task dev
-
-# ビルド検証 (リンク切れチェック)
-uv run mkdocs build
+task dev         # ローカルプレビュー
+task build       # --strict ビルド検証
+task check       # リンク切れ + 鮮度チェック
+task deploy      # GitHub Pages デプロイ
+task git MESSAGE="docs: ..." # add + commit + push
 ```
 
-## 申し送り事項
-- `mkdocs.yml` の `validation` 設定により、リンク切れはビルド時に検出されます。変更時は必ずビルドを通してください。
-- 記事の更新時は、単なる追記ではなく「Destructive Rewrite (破壊的書き直し)」を恐れずに行い、常に記事をシンプルに保ってください。
+## コンテンツルール
+
+| ルール | 説明 |
+|--------|------|
+| 公式ドキュメント至上主義 | 一次情報を必ず参照。二次情報（ブログ等）は参考程度 |
+| 日本語記述 | 専門用語は英語可（Agent, RAG, MCP等） |
+| Destructive Rewrite | 追記より破壊的書き直しを優先。常にシンプルに |
+| 正確性最優先 | 「〜らしい」「〜かも」禁止。不明なら書かない |
+| 出典必須 | 公式リンク + バージョン情報を記載 |
+
+## ワークフロー
+
+| コマンド | 目的 |
+|---------|------|
+| `/add-knowledge` | 新規知識の追加 |
+| `/maintain-quality` | 品質維持・リンク切れ修正 |
+| `/update-content` | 既存コンテンツの更新 |
+| `/writing-rules` | 執筆ルール参照 |
+
+## 構造
+
+```
+docs/
+├── dev/           # 開発・技術
+│   ├── agent/     # LLM Agent
+│   ├── deepdive/  # 学習コンテンツ
+│   └── wsl/       # WSL
+├── bookmarks/     # ブックマーク集
+└── life/          # 生活・税金
+```
+
+## 禁止事項
+
+- `uv run mkdocs` の直接実行（`task build` を使う）
+- `mkdocs.yml` の `nav:` に存在しないファイルパスの記載
+- コンテンツの追記のみの更新（必ず全体を見直す）

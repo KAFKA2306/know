@@ -6,9 +6,42 @@ tasks:
     cmd: uv run mkdocs serve
 
   build:
-    desc: Build static site
-    cmd: uv run mkdocs build
+    desc: Build static site (strict)
+    cmd: uv run mkdocs build --strict
+
+  check:
+    desc: Build verification + freshness check
+    cmds:
+      - uv run mkdocs build --strict
+      - grep -rn "2025" docs/ || true
 
   deploy:
     desc: Deploy to GitHub Pages
     cmd: uv run mkdocs gh-deploy --force
+
+  git:status:
+    desc: Git status
+    cmd: git status --short
+
+  git:add:
+    desc: Git add all
+    cmd: git add -A
+
+  git:commit:
+    desc: Git commit
+    cmd: git commit -m "{{.MESSAGE}}"
+    requires:
+      vars: [MESSAGE]
+
+  git:push:
+    desc: Git push
+    cmd: git push
+
+  git:
+    desc: Add, commit, push
+    cmds:
+      - git add -A
+      - git commit -m "{{.MESSAGE}}"
+      - git push
+    requires:
+      vars: [MESSAGE]
