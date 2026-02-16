@@ -15,7 +15,7 @@
 
 **Dev Architecture • AI Ecosystems • Financial Strategy • Life Hacks**
 <br>
-A curated, living repository optimized for modern knowledge workers.
+現代のナレッジワーカーに最適化された、厳選された生きたリポジトリ。
 
 </div>
 
@@ -24,7 +24,7 @@ A curated, living repository optimized for modern knowledge workers.
 ## 🌌 Universe of Knowledge
 
 ### 🛠️ **Dev Engineering**
-Cutting-edge technical documentation and architectural deep dives.
+最先端の技術文書とアーキテクチャの深掘り。
 
 - **🤖 AI Agent Ecosystem**
     - **Orchestration**: LangChain, LlamaIndex, CrewAI, Haystack
@@ -39,14 +39,14 @@ Cutting-edge technical documentation and architectural deep dives.
 - **💻 System**: WSL configuration & troubleshooting
 
 ### 🌱 **Life & Finance Strategy**
-Practical guides for asset management and personal optimization.
+資産管理と個人の生活最適化のための実践ガイド。
 
-- **💰 Money Management**: Credit Card strategies, Points maximization (2026 Edition)
-- **📈 Investment**: NISA, High-Dividend Stocks, Asset Allocation
-- **Taxation**: Comprehensive Tax Guide, Filing procedures (Kakutei Shinkoku)
+- **💰 Money Management**: クレジットカード戦略, ポイント最大化 (2026年版)
+- **📈 Investment**: NISA, 高配当株, アセットアロケーション
+- **Taxation**: 税務完全ガイド, 確定申告の手順
 
 ### 🔖 **Curated Bookmarks**
-A strictly vetted collection of high-quality resources.
+厳格に精査された高品質リソースのコレクション。
 
 | Category | Highlights |
 | :--- | :--- |
@@ -61,14 +61,14 @@ A strictly vetted collection of high-quality resources.
 
 ## 🤖 AI-Powered Operations
 
-This repository is not just static text; it's maintained by AI agents.
+このリポジトリは単なる静的なテキストではありません。AIエージェントによって維持・管理されています。
 
 - **Workflow Automation**:
-    - [`add-knowledge`](.agent/workflows/add-knowledge.md): Streamlined ingestion of new information.
-    - [`maintain-quality`](.agent/workflows/maintain-quality.md): Automated consistency checks.
-    - [`update-content`](.agent/workflows/update-content.md): Periodic refreshing of stale data.
+    - [`add-knowledge`](.agent/workflows/add-knowledge.md): 新しい情報の迅速な取り込み。
+    - [`maintain-quality`](.agent/workflows/maintain-quality.md): 自動化された整合性チェック。
+    - [`update-content`](.agent/workflows/update-content.md): 定期的な情報の更新。
 - **Scripts**:
-    - `bookmark_manager.py`: Automated link rot detection and categorization cleanup.
+    - `bookmark_manager.py`: リンク切れ検知とカテゴリ整理の自動化。
 
 ---
 
@@ -76,39 +76,39 @@ This repository is not just static text; it's maintained by AI agents.
 
 ### Prerequisites
 - **Python 3.11+**
-- **[uv](https://docs.astral.sh/uv/)** (Fast Python package installer)
-- **[Task](https://taskfile.dev/)** (Build tool)
+- **[uv](https://docs.astral.sh/uv/)** (高速なPythonパッケージインストーラー)
+- **[Task](https://taskfile.dev/)** (ビルドツール)
 
 ### Installation & Run
 
 ```bash
-# 1. Clone the repository
+# 1. リポジトリをクローン
 git clone https://github.com/KAFKA2306/know.git
 cd know
 
-# 2. Sync dependencies using uv
+# 2. 依存関係を同期 (uvを使用)
 uv sync
 
-# 3. Start the local development server
+# 3. ローカル開発サーバーを起動
 task dev
-# 🟢 Access at http://127.0.0.1:8000
+# 🟢 http://127.0.0.1:8000 でアクセス
 ```
 
 ### Development Commands
 
 | Command | Action |
 | :--- | :--- |
-| `task dev` | Start local Dev server with hot-reload |
-| `task build` | Build static site for production |
-| `task deploy` | Deploy to GitHub Pages |
-| `task clean` | Remove temporary build artifacts |
+| `task dev` | ローカル開発サーバーをホットリロード付きで起動 |
+| `task build` | 本番用の静的サイトをビルド |
+| `task deploy` | GitHub Pages へデプロイ |
+| `task clean` | 一時的なビルド生成物を削除 |
 
 ---
 
 ## 📝 Policy
 
 **Zero-Fat & Reliability**
-We adhere to a strict "Zero-Fat" policy—eliminating redundancy and focusing on actionable, high-density information. All entries must cite primary sources.
+私たちは「Zero-Fat（無駄ゼロ）」ポリシーを遵守しています。冗長性を排除し、実践的で高密度な情報のみに焦点を当てます。すべてのエントリーは一次情報を出典とすることを原則としています。
 
 - [Writing Rules & Guidelines](docs/rules.md)
 
