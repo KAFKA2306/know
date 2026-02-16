@@ -110,3 +110,18 @@ nav:
   - Dev:
       - Agent: dev/agent/index.md
       - WSL: dev/wsl/index.md
+      - DeepDive:
+          - 概要: dev/deepdive/index.md
+          - 基礎:
+              - データとは何か: dev/deepdive/foundations/data.md
+              - プログラムの構造: dev/deepdive/foundations/structure.md
+              - ネットワークとHTTP: dev/deepdive/foundations/network.md
+              - データベースとSQL: dev/deepdive/foundations/database.md
+          - 実践:
+              - Zero-Fat設計論: dev/deepdive/zero-fat.md
+              - 型システムと契約: dev/deepdive/typing.md
+              - MCPエコシステム: dev/deepdive/mcp.md
+              - Taskfile & uv: dev/deepdive/workflow.md
+              - デザイントークン: dev/deepdive/design.md
+              - AIパイプライン: dev/deepdive/ai-pipeline.md
+              - AIペルソナ品質管理: dev/deepdive/persona.md
