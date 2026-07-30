@@ -1,0 +1,83 @@
+project:
+  id: kafka:know
+  name: Know
+  repository: https://github.com/KAFKA2306/know
+  pages: https://kafka2306.github.io/know/
+  version: 0.1.0
+  updated: 2026-07-30
+  core_ontology: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml
+  schema: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json
+
+purpose:
+  problem: Maintain a source-traceable technical and financial knowledge base and govern the shared causal-evidence vocabulary used by active KAFKA2306 projects.
+  intended_decisions: [accept_entry, reject_entry, update_required, deprecate_term, publish]
+  success_conditions:
+    - Knowledge entries identify their sources, scope, time context, and verification status.
+    - The core ontology, schema, project registry, and project manifests remain mutually consistent.
+    - Deprecated terms and semantic changes are explicit and versioned.
+    - The MkDocs site builds and publishes from the reviewed repository state.
+  falsification_conditions:
+    - An unsupported statement is presented as verified knowledge.
+    - A project manifest uses undefined or conflicting core meanings without an explicit extension.
+    - A registry entry points to a missing or inconsistent manifest.
+    - Documentation build or publication fails.
+
+scope:
+  included: [technical knowledge, financial knowledge, curated resources, operating rules, causal-evidence core ontology, project schema, project registry]
+  excluded: [unverified copied claims, silently stale current facts, domain-project implementation artifacts]
+  temporal: Source publication, retrieval, review, ontology version, and project-manifest update dates are explicit.
+  abstraction_level: Knowledge governance and cross-project upper ontology.
+
+competency_questions:
+  - What source, date, scope, and verification status support each knowledge claim?
+  - Which core class and relation should a project-specific concept extend?
+  - Which active repositories implement the shared project manifest contract?
+  - Are observed, reported, calculated, estimated, assumed, required, and decided assertions kept distinct?
+  - Which terms or project mappings are missing, conflicting, stale, or deprecated?
+
+domain_mapping:
+  System: CrossProjectKnowledgeAndOntologySystem
+  State: [knowledge state, verification state, ontology state, registry state, publication state]
+  Action: [add knowledge, review source, define term, map project, deprecate term, build documentation, publish]
+  Process: [source verification, ontology governance, schema validation, registry audit, MkDocs build]
+  Observation: [source document, repository manifest, validation result, build result, live endpoint response]
+  Model: [causal-evidence core ontology, project manifest schema, classification and governance rules]
+  Requirement: [source traceability, semantic separation, versioning, registry consistency, build integrity]
+  Claim: [verified knowledge, ontology definition, project mapping, publication readiness]
+  Evidence: [source URL, review record, ontology file, schema, manifest, build log, deployed page]
+  Decision: [accept_entry, reject_entry, update_required, deprecate_term, publish]
+
+claims_and_evidence:
+  assertion_types: [ObservedFact, ReportedFact, CalculatedValue, ModelEstimate, Forecast, Assumption, Hypothesis, RequirementAssertion, DecisionAssertion]
+  required_evidence:
+    VerifiedKnowledge: [identified source, publication or observation date, scope, review status]
+    OntologyDefinition: [version, definition, relation constraints, external alignment where applicable]
+    ProjectRegistration: [accessible repository, project manifest, required sections, README link]
+    Publication: [strict build, link checks, deployed endpoint]
+  unknown_policy: Missing, stale, ambiguous, or conflicting evidence remains unverified or update_required.
+
+decision_rules:
+  - id: accept-knowledge-entry
+    when: Source, scope, time context, and verification requirements pass.
+    result: accept_entry
+  - id: reject-unsupported-entry
+    when: A material claim lacks traceable evidence or contradicts a controlling source without qualification.
+    result: reject_entry
+  - id: registry-consistency
+    when: A registered project has an accessible manifest containing all required sections and a README link.
+    result: accept_entry
+  - id: publish-knowledge-base
+    when: Ontology, registry, documentation, build, and link validation pass.
+    result: publish
+
+provenance:
+  sources: [primary technical standards, official documentation, reviewed project repositories, identified publications]
+  generated_artifacts: [Markdown knowledge pages, ontology YAML, JSON Schema, project registry, MkDocs site]
+  agents: [maintainer, AI agents, validation scripts, MkDocs, GitHub Actions]
+  lineage: Knowledge and ontology records retain source, review, version, project, commit, and publication relationships.
+
+validation:
+  structural: Required files, schema syntax, manifest sections, registry links, and MkDocs structure.
+  semantic: Core class definitions, relation domains and ranges, assertion-type separation, and version consistency.
+  evidence: Source identity, review status, project manifest references, and explicit unknown or deprecation states.
+  publication: README Pages URL, MkDocs build, GitHub Pages deployment, and live endpoint verification.
