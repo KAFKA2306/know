@@ -1,0 +1,171 @@
+ontology:
+  id: kafka:causal-evidence-core
+  title: Causal–Evidence Core Ontology
+  title_ja: 因果・証拠中核オントロジー
+  version: 0.1.0
+  status: experimental
+  updated: 2026-07-30
+  purpose: >-
+    Describe systems across research, manufacturing, finance, 3D production,
+    games, catalogs, and software as one auditable chain from existence and
+    state through action, observation, estimation, claims, evidence, and decision.
+
+semantic_chain:
+  - Entity
+  - State
+  - Action
+  - Process
+  - Observation
+  - Estimate
+  - Claim
+  - Test
+  - Evidence
+  - Decision
+
+classes:
+  Entity:
+    definition: A distinguishable thing that exists or is represented.
+  System:
+    parent: Entity
+    definition: An entity treated as a bounded whole for analysis or control.
+  State:
+    definition: A condition of a system at a specified time or interval.
+  Property:
+    definition: A quality or quantity attributable to an entity or state.
+  Process:
+    definition: An activity or mechanism that can change state.
+  Action:
+    parent: Process
+    definition: A deliberate intervention performed by an agent.
+  Observation:
+    definition: A recorded result about a property under stated conditions.
+  Model:
+    definition: An explicit representation used for explanation, calculation, simulation, or prediction.
+  Estimate:
+    definition: A value or state inferred by a model rather than directly observed.
+  Uncertainty:
+    definition: A quantitative or qualitative description of limited knowledge.
+  Goal:
+    definition: A desired state or outcome.
+  Requirement:
+    definition: A condition that must be satisfied for acceptance.
+  Constraint:
+    definition: A limit on action, state, process, or decision.
+  Claim:
+    definition: A proposition whose status must be supported, contradicted, or left unresolved.
+  Test:
+    parent: Process
+    definition: A procedure designed to challenge a claim or requirement.
+  Evidence:
+    parent: Entity
+    definition: A traceable record used to support or contradict a claim.
+  Decision:
+    definition: A disposition based on requirements, evidence, and an explicit rule.
+  Agent:
+    parent: Entity
+    definition: A person, organization, device, software process, or AI that performs an activity.
+  Source:
+    parent: Entity
+    definition: An identified origin of observed, reported, or imported information.
+
+relations:
+  hasState: {domain: System, range: State}
+  hasProperty: {domain: Entity, range: Property}
+  actsOn: {domain: Process, range: Entity}
+  changes: {domain: Process, range: State}
+  controls: {domain: Action, range: Process}
+  observes: {domain: Observation, range: Property}
+  observedEntity: {domain: Observation, range: Entity}
+  hasResult: {domain: Observation, range: Entity}
+  usesProcedure: {domain: Observation, range: Process}
+  madeBy: {domain: Process, range: Agent}
+  usesObservation: {domain: Model, range: Observation}
+  estimates: {domain: Model, range: State}
+  generatesEstimate: {domain: Model, range: Estimate}
+  hasUncertainty: {domain: Estimate, range: Uncertainty}
+  targets: {domain: Goal, range: State}
+  constrains: {domain: Requirement, range: Entity}
+  limits: {domain: Constraint, range: Entity}
+  about: {domain: Claim, range: Entity}
+  tests: {domain: Test, range: Claim}
+  supports: {domain: Evidence, range: Claim}
+  contradicts: {domain: Evidence, range: Claim}
+  generatedBy: {domain: Evidence, range: Process}
+  basedOn: {domain: Decision, range: Evidence}
+  evaluates: {domain: Decision, range: Requirement}
+  derivedFrom: {domain: Entity, range: Entity}
+  sourcedFrom: {domain: Entity, range: Source}
+
+assertion_types:
+  ObservedFact:
+    definition: Directly recorded from a stated source or procedure.
+  ReportedFact:
+    definition: Reported by an identified external source and preserved without reinterpretation.
+  CalculatedValue:
+    definition: Deterministically calculated from identified upstream values and a formula.
+  ModelEstimate:
+    definition: Inferred by a model and accompanied by model identity and uncertainty status.
+  Forecast:
+    definition: An estimate about a future period or state.
+  Assumption:
+    definition: A proposition introduced for analysis and not treated as evidence.
+  Hypothesis:
+    definition: A falsifiable proposition awaiting sufficient evidence.
+  RequirementAssertion:
+    definition: A normative condition, not an observed fact.
+  DecisionAssertion:
+    definition: A disposition produced by a stated decision rule.
+
+minimum_records:
+  Observation:
+    required: [id, observed_entity, property, result, observed_at, source_or_procedure]
+  QuantitativeResult:
+    required: [value, unit_or_dimensionless, quantity_kind]
+  Estimate:
+    required: [id, model, inputs, value_or_state, uncertainty_status, generated_at]
+  Claim:
+    required: [id, statement, assertion_type, subject, status]
+  Evidence:
+    required: [id, evidence_type, location, generated_by_or_source, integrity_status]
+  Decision:
+    required: [id, decision_rule, requirements, evidence, result, decided_at]
+
+invariants:
+  - Observed, reported, calculated, estimated, forecast, assumed, and required values must not be silently merged.
+  - Every calculated value must identify its formula and upstream records.
+  - Every estimate must identify its model and uncertainty status, including unavailable when not quantified.
+  - Every PASS, GO, release, adoption, or merge decision must reference evidence and an explicit rule.
+  - Missing evidence produces UNKNOWN, REVIEW_REQUIRED, or NO-GO; absence is never interpreted as PASS.
+  - A source URL or immutable local evidence identifier must be retained when the source permits it.
+  - Time, scope, version, and target entity must be explicit whenever they can change interpretation.
+  - Human visual or semantic judgment must not be replaced by a structural test that cannot falsify the requirement.
+
+project_manifest_contract:
+  required_sections:
+    - project
+    - purpose
+    - scope
+    - competency_questions
+    - domain_mapping
+    - claims_and_evidence
+    - decision_rules
+    - provenance
+    - validation
+  canonical_path: ontology/project.yaml
+
+external_alignment:
+  OWL_2:
+    role: Formal classes, properties, individuals, and semantics.
+    reference: https://www.w3.org/TR/owl2-overview/
+  PROV_O:
+    role: Entity, Activity, Agent, derivation, generation, and attribution provenance.
+    reference: https://www.w3.org/TR/prov-o/
+  SOSA_SSN:
+    role: Observation, sensor, actuator, procedure, feature of interest, and observable property.
+    reference: https://www.w3.org/TR/vocab-ssn/
+  SHACL:
+    role: Machine validation of RDF graph constraints.
+    reference: https://www.w3.org/TR/shacl/
+  QUDT:
+    role: Quantities, units, dimensions, quantity kinds, and quantitative values.
+    reference: https://www.qudt.org/catalog/qudt-catalog.html
