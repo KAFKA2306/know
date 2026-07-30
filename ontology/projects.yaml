@@ -12,6 +12,12 @@ registry:
       reason: No exact KAFKA2306 repository has been identified.
 
 projects:
+  - id: kafka:know
+    repository: https://github.com/KAFKA2306/know
+    manifest: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.yaml
+    domain: Cross-project knowledge governance and causal-evidence upper ontology
+    upper_system: CrossProjectKnowledgeAndOntologySystem
+
   - id: kafka:anime
     repository: https://github.com/KAFKA2306/anime
     manifest: https://raw.githubusercontent.com/KAFKA2306/anime/main/ontology/project.yaml
