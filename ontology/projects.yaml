@@ -1,0 +1,55 @@
+registry:
+  id: kafka:causal-evidence-projects
+  version: 0.1.0
+  updated: 2026-07-30
+  core_ontology: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml
+  project_schema: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json
+  inclusion_policy: Active KAFKA2306 projects with an identified public repository and a maintained evidence or publication workflow.
+  excluded_until_identified:
+    - domain: thin-film inverse design and process control
+      reason: No exact KAFKA2306 repository has been identified.
+    - domain: RO membrane research
+      reason: No exact KAFKA2306 repository has been identified.
+
+projects:
+  - id: kafka:anime
+    repository: https://github.com/KAFKA2306/anime
+    manifest: https://raw.githubusercontent.com/KAFKA2306/anime/main/ontology/project.yaml
+    domain: Anime catalog acquisition, classification, recommendation, and publication
+    upper_system: AnimeCatalogPublicationSystem
+
+  - id: kafka:image2outfit
+    repository: https://github.com/KAFKA2306/image2outfit
+    manifest: https://raw.githubusercontent.com/KAFKA2306/image2outfit/main/ontology/project.yaml
+    domain: VRChat garment modeling, integration, review, and release
+    upper_system: AvatarGarmentIntegration
+
+  - id: kafka:semiconductor-earnings-model
+    repository: https://github.com/KAFKA2306/semiconductor-earnings-model
+    manifest: https://raw.githubusercontent.com/KAFKA2306/semiconductor-earnings-model/main/ontology/project.yaml
+    domain: Primary-facts semiconductor financial research and operating KPI analysis
+    upper_system: SemiconductorIssuerAndIndustrySystem
+
+  - id: kafka:investor2
+    repository: https://github.com/KAFKA2306/investor2
+    manifest: https://raw.githubusercontent.com/KAFKA2306/investor2/main/ontology/project.yaml
+    domain: Hypothesis registration, forecasting, frozen OOS evaluation, and research promotion
+    upper_system: FinancialResearchLifecycle
+
+  - id: kafka:pal-atlas
+    repository: https://github.com/KAFKA2306/pal-atlas
+    manifest: https://raw.githubusercontent.com/KAFKA2306/pal-atlas/main/ontology/project.yaml
+    domain: Palworld catalog and breeding knowledge graph
+    upper_system: PalBreedingKnowledgeGraph
+
+  - id: kafka:furuyoni
+    repository: https://github.com/KAFKA2306/furuyoni
+    manifest: https://raw.githubusercontent.com/KAFKA2306/furuyoni/main/ontology/project.yaml
+    domain: Versioned official, historical, and community Furuyoni knowledge
+    upper_system: VersionedFuruyoniKnowledgeBase
+
+  - id: kafka:vrmine
+    repository: https://github.com/KAFKA2306/vrmine
+    manifest: https://raw.githubusercontent.com/KAFKA2306/vrmine/main/ontology/project.yaml
+    domain: Browser and VRChat board-game rules, state, synchronization, and release
+    upper_system: MultiGameRuntimePlatform
