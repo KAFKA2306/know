@@ -21,6 +21,18 @@
 
 ---
 
+## Causal–Evidence Core Ontology
+
+研究、製造、財務、3D制作、ゲーム、カタログ、ソフトウェアを、`Entity → State → Action → Process → Observation → Estimate → Claim → Test → Evidence → Decision` の共通構造で記述します。
+
+- [因果・証拠中核オントロジー](ontology/causal-evidence-core.yaml)
+- [プロジェクト記述スキーマ](ontology/project.schema.json)
+- 各対象リポジトリの正規配置: `ontology/project.yaml`
+
+観測事実、外部報告、計算値、モデル推定、予測、仮定、要求、判定を異なる型として保持し、`PASS`、`GO`、公開、採用には明示的な要求・証拠・判定規則を要求します。
+
+---
+
 ## 🌌 Universe of Knowledge
 
 ### 🛠️ **Dev Engineering**
