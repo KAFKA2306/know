@@ -1,132 +1,110 @@
-<div align="center">
+# Know — 開発・投資・生活の知識基盤
 
-# 🧠 Know
+**公開サイト:** https://kafka2306.github.io/know/
 
-**The Second Brain for Developers & Investors**
+Knowは、開発、AI、金融、生活設計で繰り返し参照する知識を、MkDocsで検索・更新できる形にまとめる個人向けナレッジベースです。
 
-[![Built with MkDocs](https://img.shields.io/badge/Built_with-MkDocs-009485?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
-[![Python 3.11](https://img.shields.io/badge/Python-3.11-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://www.python.org/)
-[![Managed by uv](https://img.shields.io/badge/Managed_by-uv-DE5FE6?style=for-the-badge&logo=python&logoColor=white)](https://docs.astral.sh/uv/)
-[![AI Native](https://img.shields.io/badge/AI-Native-FF6F00?style=for-the-badge&logo=google-gemini&logoColor=white)](.agent/workflows/)
+単なるブックマーク集ではなく、情報源、観測事実、計算値、推定、主張、検証、判断を区別し、他のKAFKA2306プロジェクトでも再利用できる共通オントロジーを管理します。
 
-<br />
+## 主な内容
 
-## 🚀 **[Explore the Knowledge Base](https://kafka2306.github.io/know/)** 🚀
+### 開発・AI
 
-**Dev Architecture • AI Ecosystems • Financial Strategy • Life Hacks**
-<br>
-現代のナレッジワーカーに最適化された、厳選された生きたリポジトリ。
+- AIエージェント、オーケストレーション、メモリ、評価、監視
+- MCP、CLI、ローカルLLM、開発ツール
+- データ構造、HTTP、データベース、型、アーキテクチャ
+- WSLや開発環境の設定・トラブル対応
 
-</div>
+### 金融・生活設計
 
----
+- NISA、資産配分、配当、税務
+- クレジットカード、ポイント、家計管理
+- 継続的に使うサービスや参考資料の整理
 
-## Causal–Evidence Core Ontology
+### 厳選リンク
 
-研究、製造、財務、3D制作、ゲーム、カタログ、ソフトウェアを、`Entity → State → Action → Process → Observation → Estimate → Claim → Test → Evidence → Decision` の共通構造で記述します。
+開発、金融、生活、メディア、学術、ゲームに分類した外部資料を管理します。リンクは追加するだけでなく、重複、リンク切れ、分類のずれを監査します。
+
+## 共通の因果・証拠オントロジー
+
+```text
+Entity
+  → State
+  → Action / Process
+  → Observation
+  → Estimate
+  → Claim
+  → Test
+  → Evidence
+  → Decision
+```
+
+主なファイル:
 
 - [因果・証拠中核オントロジー](ontology/causal-evidence-core.yaml)
 - [プロジェクト記述スキーマ](ontology/project.schema.json)
 - [適用プロジェクト・レジストリ](ontology/projects.yaml)
-- 各対象リポジトリの正規配置: `ontology/project.yaml`
+- 各リポジトリの標準配置: `ontology/project.yaml`
 
-観測事実、外部報告、計算値、モデル推定、予測、仮定、要求、判定を異なる型として保持し、`PASS`、`GO`、公開、採用には明示的な要求・証拠・判定規則を要求します。
+観測事実、外部報告、計算値、モデル推定、予測、仮定、要求、判定を同じ文章として混ぜません。`PASS`、`GO`、公開、採用などの判断には、要求条件、証拠、判定規則を明示します。
 
----
+## 自動監査
 
-## 🌌 Universe of Knowledge
+現在は、登録された各プロジェクトの`ontology/project.yaml`を横断して次を確認します。
 
-### 🛠️ **Dev Engineering**
-最先端の技術文書とアーキテクチャの深掘り。
+- レジストリと実ファイルの対応
+- 必須フィールドとスキーマ整合性
+- 主張、証拠、判断の区分
+- リポジトリ間で使う共通語彙の一貫性
+- 未登録または参照切れのプロジェクト
 
-- **🤖 AI Agent Ecosystem**
-    - **Orchestration**: LangChain, LlamaIndex, CrewAI, Haystack
-    - **Memory & Storage**: Letta, Mem0, Chroma, Pinecone, Qdrant
-    - **Observability**: LangSmith, LangFuse, Arize, Traceloop
-    - **Evaluation**: Ragas, Galileo
-    - **CLI Tools**: Claude Code, Gemini CLI, OpenInterpreter
-- **📐 Deep Dive & Architecture**
-    - **Foundations**: Data structures, Network (HTTP), Database/SQL
-    - **Design**: Zero-Fat Architecture, MCP Ecosystem, Typing Systems
-    - **Workflow**: AI Pipelines, Persona Quality Control
-- **💻 System**: WSL configuration & troubleshooting
+監査はGitHub Actionsでも実行します。
 
-### 🌱 **Life & Finance Strategy**
-資産管理と個人の生活最適化のための実践ガイド。
+## AIエージェントによる保守
 
-- **💰 Money Management**: クレジットカード戦略, ポイント最大化 (2026年版)
-- **📈 Investment**: NISA, 高配当株, アセットアロケーション
-- **Taxation**: 税務完全ガイド, 確定申告の手順
+- `.agent/workflows/add-knowledge.md` — 新しい知識の追加
+- `.agent/workflows/maintain-quality.md` — リンク・分類・重複の監査
+- `.agent/workflows/update-content.md` — 既存情報の更新
+- `bookmark_manager.py` — ブックマークの検査と整理
 
-### 🔖 **Curated Bookmarks**
-厳格に精査された高品質リソースのコレクション。
+## ローカル実行
 
-| Category | Highlights |
-| :--- | :--- |
-| **Dev** | AI, Data Science, Tools & Utilities |
-| **Finance** | Crypto, Stock Markets, Banking Services |
-| **Life** | Smart Shopping, Utility Services |
-| **Media** | Music, Video, Streaming |
-| **Academic** | Research Papers, Digital Libraries |
-| **Game** | VR, Board Games, Digital Entertainment |
+### 必要環境
 
----
-
-## 🤖 AI-Powered Operations
-
-このリポジトリは単なる静的なテキストではありません。AIエージェントによって維持・管理されています。
-
-- **Workflow Automation**:
-    - [`add-knowledge`](.agent/workflows/add-knowledge.md): 新しい情報の迅速な取り込み。
-    - [`maintain-quality`](.agent/workflows/maintain-quality.md): 自動化された整合性チェック。
-    - [`update-content`](.agent/workflows/update-content.md): 定期的な情報の更新。
-- **Scripts**:
-    - `bookmark_manager.py`: リンク切れ検知とカテゴリ整理の自動化。
-
----
-
-## ⚡ Quick Start
-
-### Prerequisites
-- **Python 3.11+**
-- **[uv](https://docs.astral.sh/uv/)** (高速なPythonパッケージインストーラー)
-- **[Task](https://taskfile.dev/)** (ビルドツール)
-
-### Installation & Run
+- Python 3.11以上
+- `uv`
+- `go-task`
 
 ```bash
-# 1. リポジトリをクローン
 git clone https://github.com/KAFKA2306/know.git
 cd know
-
-# 2. 依存関係を同期 (uvを使用)
 uv sync
-
-# 3. ローカル開発サーバーを起動
 task dev
-# 🟢 http://127.0.0.1:8000 でアクセス
 ```
 
-### Development Commands
+ローカル表示:
 
-| Command | Action |
-| :--- | :--- |
-| `task dev` | ローカル開発サーバーをホットリロード付きで起動 |
-| `task build` | 本番用の静的サイトをビルド |
-| `task deploy` | GitHub Pages へデプロイ |
-| `task clean` | 一時的なビルド生成物を削除 |
+```text
+http://127.0.0.1:8000
+```
 
----
+主なコマンド:
 
-## 📝 Policy
+| コマンド | 内容 |
+| --- | --- |
+| `task dev` | 開発サーバーを起動 |
+| `task build` | 静的サイトをビルド |
+| `task deploy` | GitHub Pagesへ公開 |
+| `task clean` | 一時生成物を削除 |
 
-**Zero-Fat & Reliability**
-私たちは「Zero-Fat（無駄ゼロ）」ポリシーを遵守しています。冗長性を排除し、実践的で高密度な情報のみに焦点を当てます。すべてのエントリーは一次情報を出典とすることを原則としています。
+## 記述方針
 
-- [Writing Rules & Guidelines](docs/rules.md)
+- 一次情報を優先する
+- 取得日と対象バージョンを残す
+- 推測と確認済み事実を分ける
+- 古い情報を現在の仕様として断定しない
+- 長い説明より、再利用可能な高密度情報を残す
 
----
+詳細は[記述ルール](docs/rules.md)を参照してください。
 
-<div align="center">
-  <sub>Copyright © 2026 KAFKA2306. All rights reserved.</sub>
-</div>
+**README最終監査:** 2026-08-01
