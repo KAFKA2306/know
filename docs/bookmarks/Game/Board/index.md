@@ -12,5 +12,4 @@
 - [Browse Board Games](https://boardgamegeek.com)
 - [Everdell](https://www.board-game.co.uk)
 - [エバーデール 完全日本語版](https://arclightgames.jp)
-- [真・倉敷ボードゲーム会](https://twipla.jp)
 - [リアル脱出ゲームのスケジュールが一覧できる！スクラップチケットカレンダー](https://www.scrapmagazine.com)
