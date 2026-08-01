@@ -1,12 +1,12 @@
 # Cloud
 
-- [Notion (Main)](https://www.notion.so)
-- [XREAの管理・購入 | バリュードメイン (ユーザー名:ag1i5rer)](https://www.value-domain.com)
+- [自作公開サイト一覧](../Sites/index.md)
+- [Notion](https://www.notion.so)
+- [XREA](https://www.value-domain.com)
 - [XREA Control Panel](https://cp.xrea.com)
 - [お名前.com Navi](https://navi.onamae.com)
 - [Excelオンライン](https://onedrive.live.com)
 - [ZeroTier Central](https://my.zerotier.com)
-- [Downloads | TP-Link Deutschland](https://www.tp-link.com)
-- [Notion (TRPG Schedule)](https://caring-cheese-266.notion.site)
-- [Create your own - IFTTT](https://ifttt.com)
+- [TP-Link ダウンロード](https://www.tp-link.com)
+- [IFTTT](https://ifttt.com)
 - [Instapaper](https://www.instapaper.com)
