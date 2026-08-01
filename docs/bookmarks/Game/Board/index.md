@@ -4,7 +4,9 @@
 
 ## 自作・ルール支援
 
-- [ボドゲのミカタ — AIでルールを要約](https://bodoge-no-mikata.vercel.app/)
+- [ボードゲームルールガイド — GitHub Pages版](https://kafka2306.github.io/boardgamelist/)
+- [ボドゲのミカタ — Cloudflare Pages版](https://bodogenomikata2.pages.dev/)
+- [ボドゲのミカタ — Vercel版](https://bodoge-no-mikata.vercel.app/)
 
 ## オンラインで遊ぶ
 
