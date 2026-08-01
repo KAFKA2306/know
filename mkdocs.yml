@@ -50,7 +50,7 @@ theme:
 
 plugins:
   - search:
-      lang: 
+      lang:
         - en
         - ja
   - tags
@@ -89,6 +89,7 @@ nav:
           - Crypto: bookmarks/Finance/Crypto/index.md
       - Service:
           - Top: bookmarks/Service/index.md
+          - 自作公開サイト: bookmarks/Service/Sites/index.md
           - Cloud: bookmarks/Service/Cloud/index.md
           - Social: bookmarks/Service/Social/index.md
       - Media:
