@@ -5,6 +5,8 @@
 ## 自作・ルール支援
 
 - [ボードゲームルールガイド — GitHub Pages版](https://kafka2306.github.io/boardgamelist/)
+- [ふるよに統合ガイド — GitHub Pages版](https://kafka2306.github.io/furuyoni/)
+- [ドミニオン デッキ引き切り確率計算機 — GitHub Pages版](https://kafka2306.github.io/DominionDeckDrawSimlator/)
 - [ボドゲのミカタ — Cloudflare Pages版](https://bodogenomikata2.pages.dev/)
 - [ボドゲのミカタ — Vercel版](https://bodoge-no-mikata.vercel.app/)
 
