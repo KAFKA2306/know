@@ -1,0 +1,27 @@
+name: evidence-contract-starter
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run validator tests
+        run: python -m unittest templates/evidence-contract-starter/test_validator.py
+      - name: Validate positive fixture
+        run: python templates/evidence-contract-starter/validate_contract.py templates/evidence-contract-starter/examples/valid.json
+      - name: Verify missing evidence fails closed
+        run: |
+          if python templates/evidence-contract-starter/validate_contract.py templates/evidence-contract-starter/examples/missing-evidence.json; then
+            echo 'Expected missing-evidence fixture to fail' >&2
+            exit 1
+          fi
