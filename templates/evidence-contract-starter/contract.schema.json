@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kafka2306.github.io/know/schemas/evidence-contract-starter-v1.json",
+  "title": "Evidence Contract Starter",
+  "type": "object",
+  "required": ["schema_version", "observations", "claims", "tests", "evidence", "decisions"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+    "tests": {"type": "array", "items": {"$ref": "#/$defs/test"}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "decisions": {"type": "array", "items": {"$ref": "#/$defs/decision"}}
+  },
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "required": ["id", "assertion_type", "observed_entity", "property", "result", "observed_at", "source"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "assertion_type": {"enum": ["ObservedFact", "ReportedFact", "CalculatedValue", "ModelEstimate", "Assumption", "Hypothesis"]},
+        "observed_entity": {"type": "string", "minLength": 1},
+        "property": {"type": "string", "minLength": 1},
+        "result": {},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "source": {"type": "string", "minLength": 1}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": ["id", "statement", "assertion_type", "subject", "status"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "statement": {"type": "string", "minLength": 1},
+        "assertion_type": {"enum": ["ObservedFact", "ReportedFact", "CalculatedValue", "ModelEstimate", "Forecast", "Assumption", "Hypothesis", "RequirementAssertion"]},
+        "subject": {"type": "string", "minLength": 1},
+        "status": {"enum": ["SUPPORTED", "CONTRADICTED", "UNRESOLVED"]}
+      }
+    },
+    "test": {
+      "type": "object",
+      "required": ["id", "claim_id", "procedure", "result"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "claim_id": {"type": "string", "minLength": 1},
+        "procedure": {"type": "string", "minLength": 1},
+        "result": {"enum": ["PASS", "FAIL", "REVIEW_REQUIRED", "UNKNOWN"]}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["id", "claim_id", "evidence_type", "location", "integrity_status"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "claim_id": {"type": "string", "minLength": 1},
+        "evidence_type": {"enum": ["PRIMARY_SOURCE", "DERIVED", "MODEL_OUTPUT", "LOCAL_TEST"]},
+        "location": {"type": "string", "minLength": 1},
+        "integrity_status": {"enum": ["VERIFIED", "UNVERIFIED", "MISSING"]}
+      }
+    },
+    "decision": {
+      "type": "object",
+      "required": ["id", "decision_rule", "requirements", "evidence", "result", "decided_at"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "decision_rule": {"type": "string", "minLength": 1},
+        "requirements": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "evidence": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "result": {"enum": ["PASS", "FAIL", "REVIEW_REQUIRED", "UNKNOWN"]},
+        "decided_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}
