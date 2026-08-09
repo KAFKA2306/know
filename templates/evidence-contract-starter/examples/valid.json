@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "observations": [
+    {
+      "id": "obs-1",
+      "assertion_type": "ObservedFact",
+      "observed_entity": "example-api",
+      "property": "health_status",
+      "result": "ok",
+      "observed_at": "2026-08-09T05:00:00Z",
+      "source": "https://example.com/health"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-1",
+      "statement": "The example API passed the declared health check.",
+      "assertion_type": "Hypothesis",
+      "subject": "example-api",
+      "status": "SUPPORTED"
+    }
+  ],
+  "tests": [
+    {
+      "id": "test-1",
+      "claim_id": "claim-1",
+      "procedure": "Compare the observed health status with the required value ok.",
+      "result": "PASS"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-1",
+      "claim_id": "claim-1",
+      "evidence_type": "PRIMARY_SOURCE",
+      "location": "https://example.com/health",
+      "integrity_status": "VERIFIED"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision-1",
+      "decision_rule": "PASS only when the health test passes and referenced evidence is VERIFIED.",
+      "requirements": ["health_status == ok"],
+      "evidence": ["evidence-1"],
+      "result": "PASS",
+      "decided_at": "2026-08-09T05:01:00Z"
+    }
+  ]
+}

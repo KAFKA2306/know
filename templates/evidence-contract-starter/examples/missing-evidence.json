@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "observations": [],
+  "claims": [
+    {
+      "id": "claim-1",
+      "statement": "This claim has no evidence.",
+      "assertion_type": "Hypothesis",
+      "subject": "example",
+      "status": "UNRESOLVED"
+    }
+  ],
+  "tests": [],
+  "evidence": [],
+  "decisions": [
+    {
+      "id": "decision-1",
+      "decision_rule": "PASS requires verified evidence.",
+      "requirements": ["evidence required"],
+      "evidence": [],
+      "result": "PASS",
+      "decided_at": "2026-08-09T05:01:00Z"
+    }
+  ]
+}
