@@ -16,7 +16,8 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run validator tests
-        run: python -m unittest templates/evidence-contract-starter/test_validator.py
+        working-directory: templates/evidence-contract-starter
+        run: python -m unittest test_validator.py
       - name: Validate positive fixture
         run: python templates/evidence-contract-starter/validate_contract.py templates/evidence-contract-starter/examples/valid.json
       - name: Verify missing evidence fails closed
