@@ -1,0 +1,42 @@
+project:
+  id: example:evidence-contract-starter
+  name: Evidence Contract Starter Example
+  repository: https://github.com/example/example
+purpose:
+  outcome: Keep observed facts, derived values, claims, tests, evidence, and decisions traceable.
+scope:
+  in_scope:
+    - one public example use case
+  out_of_scope:
+    - regulatory compliance guarantees
+    - hallucination prevention guarantees
+competency_questions:
+  - Can every PASS decision be traced to evidence and a decision rule?
+  - Does missing provenance prevent PASS?
+domain_mapping:
+  Observation: observation
+  Estimate: estimate
+  Claim: claim
+  Test: test
+  Evidence: evidence
+  Decision: decision
+claims_and_evidence:
+  assertion_types:
+    - ObservedFact
+    - CalculatedValue
+    - ModelEstimate
+    - Assumption
+    - Hypothesis
+    - RequirementAssertion
+    - DecisionAssertion
+decision_rules:
+  allowed_results:
+    - PASS
+    - FAIL
+    - REVIEW_REQUIRED
+    - UNKNOWN
+  missing_evidence_result: REVIEW_REQUIRED
+provenance:
+  require_source_url_or_local_evidence_id: true
+validation:
+  command: python templates/evidence-contract-starter/validate_contract.py templates/evidence-contract-starter/examples/valid.json
