@@ -13,6 +13,7 @@
 evidence-contract/
   contract.schema.json
   validate_contract.py
+  test_validator.py
   examples/
     valid.json
     missing-evidence.json
@@ -20,8 +21,8 @@ evidence-contract/
     project.yaml
 ```
 
-1. このディレクトリの `contract.schema.json`、`validate_contract.py`、`examples/`、`ontology/` を導入先の `evidence-contract/` へコピーします。
-2. `.github/workflows/evidence-contract.yml` を導入先リポジトリの同じパスへコピーします。
+1. このディレクトリの `contract.schema.json`、`validate_contract.py`、`test_validator.py`、`examples/`、`ontology/` を導入先の `evidence-contract/` へコピーします。
+2. このstarter内の `.github/workflows/evidence-contract.yml` を、導入先リポジトリrootの `.github/workflows/evidence-contract.yml` へコピーします。
 3. `evidence-contract/ontology/project.yaml` を対象リポジトリに合わせて編集します。
 4. `examples/valid.json` を実ユースケースの最小fixtureへ置き換えます。private source、credential、prompt、顧客データをpublic repositoryへ追加しないでください。
 5. pull requestを作成し、Evidence Contract workflowが成功することを確認します。
