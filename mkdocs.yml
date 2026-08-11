@@ -70,6 +70,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Services:
+      - Evidence Contract Integration: services/evidence-contract-integration.md
   - Bookmarks:
       - Top: bookmarks/index.md
       - Dev:

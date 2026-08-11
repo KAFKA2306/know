@@ -11,13 +11,13 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Run validator tests
+      - name: Run validator and packaging tests
         working-directory: templates/evidence-contract-starter
-        run: python -m unittest test_validator.py
+        run: python -m unittest test_validator.py test_packaging.py
       - name: Validate positive fixture
         run: python templates/evidence-contract-starter/validate_contract.py templates/evidence-contract-starter/examples/valid.json
       - name: Verify missing evidence fails closed
@@ -26,3 +26,8 @@ jobs:
             echo 'Expected missing-evidence fixture to fail' >&2
             exit 1
           fi
+      - name: Verify runtime residue is absent
+        run: |
+          find templates/evidence-contract-starter -type d -name __pycache__ -prune -exec rm -rf {} +
+          find templates/evidence-contract-starter -type f -name '*.pyc' -delete
+          test -z "$(git status --porcelain --untracked-files=all)"
