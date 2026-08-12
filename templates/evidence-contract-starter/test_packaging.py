@@ -30,12 +30,16 @@ class EvidenceIntegrationPackagingTests(unittest.TestCase):
         self.assertIn("exit 1", workflow)
         self.assertNotIn("secrets.", workflow)
 
-    def test_public_kpi_ledger_starts_without_claimed_results(self):
+    def test_public_kpi_ledger_does_not_turn_unknown_into_zero(self):
         ledger = json.loads((REPO_ROOT / "audit" / "evidence-contract-kpi.json").read_text())
-        self.assertEqual("NOT_STARTED", ledger["status"])
+        self.assertEqual("evidence-contract-kpi.v2", ledger["schema_version"])
+        self.assertEqual("NOT_INSTRUMENTED", ledger["status"])
         self.assertEqual([], ledger["evidence"])
         self.assertTrue(ledger["metrics"])
-        self.assertTrue(all(value == 0 for value in ledger["metrics"].values()))
+        for metric in ledger["metrics"].values():
+            self.assertEqual("not_instrumented", metric["measurement_state"])
+            self.assertIsNone(metric["count"])
+            self.assertEqual([], metric["evidence_refs"])
 
     def test_service_page_keeps_guarantee_boundary(self):
         page = (REPO_ROOT / "docs" / "services" / "evidence-contract-integration.md").read_text()
@@ -43,6 +47,8 @@ class EvidenceIntegrationPackagingTests(unittest.TestCase):
         self.assertIn("private source", page)
         self.assertIn("templateを見る", page)
         self.assertIn("自分のrepoへ適用する", page)
+        self.assertIn("not_instrumented", page)
+        self.assertIn("実測0", page)
 
 
 if __name__ == "__main__":
