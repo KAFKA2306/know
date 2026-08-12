@@ -1,19 +1,49 @@
 {
-  "schema_version": "evidence-contract-kpi.v1",
-  "status": "NOT_STARTED",
+  "schema_version": "evidence-contract-kpi.v2",
+  "status": "NOT_INSTRUMENTED",
   "measurement_window_days": 60,
   "metrics": {
-    "starter_opened": 0,
-    "template_copied": 0,
-    "integration_inquiry_started": 0,
-    "qualified_inquiry": 0,
-    "mapping_session_completed": 0,
-    "paid_pilot": 0,
-    "multi_repo_expansion_requested": 0
+    "starter_opened": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    },
+    "template_copied": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    },
+    "integration_inquiry_started": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    },
+    "qualified_inquiry": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    },
+    "mapping_session_completed": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    },
+    "paid_pilot": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    },
+    "multi_repo_expansion_requested": {
+      "measurement_state": "not_instrumented",
+      "count": null,
+      "evidence_refs": []
+    }
   },
   "evidence": [],
   "rules": [
-    "Record only observed events with evidence.",
+    "not_instrumented and unavailable are unknown states, not measured zero.",
+    "A measured metric, including a measured zero, requires public non-sensitive evidence.",
+    "Record only observed events or aggregate measurements with evidence.",
     "Do not store customer private source, prompt, credential, personal data, or business data in this public ledger.",
     "Do not infer paid pilots, compliance, audit readiness, hallucination prevention, or business impact from repository activity."
   ]
