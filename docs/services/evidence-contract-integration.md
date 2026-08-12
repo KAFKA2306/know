@@ -64,4 +64,8 @@ public `know` repositoryへ顧客のprivate source、prompt、credential、個�
 - `paid_pilot`
 - `multi_repo_expansion_requested`
 
-未観測イベントを実績として補完しません。初期台帳はすべて0・evidenceなしです。
+`audit/evidence-contract-kpi.json` では、計測手段自体が未導入のmetricを `measurement_state: not_instrumented` / `count: null` とします。これは**実測0件とは別状態**です。
+
+`measurement_state: measured` に変更する場合は、0件であっても測定が実施されたことを示す公開・非機密のevidence参照を必須にします。正の件数、特にinquiry / mapping session / paid pilot / expansionは、公開可能な証拠がない限り計上しません。顧客private dataを証拠化する必要がある場合はpublic `know` へ保存せず、顧客環境側に留めます。
+
+未観測イベントや未計装metricを実績として補完しません。
