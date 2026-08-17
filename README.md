@@ -1,5 +1,9 @@
 # Know — 開発・投資・生活の知識基盤
 
+[![ci](https://github.com/KAFKA2306/know/actions/workflows/ci.yml/badge.svg)](https://github.com/KAFKA2306/know/actions/workflows/ci.yml)
+[![Ontology audit](https://github.com/KAFKA2306/know/actions/workflows/ontology-audit.yml/badge.svg)](https://github.com/KAFKA2306/know/actions/workflows/ontology-audit.yml)
+[![evidence-contract-starter](https://github.com/KAFKA2306/know/actions/workflows/evidence-contract-starter.yml/badge.svg)](https://github.com/KAFKA2306/know/actions/workflows/evidence-contract-starter.yml)
+
 **公開サイト:** https://kafka2306.github.io/know/
 
 Knowは、開発、AI、金融、生活設計で繰り返し参照する知識を、MkDocsで検索・更新できる形にまとめる個人向けナレッジベースです。
