@@ -15,6 +15,10 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+      - name: Validate MkDocs site
+        run: |
+          python -m pip install --disable-pip-version-check mkdocs-material
+          mkdocs build --strict
       - name: Run validator and packaging tests
         working-directory: templates/evidence-contract-starter
         run: python -m unittest test_validator.py test_packaging.py
