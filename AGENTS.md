@@ -23,9 +23,7 @@ Multi-Knowledge Base。開発(Dev)・生活(Life)の知識を集約し、常に�
 ```bash
 task dev         # ローカルプレビュー
 task build       # --strict ビルド検証
-task check       # リンク切れ + 鮮度チェック
 task deploy      # GitHub Pages デプロイ
-task git MESSAGE="docs: ..." # add + commit + push
 ```
 
 ## コンテンツルール
