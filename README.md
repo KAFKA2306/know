@@ -99,7 +99,6 @@ http://127.0.0.1:8000
 | `task dev` | 開発サーバーを起動 |
 | `task build` | 静的サイトをビルド |
 | `task deploy` | GitHub Pagesへ公開 |
-| `task clean` | 一時生成物を削除 |
 
 ## 記述方針
 
