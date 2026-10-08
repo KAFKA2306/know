@@ -1,6 +1,6 @@
 registry:
   id: kafka:causal-evidence-projects
-  version: 0.2.0
+  version: 0.3.0
   updated: 2026-10-08
   core_ontology: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml
   project_schema: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json
@@ -136,3 +136,33 @@ projects:
     manifest: https://raw.githubusercontent.com/KAFKA2306/agent-resources/main/ontology/project.yaml
     domain: Software factory evidence chain, guarded delivery decisions, and observed recovery outcomes
     upper_system: SoftwareDeliveryEvidenceSystem
+
+  - id: kafka:finBI
+    repository: https://github.com/KAFKA2306/finBI
+    manifest: https://raw.githubusercontent.com/KAFKA2306/finBI/main/ontology/project.yaml
+    domain: Read-only evidence-safe financial analytics and canonical view status
+    upper_system: CanonicalFinancialReadOnlyPresentation
+
+  - id: kafka:etf
+    repository: https://github.com/KAFKA2306/etf
+    manifest: https://raw.githubusercontent.com/KAFKA2306/etf/main/ontology/project.yaml
+    domain: Source-fingerprinted ARK ETF holdings and as-of-aligned derived comparisons
+    upper_system: ETFHoldingsSourceAndDerivation
+
+  - id: kafka:travel
+    repository: https://github.com/KAFKA2306/travel
+    manifest: https://raw.githubusercontent.com/KAFKA2306/travel/main/ontology/project.yaml
+    domain: Trip planning, constraints and official time-sensitive travel evidence
+    upper_system: EvidenceBackedTripDecisionWorkspace
+
+  - id: kafka:books
+    repository: https://github.com/KAFKA2306/books
+    manifest: https://raw.githubusercontent.com/KAFKA2306/books/main/ontology/project.yaml
+    domain: Work, edition, acquisition and verified holding evidence
+    upper_system: EvidenceBackedBookOwnership
+
+  - id: kafka:autonomous-logistics
+    repository: https://github.com/KAFKA2306/autonomous-logistics
+    manifest: https://raw.githubusercontent.com/KAFKA2306/autonomous-logistics/main/ontology/project.yaml
+    domain: Regulatory authority and commercial operation event provenance
+    upper_system: RegulatoryAuthorizationAndOperations
