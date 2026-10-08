@@ -1,7 +1,7 @@
 registry:
   id: kafka:causal-evidence-projects
   version: 0.2.0
-  updated: 2026-07-30
+  updated: 2026-10-08
   core_ontology: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml
   project_schema: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json
   inclusion_policy: Active KAFKA2306 projects with an identified repository and a maintained evidence, research, catalog, or publication workflow.
@@ -119,3 +119,20 @@ projects:
     manifest: https://raw.githubusercontent.com/KAFKA2306/marvelousdesigner/main/ontology/project.yaml
     domain: Evidence-backed VRChat garment-production instruction and validation
     upper_system: GarmentProductionLearningSystem
+  - id: kafka:salary
+    repository: https://github.com/KAFKA2306/salary
+    manifest: https://raw.githubusercontent.com/KAFKA2306/salary/main/ontology/project.yaml
+    domain: Source-backed job search decisions, base-salary gates, and dbt ranking
+    upper_system: JobSearchDecisionPlatform
+
+  - id: kafka:japanproperty
+    repository: https://github.com/KAFKA2306/japanproperty
+    manifest: https://raw.githubusercontent.com/KAFKA2306/japanproperty/main/ontology/project.yaml
+    domain: Source-backed geospatial property forecasting and time-separated model evaluation
+    upper_system: RealEstatePriceEvidenceSystem
+
+  - id: kafka:agent-resources
+    repository: https://github.com/KAFKA2306/agent-resources
+    manifest: https://raw.githubusercontent.com/KAFKA2306/agent-resources/main/ontology/project.yaml
+    domain: Software factory evidence chain, guarded delivery decisions, and observed recovery outcomes
+    upper_system: SoftwareDeliveryEvidenceSystem
