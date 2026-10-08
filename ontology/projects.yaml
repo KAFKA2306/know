@@ -1,6 +1,6 @@
 registry:
   id: kafka:causal-evidence-projects
-  version: 0.3.0
+  version: 0.4.0
   updated: 2026-10-08
   core_ontology: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml
   project_schema: https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json
@@ -166,3 +166,21 @@ projects:
     manifest: https://raw.githubusercontent.com/KAFKA2306/autonomous-logistics/main/ontology/project.yaml
     domain: Regulatory authority and commercial operation event provenance
     upper_system: RegulatoryAuthorizationAndOperations
+
+  - id: kafka:factory
+    repository: https://github.com/KAFKA2306/factory
+    manifest: https://raw.githubusercontent.com/KAFKA2306/factory/main/ontology/project.yaml
+    domain: Factory facility, product, investment and primary-source financial evidence
+    upper_system: ManufacturingFacilityEvidenceSystem
+
+  - id: kafka:autonomous-vehicles
+    repository: https://github.com/KAFKA2306/autonomous-vehicles
+    manifest: https://raw.githubusercontent.com/KAFKA2306/autonomous-vehicles/main/ontology/project.yaml
+    domain: Government-source vehicle testing, permits, reports and reporting-regime boundaries
+    upper_system: GovernmentAVReportingSystem
+
+  - id: kafka:design
+    repository: https://github.com/KAFKA2306/design
+    manifest: https://raw.githubusercontent.com/KAFKA2306/design/main/ontology/project.yaml
+    domain: Canonical design tokens, consumer pinning, conformance actions and release evidence
+    upper_system: CanonicalDesignConformanceSystem
