@@ -18,54 +18,213 @@
   "properties": {
     "project": {
       "type": "object",
-      "required": ["id", "name", "repository", "version", "updated"],
+      "required": [
+        "id",
+        "name",
+        "repository",
+        "version",
+        "updated"
+      ],
       "properties": {
-        "id": {"type": "string", "minLength": 1},
-        "name": {"type": "string", "minLength": 1},
-        "repository": {"type": "string", "pattern": "^https://github\\.com/"},
-        "pages": {"type": ["string", "null"]},
-        "version": {"type": "string", "minLength": 1},
-        "updated": {"type": "string", "format": "date"},
-        "core_ontology": {"type": "string"}
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository": {
+          "type": "string",
+          "pattern": "^https://github\\.com/"
+        },
+        "pages": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updated": {
+          "type": "string",
+          "format": "date"
+        },
+        "core_ontology": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "purpose": {
       "type": "object",
-      "required": ["problem", "intended_decisions", "success_conditions", "falsification_conditions"]
+      "required": [
+        "problem",
+        "intended_decisions",
+        "success_conditions",
+        "falsification_conditions"
+      ]
     },
     "scope": {
       "type": "object",
-      "required": ["included", "excluded", "temporal", "abstraction_level"]
+      "required": [
+        "included",
+        "excluded",
+        "temporal",
+        "abstraction_level"
+      ]
     },
     "competency_questions": {
       "type": "array",
       "minItems": 3,
-      "items": {"type": "string", "minLength": 1}
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "domain_mapping": {
       "type": "object",
-      "required": ["System", "State", "Action", "Process", "Observation", "Model", "Requirement", "Claim", "Evidence", "Decision"]
+      "required": [
+        "System",
+        "State",
+        "Action",
+        "Process",
+        "Observation",
+        "Model",
+        "Requirement",
+        "Claim",
+        "Evidence",
+        "Decision"
+      ]
     },
     "claims_and_evidence": {
       "type": "object",
-      "required": ["assertion_types", "required_evidence", "unknown_policy"]
+      "required": [
+        "assertion_types",
+        "required_evidence",
+        "unknown_policy"
+      ]
     },
     "decision_rules": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "when", "result"]
+        "required": [
+          "id",
+          "when",
+          "result"
+        ]
       }
     },
     "provenance": {
       "type": "object",
-      "required": ["sources", "generated_artifacts", "agents", "lineage"]
+      "required": [
+        "sources",
+        "generated_artifacts",
+        "agents",
+        "lineage"
+      ]
     },
     "validation": {
       "type": "object",
-      "required": ["structural", "semantic", "evidence", "publication"]
+      "required": [
+        "structural",
+        "semantic",
+        "evidence",
+        "publication"
+      ]
+    },
+    "operational_model": {
+      "type": "object",
+      "description": "Optional operational ontology mapping, recorded without implying that an action executor has been deployed.",
+      "required": [
+        "implementation_status",
+        "canonical_sources",
+        "objects",
+        "links",
+        "actions",
+        "outcome_metrics"
+      ],
+      "properties": {
+        "implementation_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "objects": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "preconditions",
+              "recorded_effect",
+              "rollback_or_recovery"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "preconditions": {
+                "type": "string",
+                "minLength": 1
+              },
+              "recorded_effect": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rollback_or_recovery": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "outcome_metrics": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": true
