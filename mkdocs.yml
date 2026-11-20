@@ -1,9 +1,9 @@
 site_name: Know
-site_url: https://KAFKA2306.github.io/know/
+site_url: https://kafka2306.github.io/know/
 repo_url: https://github.com/KAFKA2306/know
 repo_name: KAFKA2306/know
 
-site_description: Multi-Knowledge Base for Life, Dev, and more.
+site_description: 開発・生活・研究で調べたことを、一次資料と確認時点からたどる。
 site_author: KAFKA2306
 copyright: Copyright &copy; 2026 KAFKA2306
 
@@ -26,24 +26,27 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.top
-    - navigation.expand
+    - navigation.indexes
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - toc.follow
+  icon:
+    logo: material/book-open-page-variant-outline
   palette:
     - scheme: default
       primary: teal
       accent: purple
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: ダークモードに切り替える
     - scheme: slate
       primary: teal
       accent: purple
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: ライトモードに切り替える
   font:
     text: Noto Sans JP
     code: Roboto Mono
@@ -55,7 +58,12 @@ plugins:
         - ja
   - tags
 
+extra_css:
+  - stylesheets/know.css
+
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   - admonition
@@ -69,52 +77,20 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - Home: index.md
-  - Services:
-      - Evidence Contract Integration: services/evidence-contract-integration.md
-  - Bookmarks:
-      - Top: bookmarks/index.md
-      - Dev:
-          - Top: bookmarks/Dev/index.md
-          - AI: bookmarks/Dev/AI/index.md
-          - Data: bookmarks/Dev/Data/index.md
-          - Tool: bookmarks/Dev/Tool/index.md
-      - Game:
-          - Top: bookmarks/Game/index.md
-          - VR: bookmarks/Game/VR/index.md
-          - Board: bookmarks/Game/Board/index.md
-          - Digital: bookmarks/Game/Digital/index.md
-      - Finance:
-          - Top: bookmarks/Finance/index.md
-          - Bank: bookmarks/Finance/Bank/index.md
-          - Market: bookmarks/Finance/Market/index.md
-          - Crypto: bookmarks/Finance/Crypto/index.md
-      - Service:
-          - Top: bookmarks/Service/index.md
-          - 自作公開サイト: bookmarks/Service/Sites/index.md
-          - Cloud: bookmarks/Service/Cloud/index.md
-          - Social: bookmarks/Service/Social/index.md
-      - Media:
-          - Top: bookmarks/Media/index.md
-          - Video: bookmarks/Media/Video/index.md
-          - Music: bookmarks/Media/Music/index.md
-      - Academic:
-          - Top: bookmarks/Academic/index.md
-          - Library: bookmarks/Academic/Library/index.md
-          - Research: bookmarks/Academic/Research/index.md
-      - Life:
-          - Top: bookmarks/Life/index.md
-          - Shopping: bookmarks/Life/Shopping/index.md
-          - Utility: bookmarks/Life/Utility/index.md
-      - Other: bookmarks/Other/index.md
-  - Life:
-      - Tax: life/tax/index.md
-      - Money: life/money/credit-card-investment-2026.md
-  - Dev:
-      - Agent: dev/agent/index.md
+  - ホーム: index.md
+  - 研究判断:
+      - research/index.md
+      - 米国の電力供給: dev/deepdive/us-electricity-supply.md
+      - カリフォルニア州の自動運転報告: dev/deepdive/california-av-reporting-2026.md
+      - 製造の品質検査: dev/deepdive/manufacturing-quality-inspection.md
+      - 再使用ロケット: dev/deepdive/reusable-launch-evidence.md
+      - 根拠の記録と検証の導入ガイド: services/evidence-contract-integration.md
+  - 開発:
+      - dev/index.md
+      - AIエージェント: dev/agent/index.md
       - WSL: dev/wsl/index.md
-      - DeepDive:
-          - 概要: dev/deepdive/index.md
+      - 情報処理の実践:
+          - dev/deepdive/index.md
           - 基礎:
               - データとは何か: dev/deepdive/foundations/data.md
               - プログラムの構造: dev/deepdive/foundations/structure.md
@@ -128,7 +104,42 @@ nav:
               - デザイントークン: dev/deepdive/design.md
               - AIパイプライン: dev/deepdive/ai-pipeline.md
               - AIペルソナ品質管理: dev/deepdive/persona.md
-              - 米国電力供給の研究判断: dev/deepdive/us-electricity-supply.md
-              - California AV報告制度の研究判断: dev/deepdive/california-av-reporting-2026.md
-              - 製造品質検査の研究判断: dev/deepdive/manufacturing-quality-inspection.md
-              - 再使用ロケットの研究判断: dev/deepdive/reusable-launch-evidence.md
+  - 生活・金融:
+      - life/index.md
+      - 税金: life/tax/index.md
+      - クレジットカード積立: life/money/credit-card-investment-2026.md
+  - 公開ツール: bookmarks/Service/Sites/index.md
+  - ブックマーク:
+      - bookmarks/index.md
+      - 開発:
+          - bookmarks/Dev/index.md
+          - AI: bookmarks/Dev/AI/index.md
+          - データ: bookmarks/Dev/Data/index.md
+          - 開発ツール: bookmarks/Dev/Tool/index.md
+      - ゲーム:
+          - bookmarks/Game/index.md
+          - VR: bookmarks/Game/VR/index.md
+          - ボードゲーム: bookmarks/Game/Board/index.md
+          - デジタルゲーム: bookmarks/Game/Digital/index.md
+      - 金融:
+          - bookmarks/Finance/index.md
+          - 銀行: bookmarks/Finance/Bank/index.md
+          - 市場: bookmarks/Finance/Market/index.md
+          - 暗号資産: bookmarks/Finance/Crypto/index.md
+      - サービス:
+          - bookmarks/Service/index.md
+          - クラウド: bookmarks/Service/Cloud/index.md
+          - SNS: bookmarks/Service/Social/index.md
+      - メディア:
+          - bookmarks/Media/index.md
+          - 動画: bookmarks/Media/Video/index.md
+          - 音楽: bookmarks/Media/Music/index.md
+      - 学術:
+          - bookmarks/Academic/index.md
+          - 図書館: bookmarks/Academic/Library/index.md
+          - 研究資料: bookmarks/Academic/Research/index.md
+      - 生活:
+          - bookmarks/Life/index.md
+          - 買い物: bookmarks/Life/Shopping/index.md
+          - 生活サービス: bookmarks/Life/Utility/index.md
+      - その他: bookmarks/Other/index.md

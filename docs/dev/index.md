@@ -1,8 +1,7 @@
-# Dev
+# 開発 { #dev }
 
-開発・プログラミングに関する技術ナレッジ。
+## ガイド { #categories }
 
-## Categories
-
-1. **[Agent](agent/)**: AIエージェント、自律システムに関するドキュメント。
-2. **[WSL](wsl/)**: Windows Subsystem for Linuxの環境構築とトラブルシューティング。
+- [AIエージェント](agent/index.md) — CLI、ツールの連携、記憶、評価、監視。
+- [WSL](wsl/index.md) — Windows上のLinux環境を設定する。
+- [情報処理の実践](deepdive/index.md) — HTTPやSQLの基礎から、実際のコードを用いた設計・実装まで学ぶ。

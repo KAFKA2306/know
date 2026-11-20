@@ -1,10 +1,12 @@
 # 米国電力供給をどう調べるか
 
+2026年9月10日確認 · [一次資料](#evidence) · [再確認条件](#_6)
+
 ## 判断
 
 米国の電力供給制約を調べるとき、原子力・再エネ・天然ガスのどれか一つだけを代表変数にしない。
 
-直近の全米48州の実発電構成では天然ガスが最大で、石炭と原子力もそれぞれ大きな比率を持つ。したがって、短中期の供給余力を判断するときは、少なくとも次を別々に確認する。
+2026年9月7日の米国本土48州の実発電構成では天然ガスが最大で、石炭と原子力もそれぞれ大きな比率を持つ。したがって、短中期の供給余力を判断するときは、少なくとも次を別々に確認する。
 
 - 天然ガス火力の実発電と供給制約
 - 原子力の既設容量・稼働と新設計画
@@ -14,8 +16,6 @@
 この判断は「どの電源へ投資すべきか」や「AIデータセンターが需要増の原因か」を示すものではない。現在の電源構成だけから、原因・価格・地域別混雑・追加容量の実現時期は推定しない。
 
 ## 観測
-
-確認日: 2026-09-10
 
 正本: [KAFKA2306/Electricity](https://github.com/KAFKA2306/Electricity)
 
@@ -42,12 +42,12 @@
 
 EIA-860Mの2026年7月inventoryでは、operating net summer capacityは1,316,203.6 MW、planned net summer capacityは283,538.0 MW。plannedはoperatingと分離し、現在利用可能な容量として加算しない。
 
-## Evidence
+## 一次資料 { #evidence }
 
-- Electricity canonical metrics: https://github.com/KAFKA2306/Electricity/blob/main/api/v1/electricity/metrics.json
-- Electricity canonical generation mix: https://github.com/KAFKA2306/Electricity/blob/main/api/v1/electricity/generation-mix.json
-- EIA Open Data: https://www.eia.gov/opendata/
-- EIA Preliminary Monthly Electric Generator Inventory (EIA-860M): https://www.eia.gov/electricity/data/eia860m/
+- [Electricityの需要・設備容量データ](https://github.com/KAFKA2306/Electricity/blob/48684713c5687785da565852f005e1ef08b77aec/api/v1/electricity/metrics.json)
+- [Electricityの発電構成データ](https://github.com/KAFKA2306/Electricity/blob/48684713c5687785da565852f005e1ef08b77aec/api/v1/electricity/generation-mix.json)
+- [米国エネルギー情報局（EIA）のオープンデータ](https://www.eia.gov/opendata/)
+- [EIAの月次発電設備台帳（EIA-860M）](https://www.eia.gov/electricity/data/eia860m/)
 
 EIAのBalancing Authority hourly operating dataはactual/forecast demand、net generation、系統間flowを提供する。EIA-860Mは既設・計画generatorを月次で追跡するpreliminary inventoryで、後続月に訂正される可能性がある。
 

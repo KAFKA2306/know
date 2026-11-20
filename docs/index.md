@@ -1,48 +1,93 @@
-<div align="center">
+---
+title: ホーム
+description: 開発、生活、研究で調べたことを、一次資料と確認時点からたどる。
+hide:
+  - toc
+search:
+  exclude: true
+---
 
-# 🧠 Know
+<div class="know-home" markdown="1">
 
-**Curated Knowledge Base & Bookmark Manager**
+<section class="know-hero" aria-labelledby="know-title" markdown="1">
 
-[![Built with MkDocs](https://img.shields.io/badge/Built_with-MkDocs-blue?style=for-the-badge&logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
-[![Python 3.11](https://img.shields.io/badge/Python-3.11-yellow?style=for-the-badge&logo=python)](https://www.python.org/)
+<div class="know-intro" markdown="1">
 
-開発、生活、資産運用のための統合ナレッジリポジトリ。
-<br>洗練された情報管理を、ここに。
+# 調べたことを、<br><span>次の判断に。</span> { #know-title }
+
+開発・生活・研究の記録を探し、何が分かったか、いつ何を根拠に確かめたかを読み返せます。
+{ .know-intro-copy }
+
+<form class="know-search" method="get" role="search" aria-label="Knowの記事検索">
+  <label class="know-visually-hidden" for="know-query">検索キーワード</label>
+  <input id="know-query" type="search" name="q" placeholder="電力供給、WSL、NISA など" required>
+  <button type="submit">記事を探す</button>
+</form>
 
 </div>
 
----
+<aside class="know-feature" aria-labelledby="featured-research" markdown="1">
 
-## 📚 Contents
+[研究判断](research/index.md)
+{ .know-feature-label }
 
-### 🔖 **[Bookmarks](bookmarks/index.md)**
-厳選されたリソースコレクション。
-- **Dev**: AI, Data, Tools
-- **Finance**: Crypto, Markets, Banking
-- **Life**: Utility, Shopping
-- **Media**: Music, Video
-- **Game**, **Academic**, **Service**
+## 米国電力供給をどう調べるか { #featured-research }
 
-### 🛠️ **[Dev Knowledge](dev/index.md)**
-モダンな技術スタックの深掘りと実践ガイド。
-- **AI Agents**: CLI tools, Orchestration (LangChain, LlamaIndex)
-- **Data Storage**: Vector DBs (Chroma, Pinecone)
-- **Observability**: LangSmith, LangFuse
-- **System**: WSL configuration
-- **DeepDive**: アーキテクチャ, 設計論
+発電量・設備容量・送電制約を分けて、供給余力を判断する。
 
-### 🌱 **[Life & Finance](life/index.md)**
-個人の生活と資産を最適化する戦略。
-- **Tax**: 確定申告, 税金ガイド
-- **Investment**: NISA, 配当金, 資産管理戦略
-- **Money**: クレジットカード, ポイント活用
+[判断を読む](dev/deepdive/us-electricity-supply.md#_2){ .know-feature-main } [一次資料](dev/deepdive/us-electricity-supply.md#evidence) [再確認条件](dev/deepdive/us-electricity-supply.md#_6)
+{ .know-feature-links }
 
----
+</aside>
 
-## 📝 Policy
+</section>
 
-**Reliability First**
-すべての記事は公式ドキュメント（一次情報）を参照し、必ず「根拠URL」を明記することを原則としています。
+<section class="know-library" aria-labelledby="contents" markdown="1">
 
-- [Writing Rules](rules.md)
+## 分野から探す { #contents }
+
+<div class="know-grid" markdown="1">
+
+<div class="know-entry" markdown="1">
+
+### [開発](dev/index.md) { #dev-knowledge }
+
+AIエージェント、WSL、情報処理の基礎と実践。
+
+</div>
+
+<div class="know-entry" markdown="1">
+
+### [生活・金融](life/index.md) { #life-finance }
+
+確定申告、NISA、クレジットカード積立。
+
+</div>
+
+<div class="know-entry" markdown="1">
+
+### [公開ツール](bookmarks/Service/Sites/index.md)
+
+計算ツール、ゲーム、VRChat向けツール、データAPI。
+
+</div>
+
+<div class="know-entry" markdown="1">
+
+### [ブックマーク](bookmarks/index.md) { #bookmarks }
+
+開発、学術、ゲームなどの外部リンク集。
+
+</div>
+
+</div>
+
+</section>
+
+<div class="know-policy" id="policy" markdown="1">
+
+[記述と出典のルール](rules.md)
+
+</div>
+
+</div>
