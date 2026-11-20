@@ -42,6 +42,6 @@ GitHub Pages、Cloudflare Pages、Vercel、Netlify、Hugging Face Spacesなど�
 
 ## 公開API・データ
 
-- [BOOTH商品フィード — items.json](https://kafka2306.github.io/booth_json/items.json) `GitHub Pages / JSON`
+- [BOOTH商品データ — 配布ファイルと件数](https://kafka2306.github.io/boothitemmanager/api/v1/manifest.json) `GitHub Pages / JSON`
 - [PAL ATLAS API](https://kafka2306.github.io/pal-atlas/api/index.json) `GitHub Pages / JSON`
 - [半導体財務データ API](https://kafka2306.github.io/semiconductor-earnings-model/api/v3/financial-database/index.json) `GitHub Pages / JSON`
