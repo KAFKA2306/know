@@ -1,24 +1,37 @@
 ---
 type: bookmark
-description: "「Market」のブックマークを探すための索引。"
+description: "金融市場、経済指標、企業分析、暗号資産を調べるリンク集。"
 tags:
   - know/bookmarks
 ---
-# Market
 
-- [Today's Markets](https://app.koyfin.com)
-- [Investing](https://www.investing.com)
+# 市場・投資・暗号資産
+
+## 市場データ・チャート
+
+- [Koyfin](https://app.koyfin.com)
+- [Investing.com](https://www.investing.com)
 - [Yahoo Finance](https://finance.yahoo.com)
-- [【確定申告書等作成コーナー】-作成コーナートップ](https://www.keisan.nta.go.jp)
-- [Morningstar | Empowering Investor Success](https://www.morningstar.com)
+- [TradingView](https://jp.tradingview.com)
+- [世界株価（24時間チャート）](https://sekai-kabuka.com)
+- [TOPIX（Stooq）](https://stooq.pl)
+- [米国債イールドカーブ（Slickcharts）](https://www.slickcharts.com)
+
+## 経済・企業情報
+
+- [Morningstar](https://www.morningstar.com)
 - [Earnings Whispers](https://www.earningswhispers.com)
-- [Economic Calendar - FXStreet](https://www.fxstreet.com)
-- [銘柄一覧（ETF） | 日本取引所グループ](https://www.jpx.co.jp)
-- [US Treasury Yield Curve Chart](https://www.slickcharts.com)
-- [Backtest Portfolio Asset Class Allocation](https://www.portfoliovisualizer.com)
-- [ARKK - Innovation ETF by ARK Invest](https://ark-funds.com)
-- [Nikko AM and ARK Invest｜日興アセットマネジメント](https://www.nikkoam.com)
-- [バロンズ| 金融および投資ニュース](https://www.barrons.com)
+- [FXStreet 経済カレンダー](https://www.fxstreet.com)
+- [バロンズ](https://www.barrons.com)
 - [バフェット・コード](https://www.buffett-code.com)
-- [^TPX (-0.10%) - TOPIX - Japan - Stooq](https://stooq.pl)
-- [本日の市場 — 相場、チャート、イベント — TradingView](https://jp.tradingview.com)
+
+## ETF・運用分析
+
+- [日本取引所グループ ETF一覧](https://www.jpx.co.jp)
+- [Portfolio Visualizer](https://www.portfoliovisualizer.com)
+- [ARK InvestのETF](https://ark-funds.com)
+- [日興アセットマネジメント](https://www.nikkoam.com)
+
+## 暗号資産
+
+- [みんかぶ暗号資産](https://cc.minkabu.jp)
