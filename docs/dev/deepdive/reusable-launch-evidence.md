@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "再使用能力を比較するとき、打上げ回数を再使用回数の代理指標にしない。再使用成熟度の判断には、同じvehicle / stageについて一次情報で明示されたreflight、recovery、landing、lossを使い、planned missionやauthorizationとcompleted/reuse eventを分離する。"
+tags:
+  - know/dev
+---
+
 # 再使用ロケットの研究判断
 
 ## Decision

@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "開発環境の構築と自動化。「1コマンドで何でもできる」を実現する。"
+tags:
+  - know/dev
+---
+
 # Taskfile & uv
 
 開発環境の構築と自動化。「1コマンドで何でもできる」を実現する。

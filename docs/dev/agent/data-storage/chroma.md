@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "オープンソースのAIネイティブ埋め込みデータベース。"
+tags:
+  - know/dev
+---
+
 # Chroma
 
 オープンソースのAIネイティブ埋め込みデータベース。

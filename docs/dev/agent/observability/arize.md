@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "AIの可観測性と評価プラットフォーム。"
+tags:
+  - know/dev
+---
+
 # Arize
 
 AIの可観測性と評価プラットフォーム。

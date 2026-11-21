@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "OpenLLMetryに基づくLLM可観測性プラットフォーム。"
+tags:
+  - know/dev
+---
+
 # Traceloop
 
 OpenLLMetryに基づくLLM可観測性プラットフォーム。

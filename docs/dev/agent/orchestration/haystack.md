@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "LLMアプリケーション構築のためのオープンソースフレームワーク。"
+tags:
+  - know/dev
+---
+
 # Haystack
 
 LLMアプリケーション構築のためのオープンソースフレームワーク。

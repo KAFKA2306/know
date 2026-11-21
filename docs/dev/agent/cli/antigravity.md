@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "**Google Antigravity** は、Google が提唱する次世代のソフトウェア開発パラダイム **\"Agent-First Development\"** (エージェントファースト開発) を具現化するためにゼロから設計された、**AIネイティブ統合開発環境 (IDE)** です。"
+tags:
+  - know/dev
+---
+
 # Google Antigravity: 完全ガイド
 
 **Google Antigravity** は、Google が提唱する次世代のソフトウェア開発パラダイム **"Agent-First Development"** (エージェントファースト開発) を具現化するためにゼロから設計された、**AIネイティブ統合開発環境 (IDE)** です。

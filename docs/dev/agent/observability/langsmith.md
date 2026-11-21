@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "LLMアプリケーション開発のためのプラットフォーム。"
+tags:
+  - know/dev
+---
+
 # LangSmith
 
 LLMアプリケーション開発のためのプラットフォーム。

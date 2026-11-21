@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "**申告分離課税（源泉徴収で完結）:**"
+tags:
+  - know/life
+---
+
 # 配当控除
 
 ## 法的根拠

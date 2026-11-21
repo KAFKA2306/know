@@ -1,3 +1,9 @@
+---
+type: bookmark
+description: "「Market」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
 # Market
 
 - [Today's Markets](https://app.koyfin.com)

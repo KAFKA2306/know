@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Life」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Life
 
 - [Shopping](Shopping/index.md) - 買い物

@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "**Gemini CLI** (`@google/gemini-cli`) は、Google が提供する最新のマルチモーダル AI モデル \"Gemini\" (Gemini 2.5 / 3.0 Pro, Flash) を、開発者のターミナルワークフローに直接統合するためのオープンソース・ツールキットです。"
+tags:
+  - know/dev
+---
+
 # Google Gemini CLI: 完全ガイド
 
 **Gemini CLI** (`@google/gemini-cli`) は、Google が提供する最新のマルチモーダル AI モデル "Gemini" (Gemini 2.5 / 3.0 Pro, Flash) を、開発者のターミナルワークフローに直接統合するためのオープンソース・ツールキットです。

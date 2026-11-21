@@ -6,6 +6,7 @@ tags:
   - liquidity
   - ai-capex
   - evidence
+type: knowledge
 ---
 
 # 米国流動性・AI投資・富裕層消費

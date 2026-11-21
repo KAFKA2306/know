@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "「口座制度」について、要点と参照資料を確認するページ。"
+tags:
+  - know/life
+---
+
 # 口座制度
 
 ## 法的根拠

@@ -1,3 +1,10 @@
+---
+type: index
+description: "「税金」の記事と参照先を探すための索引。"
+tags:
+  - know/life
+---
+
 # 税金
 
 確定申告・税金に関する知識ベース。

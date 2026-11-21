@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "ドキュメント指向データベース。"
+tags:
+  - know/dev
+---
+
 # MongoDB
 
 ドキュメント指向データベース。

@@ -6,6 +6,7 @@ tags:
   - github
   - evaluation
   - evidence
+type: knowledge
 ---
 
 # Kafstylerの効果とGitHub Pages実証

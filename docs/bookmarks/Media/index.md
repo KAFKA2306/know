@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Media」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Media
 
 - [Video](Video/index.md) - YouTube, Netflix, ニコニコ

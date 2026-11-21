@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "Californiaの自動運転事業者を比較するとき、2025年までのdisengagement seriesを、2026年8月26日からoperativeになった新しいreporting metricsへ連結しない。"
+tags:
+  - know/dev
+---
+
 # California AV報告制度の研究判断（2026-09-10）
 
 ## Decision

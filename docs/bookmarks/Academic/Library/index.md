@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Library」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Library
 
 - [図書館](https://www.tosho.city.fukuyama.hiroshima.jp)

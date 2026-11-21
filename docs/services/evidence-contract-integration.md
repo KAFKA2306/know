@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "AI / Agentが生成する調査・データ更新・レポートについて、**何を観測し、何を主張し、どのtestとevidenceを通してdecisionにしたか**をrepository内で追跡するための導入パックです。"
+tags:
+  - know/services
+---
+
 # Evidence Contract Integration Pack
 
 AI / Agentが生成する調査・データ更新・レポートについて、**何を観測し、何を主張し、どのtestとevidenceを通してdecisionにしたか**をrepository内で追跡するための導入パックです。

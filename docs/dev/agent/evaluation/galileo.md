@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "LLMアプリケーションの評価と実験プラットフォーム。"
+tags:
+  - know/dev
+---
+
 # Galileo
 
 LLMアプリケーションの評価と実験プラットフォーム。

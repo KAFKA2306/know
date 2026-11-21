@@ -1,3 +1,9 @@
+---
+type: bookmark
+description: "「Other (Uncategorized)」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
 # Other (Uncategorized)
 
 - [Matterport 3D Archive](https://my.matterport.com)

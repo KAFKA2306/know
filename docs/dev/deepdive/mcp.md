@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "Model Context Protocol（MCP）は、AI にツールを提供するための標準規格。"
+tags:
+  - know/dev
+---
+
 # MCP エコシステム
 
 Model Context Protocol（MCP）は、AI にツールを提供するための標準規格。

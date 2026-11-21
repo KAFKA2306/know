@@ -4,6 +4,7 @@ description: 仮説と観測事実、反証条件、一次資料を分離して�
 tags:
   - research
   - evidence
+type: index
 ---
 
 # 研究判断

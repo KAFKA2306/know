@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "AIエージェントのオーケストレーションフレームワーク。"
+tags:
+  - know/dev
+---
+
 # CrewAI
 
 AIエージェントのオーケストレーションフレームワーク。

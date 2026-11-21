@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Knowledge Base Bookmarks」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Knowledge Base Bookmarks
 
 This index is automatically generated from the bookmarks export.

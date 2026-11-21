@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Dev」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Dev
 
 - [AI](AI/index.md) - ChatGPT, Claude, Gemini等

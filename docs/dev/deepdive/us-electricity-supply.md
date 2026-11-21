@@ -1,3 +1,15 @@
+---
+type: knowledge
+description: "米国の発電量、設備容量、送電制約を分け、判断に必要な一次資料と再確認条件を示す。"
+tags:
+  - know/dev
+sources:
+  - id: electricity-generation
+    resource: https://github.com/KAFKA2306/Electricity/blob/48684713c5687785da565852f005e1ef08b77aec/api/v1/electricity/generation-mix.json
+  - id: eia-860m
+    resource: https://www.eia.gov/electricity/data/eia860m/
+---
+
 # 米国電力供給をどう調べるか
 
 2026年9月10日確認 · [一次資料](#evidence) · [再確認条件](#_6)
@@ -23,7 +35,7 @@
 
 ### 実発電
 
-`api/v1/electricity/generation-mix.json` の2026-09-07 UTC完結日では、US48の発電構成は次のとおり。
+`api/v1/electricity/generation-mix.json` の2026-09-07 UTC完結日では、US48の発電構成は次のとおり。[^electricity-generation]
 
 | 電源 | 発電量 | 構成比 |
 | --- | ---: | ---: |
@@ -40,7 +52,7 @@
 
 `api/v1/electricity/metrics.json` では、US48 electricity demandの最新完結日は2026-09-08で13,586,202.381 MWh。発電構成の最新完結日とは1日ずれるため、両者を同日収支として比較しない。
 
-EIA-860Mの2026年7月inventoryでは、operating net summer capacityは1,316,203.6 MW、planned net summer capacityは283,538.0 MW。plannedはoperatingと分離し、現在利用可能な容量として加算しない。
+EIA-860Mの2026年7月inventoryでは、operating net summer capacityは1,316,203.6 MW、planned net summer capacityは283,538.0 MW。plannedはoperatingと分離し、現在利用可能な容量として加算しない。[^eia-860m]
 
 ## 一次資料 { #evidence }
 
@@ -61,3 +73,6 @@ EIAのBalancing Authority hourly operating dataはactual/forecast demand、net g
 - 電源別の将来シェアや限界電源を判断する
 
 このページの役割は、Electricityの正本を複製することではなく、「米国電力供給を一電源だけで代表させない」という研究判断と、その根拠を再利用可能にすること。
+
+[^electricity-generation]: [Electricityの発電構成データ](https://github.com/KAFKA2306/Electricity/blob/48684713c5687785da565852f005e1ef08b77aec/api/v1/electricity/generation-mix.json)
+[^eia-860m]: [EIA-860M](https://www.eia.gov/electricity/data/eia860m/)

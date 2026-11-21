@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "フルマネージドなベクトルデータベース。"
+tags:
+  - know/dev
+---
+
 # Pinecone
 
 フルマネージドなベクトルデータベース。

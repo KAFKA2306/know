@@ -62,6 +62,7 @@ extra_css:
   - stylesheets/know.css
 
 markdown_extensions:
+  - footnotes
   - attr_list
   - md_in_html
   - toc:

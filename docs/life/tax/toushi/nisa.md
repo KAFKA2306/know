@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "**損益通算・繰越控除は不可。**"
+tags:
+  - know/life
+---
+
 # NISA
 
 ## 法的根拠

@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "上場株式等の**譲渡損失**と以下を相殺可能："
+tags:
+  - know/life
+---
+
 # 損益通算・繰越控除
 
 ## 法的根拠

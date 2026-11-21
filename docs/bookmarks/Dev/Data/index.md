@@ -1,3 +1,9 @@
+---
+type: bookmark
+description: "「Data」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
 # Data
 
 - [231208Best Public Score | Kaggle](https://www.kaggle.com)

@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「VR」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # VR
 
 - [LiveHouse_MMD - VRChat](https://vrchat.com)

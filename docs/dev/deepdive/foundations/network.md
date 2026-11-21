@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "ブラウザで URL を開いたとき、裏側で何が起きているかを理解する。"
+tags:
+  - know/dev
+---
+
 # ネットワークと HTTP
 
 ブラウザで URL を開いたとき、裏側で何が起きているかを理解する。

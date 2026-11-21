@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "オープンソースのLLMエンジニアリングプラットフォーム。"
+tags:
+  - know/dev
+---
+
 # Langfuse
 
 オープンソースのLLMエンジニアリングプラットフォーム。

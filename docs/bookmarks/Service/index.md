@@ -1,3 +1,9 @@
+---
+type: bookmark
+description: "「Service」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
 # Service
 
 - [自作公開サイト](Sites/index.md) - GitHub Pages、Cloudflare Pages、Vercel

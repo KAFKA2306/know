@@ -1,5 +1,8 @@
 ---
 description: ナレッジ記事作成の基本ルール
+type: reference
+tags:
+  - know/rules
 ---
 
 # Know プロジェクト 執筆ルール
@@ -27,6 +30,15 @@ description: ナレッジ記事作成の基本ルール
 5. **出典を明記する**
    - 公式ドキュメントへのリンクを必ず含める
    - バージョン情報があれば記載
+
+## Kafstylerのデータ設計とschema
+
+- 正本は `docs/**/*.md`。1ファイルが1記事または1索引。URLと既存の見出しは維持する。
+- 全ページのYAML frontmatterに `type`、日本語の `description`、1件以上の `tags` を付ける。型は [`knowledge.schema.json`](../ontology/knowledge.schema.json) に従う。
+- 検証済みの意味に使う `verified` は、原典を独立に照合した記録がある場合だけ記す。`sources` のIDと `resource` を本文脚注 `[^id]` に対応させる。未確認の推定を事実扱いしない。
+- 文章の正本はMkDocsページのまま維持する。交換用のOKF v0.3バンドルは検証器から生成する。MkDocsの `index.md` は交換先で `overview.md` にして、OKFの予約済み `index.md` と衝突させない。
+- 実行: `uv run python scripts/validate_knowledge_schema.py`。交換用生成: `uv run python scripts/validate_knowledge_schema.py --export-okf /tmp/know-okf`（出力先は空ディレクトリ）。
+- 参照したKafstylerは [`canonicalize`](https://github.com/KAFKA2306/kafstyler/blob/74542d01665cdd1e97ab41a00d6055593f07140d/skills/canonicalize/SKILL.md)。自動検査は出典の内容の正誤を保証しない。
 
 ## テンプレート
 
@@ -66,7 +78,9 @@ tags:
 
 ## 新規ドキュメント追加チェックリスト
 
-- [ ] frontmatter に `tags` を記載した
+- [ ] frontmatter に `type`、`description`、`tags` を記載した
+- [ ] sources と本文脚注の対応、未確認情報の扱いを確認した
+- [ ] `uv run python scripts/validate_knowledge_schema.py` が通った
 - [ ] 公式ドキュメントへのリンクを含めた
 - [ ] `mkdocs.yml` の `nav` に追加した（必要な場合）
 - [ ] ローカルで `uv run mkdocs build --strict` が通る

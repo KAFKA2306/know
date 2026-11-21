@@ -1,3 +1,9 @@
+---
+type: bookmark
+description: "「Tool」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
 # Tool
 
 - [Google ドライブ](https://drive.google.com)

@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「AI」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # AI
 
 - [ChatGPT](https://chatgpt.com)

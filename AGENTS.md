@@ -26,6 +26,12 @@ task build       # --strict ビルド検証
 task deploy      # GitHub Pages デプロイ
 ```
 
+## Kafstyler schema適用
+
+- データ設計の手順は [Kafstyler canonicalize](https://github.com/KAFKA2306/kafstyler/blob/74542d01665cdd1e97ab41a00d6055593f07140d/skills/canonicalize/SKILL.md) を参照する。作業対象の正本は `docs/**/*.md`、構造の正本は `ontology/knowledge.schema.json`。
+- 記事・索引を作成または変更するときは `type`・`description`・`tags` を保つ。出典・確認は `sources`・`verified` で区別し、確認していない情報を検証済みにしない。
+- `task build` の前に `uv run python scripts/validate_knowledge_schema.py` で検証する。交換用OKF v0.3は `--export-okf` で派生生成し、公開用MkDocsの索引ファイルを改名しない。
+
 ## コンテンツルール
 
 | ルール | 説明 |

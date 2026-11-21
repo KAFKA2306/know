@@ -1,3 +1,9 @@
+---
+type: bookmark
+description: "「Digital」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
 # Digital
 
 - [NotebookLM](https://notebooklm.google.com)

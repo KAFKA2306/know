@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "LLMとプライベートデータを接続するためのインターフェース。特にデータの取り込み、構造化、検索（RAG）に強みを持つ。"
+tags:
+  - know/dev
+---
+
 # LlamaIndex
 
 データフレームワーク。

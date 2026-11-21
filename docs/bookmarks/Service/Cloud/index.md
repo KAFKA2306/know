@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Cloud」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Cloud
 
 - [自作公開サイト一覧](../Sites/index.md)

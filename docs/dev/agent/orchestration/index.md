@@ -1,3 +1,10 @@
+---
+type: index
+description: "「Orchestration」の記事と参照先を探すための索引。"
+tags:
+  - know/dev
+---
+
 # Orchestration
 
 ワークフロー管理とツール連携。

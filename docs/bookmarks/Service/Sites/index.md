@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「自作公開サイト」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # 自作公開サイト
 
 GitHub Pages、Cloudflare Pages、Vercel、Netlify、Hugging Face Spacesなどで公開している自作サイト・公開APIの一覧です。公開URLをリポジトリのREADMEまたはデプロイ設定で確認できたものだけ掲載します。

@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Bank」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Bank
 
 - [通帳 - ソニー銀行（ネット銀行）](https://sonybank.jp)

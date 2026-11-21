@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "LLMアプリケーション構築のためのフレームワーク。"
+tags:
+  - know/dev
+---
+
 # LangChain
 
 LLMアプリケーション構築のためのフレームワーク。

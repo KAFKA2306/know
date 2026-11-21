@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Social」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Social
 
 - [Discord (movok)](https://discordapp.com)

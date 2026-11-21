@@ -5,6 +5,9 @@ hide:
   - toc
 search:
   exclude: true
+type: index
+tags:
+  - know/home
 ---
 
 <div class="know-home" markdown="1">

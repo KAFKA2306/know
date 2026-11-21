@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Music」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Music
 
 - [かふかチャンネル | stand.fm](https://stand.fm)

@@ -6,6 +6,7 @@ tags:
   - audio
   - evaluation
   - gguf
+type: knowledge
 ---
 
 # ローカルAIと音声生成の再現評価

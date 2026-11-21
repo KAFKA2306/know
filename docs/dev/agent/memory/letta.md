@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "ステートフルなLLMエージェント構築フレームワーク。"
+tags:
+  - know/dev
+---
+
 # Letta (旧 MemGPT)
 
 ステートフルなLLMエージェント構築フレームワーク。

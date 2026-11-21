@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Video」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Video
 
 - [チャンネル アナリティクス - YouTube Studio](https://studio.youtube.com/channel/UCYtjO-PYBfdG3MuPLXfhA-Q)

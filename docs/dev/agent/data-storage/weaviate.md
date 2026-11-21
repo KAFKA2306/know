@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "AIネイティブなオープンソースベクトルデータベース。"
+tags:
+  - know/dev
+---
+
 # Weaviate
 
 AIネイティブなオープンソースベクトルデータベース。

@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Crypto」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Crypto
 
 - [SBI VC Trade取引ツール](https://trader.sbivc.co.jp)

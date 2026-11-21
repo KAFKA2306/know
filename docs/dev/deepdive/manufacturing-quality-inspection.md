@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "製造品質の自動化を比較するとき、単に「AIを導入したか」ではなく、検査対象、検査coverage、deployment state、同一作業・同一単位で比較できる実測時間を分けて確認する。"
+tags:
+  - know/dev
+---
+
 # 製造品質検査の研究判断
 
 ## Decision

@@ -1,3 +1,10 @@
+---
+type: index
+description: "「DeepDive — 実践情報処理」の記事と参照先を探すための索引。"
+tags:
+  - know/dev
+---
+
 # DeepDive — 実践情報処理
 
 自分のコードベースを教材にした、情報処理スキル向上カリキュラム。

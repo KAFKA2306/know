@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "RAGパイプラインの評価フレームワーク。"
+tags:
+  - know/dev
+---
+
 # RAGAS
 
 RAGパイプラインの評価フレームワーク。

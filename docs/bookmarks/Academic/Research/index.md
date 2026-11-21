@@ -1,3 +1,10 @@
+---
+type: bookmark
+description: "「Research」のブックマークを探すための索引。"
+tags:
+  - know/bookmarks
+---
+
 # Research
 
 - [社会思想史学会](http://shst.jp)

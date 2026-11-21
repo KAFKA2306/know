@@ -1,3 +1,10 @@
+---
+type: index
+description: "「AI CLI Tools」の記事と参照先を探すための索引。"
+tags:
+  - know/dev
+---
+
 # AI CLI Tools
 
 ターミナルから直接利用可能なエージェント型コーディングツール。

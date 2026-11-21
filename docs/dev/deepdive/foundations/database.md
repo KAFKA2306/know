@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "データを永続化し、効率的に検索する仕組み。"
+tags:
+  - know/dev
+---
+
 # データベースと SQL
 
 データを永続化し、効率的に検索する仕組み。

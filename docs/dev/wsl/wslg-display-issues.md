@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "Electron製アプリ（GUIアプリ）をWSL2/WSLgで実行した際に、マウスクリックの位置がずれる（オフセットが発生する）、画面がぼやけるといった問題が発生することがあります。"
+tags:
+  - know/dev
+---
+
 # WSLg Display Issues
 
 Electron製アプリ（GUIアプリ）をWSL2/WSLgで実行した際に、マウスクリックの位置がずれる（オフセットが発生する）、画面がぼやけるといった問題が発生することがあります。

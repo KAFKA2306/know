@@ -1,3 +1,10 @@
+---
+type: index
+description: "「生活・金融 { life }」の記事と参照先を探すための索引。"
+tags:
+  - know/life
+---
+
 # 生活・金融 { #life }
 
 - [税金](tax/index.md) — 確定申告、NISA、配当、損益通算を調べる。

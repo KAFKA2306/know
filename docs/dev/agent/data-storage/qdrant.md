@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "Rust製の高速・スケーラブルなベクトル類似度検索エンジン。"
+tags:
+  - know/dev
+---
+
 # Qdrant
 
 高速ベクトル検索エンジン。

@@ -1,3 +1,10 @@
+---
+type: knowledge
+description: "譲渡所得 = 譲渡価額 − (取得費 + 譲渡費用)"
+tags:
+  - know/life
+---
+
 # 税率と計算
 
 ## 法的根拠

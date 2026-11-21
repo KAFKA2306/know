@@ -1,3 +1,10 @@
+---
+type: index
+description: "「Data Storage」の記事と参照先を探すための索引。"
+tags:
+  - know/dev
+---
+
 # Data Storage
 
 ベクトルDBによるセマンティック検索。

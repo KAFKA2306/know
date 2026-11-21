@@ -92,6 +92,16 @@ Entity
 
 監査はGitHub Actionsでも実行します。
 
+## KafstylerのschemaとOKF
+
+- **正本**: [docs/](docs/) のMkDocs記事。1ファイルを1ページとして扱い、ページURLと見出しを保持する。
+- **データ契約**: [knowledge.schema.json](ontology/knowledge.schema.json)。全93ページで `type`・`description`・`tags` を持つ。
+- **検証**: [validate_knowledge_schema.py](scripts/validate_knowledge_schema.py) で全記事のfrontmatter、型、重複した出典ID、根拠なしの `status: verified` を検出する。既存のPagesビルド工程に同じ検証を入れる。
+- **交換**: `uv run python scripts/validate_knowledge_schema.py --export-okf /tmp/know-okf` は元記事を編集せず、OKF v0.3の `index.md` を持つ交換用バンドルを生成する。MkDocsの索引ページは出力側で `overview.md` となる。
+- **出典と確認**: `sources`、`generated`、`verified`、`stale_after` は別の意味を持つ。形式が正しいだけで「実証済み」としない。記法は[記述ルール](docs/rules.md)を参照。
+
+設計元: [Kafstyler canonicalize（2026-11-21確認版）](https://github.com/KAFKA2306/kafstyler/blob/74542d01665cdd1e97ab41a00d6055593f07140d/skills/canonicalize/SKILL.md)。独自形式のMkDocs正本を守り、OKFへは派生生成する。
+
 ## AIエージェントによる保守
 
 - `.agent/workflows/add-knowledge.md` — 新しい知識の追加
