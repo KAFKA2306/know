@@ -1,16 +1,26 @@
 ---
 type: bookmark
-description: "「Cloud」のブックマークを探すための索引。"
+description: "仕事・公開・ネットワークに使うクラウドサービス。"
 tags:
   - know/bookmarks
 ---
 
-# Cloud
+# クラウド・仕事
 
-- [自作公開サイト一覧](../Sites/index.md)
+## アプリと連携
+
 - [Notion](https://www.notion.so)
-- [XREA](https://www.value-domain.com)
+- [Google ドライブ](https://drive.google.com)
 - [Excelオンライン](https://onedrive.live.com)
-- [TP-Link ダウンロード](https://www.tp-link.com)
 - [IFTTT](https://ifttt.com)
 - [Instapaper](https://www.instapaper.com)
+- [Google データ エクスポート](https://takeout.google.com)
+
+## 公開・ネットワーク
+
+- [Cloudflare Developer Platform（Web・AIサービス構築）](https://www.cloudflare.com/developer-platform/products/)
+- [Tailscale（リモートアクセス）](https://tailscale.com/)
+- [XREA](https://www.value-domain.com)
+- [TP-Link ダウンロード](https://www.tp-link.com)
+
+[自作公開サイトの一覧](../Sites/index.md)
