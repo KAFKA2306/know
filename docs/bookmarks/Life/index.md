@@ -7,8 +7,6 @@ tags:
 
 # Life
 
-- [Shopping](Shopping/index.md) - 買い物
-- [Utility](Utility/index.md) - 天気等
 
 ## Other
 
