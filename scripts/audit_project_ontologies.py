@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+from datetime import date
 import sys
 import urllib.error
 import urllib.request
@@ -31,6 +32,10 @@ def read_yaml_text(text: str, label: str) -> dict[str, Any]:
     value = yaml.safe_load(text)
     if not isinstance(value, dict):
         raise ValueError(f"{label}: YAML root must be an object")
+    project = value.get("project")
+    if isinstance(project, dict) and isinstance(project.get("updated"), date):
+        # PyYAML parses unquoted ISO dates as date objects; JSON Schema requires strings.
+        project["updated"] = project["updated"].isoformat()
     return value
 
 

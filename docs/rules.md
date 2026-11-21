@@ -34,7 +34,7 @@ tags:
 ## Kafstylerのデータ設計とschema
 
 - 正本は `docs/**/*.md`。1ファイルが1記事または1索引。URLと既存の見出しは維持する。
-- 全ページのYAML frontmatterに `type`、日本語の `description`、1件以上の `tags` を付ける。型は [`knowledge.schema.json`](../ontology/knowledge.schema.json) に従う。
+- 全ページのYAML frontmatterに `type`、日本語の `description`、1件以上の `tags` を付ける。型は [`knowledge.schema.json`](https://github.com/KAFKA2306/know/blob/main/ontology/knowledge.schema.json) に従う。
 - 検証済みの意味に使う `verified` は、原典を独立に照合した記録がある場合だけ記す。`sources` のIDと `resource` を本文脚注 `[^id]` に対応させる。未確認の推定を事実扱いしない。
 - 文章の正本はMkDocsページのまま維持する。交換用のOKF v0.3バンドルは検証器から生成する。MkDocsの `index.md` は交換先で `overview.md` にして、OKFの予約済み `index.md` と衝突させない。
 - 実行: `uv run python scripts/validate_knowledge_schema.py`。交換用生成: `uv run python scripts/validate_knowledge_schema.py --export-okf /tmp/know-okf`（出力先は空ディレクトリ）。
