@@ -127,7 +127,6 @@ nav:
           - デジタルゲーム: bookmarks/Game/Digital/index.md
       - 金融:
           - bookmarks/Finance/index.md
-          - 銀行: bookmarks/Finance/Bank/index.md
           - 市場: bookmarks/Finance/Market/index.md
           - 暗号資産: bookmarks/Finance/Crypto/index.md
       - サービス:
@@ -144,6 +143,4 @@ nav:
           - 研究資料: bookmarks/Academic/Research/index.md
       - 生活:
           - bookmarks/Life/index.md
-          - 買い物: bookmarks/Life/Shopping/index.md
-          - 生活サービス: bookmarks/Life/Utility/index.md
       - その他: bookmarks/Other/index.md
