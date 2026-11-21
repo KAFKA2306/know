@@ -16,7 +16,7 @@ tags:
 
 ## モデル開発
 
-- [OpenAI Codex](https://openai.com)
+- [OpenAI Codex](https://openai.com/ja-JP/codex/)
 - [Google AI Studio](https://aistudio.google.com)
 
 ## 翻訳
