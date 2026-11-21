@@ -7,8 +7,8 @@ tags:
 
 # データ分析・学習
 
-- [SIGNATE](https://biz.quest.signate.jp)
-- [pandasの欠損値処理（note.nkmk.me）](https://note.nkmk.me)
-- [pandas diffメソッド（技術雑記）](https://algorithm.joho.info)
+- [SIGNATE](https://signate.jp)
+- [pandasの欠損値処理（公式リファレンス）](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html)
+- [pandas diffメソッド（公式リファレンス）](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.diff.html)
 - [AI Academy](https://aiacademy.jp)
 - [Progate](https://prog-8.com)
