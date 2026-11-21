@@ -9,6 +9,10 @@ tags:
 
 ## 論文・学術資料
 
+- [OpenAlex（論文・引用関係の検索）](https://openalex.org/)
+- [Semantic Scholar（AI支援論文検索）](https://www.semanticscholar.org/)
+- [Our World in Data（公開統計・根拠資料）](https://ourworldindata.org/)
+
 - [J-STAGE](https://www.jstage.jst.go.jp)
 - [Google Scholar](https://scholar.google.co.jp)
 - [社会思想史学会](http://shst.jp)
