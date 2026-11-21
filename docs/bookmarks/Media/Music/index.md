@@ -1,11 +1,28 @@
 ---
 type: bookmark
-description: "「Music」のブックマークを探すための索引。"
+description: "音声合成・編集・音楽素材・配信サービス。"
 tags:
   - know/bookmarks
 ---
 
-# Music
+# 音声・音楽制作
+
+## 音声制作
+
+- [VOICEROID](https://www.ah-soft.com)
+- [音声素材（DIMENSHOP）](https://oblsk.sakura.ne.jp)
+- [Audio Joiner（音声結合）](https://audio-joiner.com)
+- [RVC音声変換の解説（bilibili）](https://www.bilibili.com)
+
+## 音楽素材・生成
+
+- [PeriTune（音楽素材）](https://peritune.com)
+- [DOVA-SYNDROME](https://dova-s.jp)
+- [Freesound（音声素材）](https://freesound.org/)
+- [Suno（音楽生成）](https://suno.com/)
+
+## 配信・音楽Bot
 
 - [Mixcloud](https://www.mixcloud.com)
-- [PeriTune - フリー音楽素材](https://peritune.com)
+- [FredBoat](https://fredboat.com)
+- [Jockie Music](https://www.jockiemusic.com)
