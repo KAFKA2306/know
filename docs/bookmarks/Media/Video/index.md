@@ -1,12 +1,13 @@
 ---
 type: bookmark
-description: "「Video」のブックマークを探すための索引。"
+description: "動画編集、YouTubeチャンネル調査、映像制作ツール。"
 tags:
   - know/bookmarks
 ---
 
-# Video
+# 動画制作
 
-- [YouTubeのカスタムURLからチャンネルIDを取得する | DIYプログラミング](https://diy-programming.site)
-- [他人のYouTubeのチャンネルIDを調べる - ilr(アイ・エル・アール)](https://ilr.jp)
-- [Audioship - Upload MP3 to YouTube](https://audioship.io)
+- [DaVinci Resolve（映像編集・カラー調整）](https://www.blackmagicdesign.com/products/davinciresolve)
+- [Audioship（音声から動画へ）](https://audioship.io)
+- [YouTubeチャンネルIDを調べる（DIYプログラミング）](https://diy-programming.site)
+- [YouTubeチャンネルIDを調べる（ilr）](https://ilr.jp)
