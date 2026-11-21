@@ -7,6 +7,13 @@ tags:
 
 # 市場・投資・暗号資産
 
+## 一次統計・開示資料
+
+- [FRED（米国連銀の経済統計）](https://fred.stlouisfed.org/)
+- [BIS Data Portal（国際金融・流動性統計）](https://data.bis.org/topics)
+- [SEC EDGAR（米国企業の法定開示）](https://www.sec.gov/edgar/search/)
+- [FRB研究データ（金融環境など）](https://www.federalreserve.gov/econres/economic-research-data.htm)
+
 ## 市場データ・チャート
 
 - [Koyfin](https://app.koyfin.com)
