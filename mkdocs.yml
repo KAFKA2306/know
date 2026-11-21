@@ -80,6 +80,9 @@ nav:
   - ホーム: index.md
   - 研究判断:
       - research/index.md
+      - 米国流動性・AI投資・富裕層消費: research/market-liquidity.md
+      - Kafstylerの効果と公開画面: research/kafstyler-efficacy.md
+      - ローカルAI・音声生成: research/local-ai-voice.md
       - 米国の電力供給: dev/deepdive/us-electricity-supply.md
       - カリフォルニア州の自動運転報告: dev/deepdive/california-av-reporting-2026.md
       - 製造の品質検査: dev/deepdive/manufacturing-quality-inspection.md

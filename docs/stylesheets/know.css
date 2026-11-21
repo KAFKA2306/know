@@ -252,3 +252,68 @@
     flex-basis: 8rem;
   }
 }
+
+
+/* Current research routes: no new script or external assets. */
+.know-snapshot {
+  margin: .8rem 0 0;
+  font-size: .67rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.know-focus,
+.know-more {
+  border-top: 1px solid var(--know-rule);
+  padding-top: .55rem;
+  margin-top: 1.4rem;
+}
+
+.know-focus h2,
+.know-more h2 {
+  margin: .75rem 0 .7rem;
+  font-size: 1.16rem;
+}
+
+.know-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .7rem;
+}
+
+.know-focus-card {
+  min-width: 0;
+  border: 1px solid var(--know-rule);
+  border-radius: .45rem;
+  background: var(--know-card);
+  padding: .85rem 1rem;
+}
+
+.know-focus-card .know-focus-kicker {
+  margin: 0 0 .3rem;
+  font-size: .66rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+}
+
+.know-focus-card h3 {
+  font-size: .96rem;
+  margin: .15rem 0 .45rem;
+}
+
+.know-focus-card p:last-child {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+  font-size: .76rem;
+  line-height: 1.7;
+}
+
+.know-more {
+  font-size: .82rem;
+  line-height: 1.9;
+}
+
+@media (max-width: 49em) {
+  .know-focus-grid {
+    grid-template-columns: 1fr;
+  }
+}
