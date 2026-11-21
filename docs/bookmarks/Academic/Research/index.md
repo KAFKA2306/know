@@ -16,7 +16,7 @@ tags:
 - [J-STAGE](https://www.jstage.jst.go.jp)
 - [Google Scholar](https://scholar.google.co.jp)
 - [社会思想史学会](http://shst.jp)
-- [化学工学会 過去問題](http://www.scej.org)
+- [化学工学会](https://www.scej.org/)
 - [D-Wave（量子計算）](https://www.dwavesys.com)
 
 ## 講義・学習
