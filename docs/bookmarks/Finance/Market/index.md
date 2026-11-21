@@ -21,8 +21,6 @@ tags:
 - [Yahoo Finance](https://finance.yahoo.com)
 - [TradingView](https://jp.tradingview.com)
 - [世界株価（24時間チャート）](https://sekai-kabuka.com)
-- [TOPIX（Stooq）](https://stooq.pl)
-- [米国債イールドカーブ（Slickcharts）](https://www.slickcharts.com)
 
 ## 経済・企業情報
 
@@ -34,7 +32,7 @@ tags:
 
 ## ETF・運用分析
 
-- [日本取引所グループ ETF一覧](https://www.jpx.co.jp)
+- [日本取引所グループ ETF一覧](https://www.jpx.co.jp/equities/products/etfs/issues/01.html)
 - [Portfolio Visualizer](https://www.portfoliovisualizer.com)
 - [ARK InvestのETF](https://ark-funds.com)
 - [日興アセットマネジメント](https://www.nikkoam.com)
