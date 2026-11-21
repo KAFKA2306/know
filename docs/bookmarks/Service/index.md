@@ -12,17 +12,8 @@ tags:
 
 ## Other
 
-- [Amazon Prime Video](https://www.amazon.co.jp)
-- [マウスコンピューター](https://www.mouse-jp.co.jp)
-- [ドミニオン（カードリスト）](http://suka.s5.xrea.com)
-- [Amazon Music](https://music.amazon.co.jp)
-- [Linguage Speak](https://www.linguage.jp)
 - [TopCashback](https://www.topcashback.com)
 - [FredBoat Commands](https://fredboat.com)
-- [FBA料金シミュレーター](https://sellercentral.amazon.co.jp)
 - [Audio Joiner](https://audio-joiner.com)
 - [DOVA-SYNDROME しゃろう](https://dova-s.jp)
-- [Rythm Bot](https://rythmbot.co)
-- [アイリスオーヤマ エアリー](https://www.irisplaza.co.jp)
 - [Jockie Music](https://www.jockiemusic.com)
-- [Skyscanner マイリスト](https://www.skyscanner.jp)
