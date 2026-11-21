@@ -23,7 +23,5 @@ tags:
 
 - [Picrew（キャラクター画像メーカー）](https://picrew.me)
 - [Modular Avatar](https://modular-avatar.nadena.dev)
-- [VRChat Avatar Toolkit](https://gitee.com)
 - [UnaSlides（VRChatプレゼンシステム）](https://unagiken.com)
-- [Matterport（3D空間）](https://my.matterport.com)
 - [Immersed（VRワークスペース）](https://immersed.com)
