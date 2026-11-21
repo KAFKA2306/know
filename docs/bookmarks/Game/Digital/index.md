@@ -6,14 +6,8 @@ tags:
 ---
 # Digital
 
-- [NotebookLM](https://notebooklm.google.com)
 - [ポーカーチェイス](https://game.poker-chase.com)
-- [ひいいの麻雀研究](http://www.ix3.jp)
-- [eスポーツ スケジュール - eスポーツ - ハースストーン](http://us.battle.net)
 - [[Reynad] Malygos Druid - Hearthstone Decks](http://www.hearthpwn.com)
-- [プラクティスティス@人狼](http://chougyuudon.jugem.jp)
-- [akisaku0266 - 【MTGアリーナ】オタクネクサスでBo1ラダー - Twitch](https://www.twitch.tv)
-- [グロービス](https://digital.globis.co.jp)
 - [Shock | MTG Arena Card Library](https://mtgarena.pro)
 - [いあきゃら](https://iachara.com)
 - [エモクロアTRPG キャラクターシート](https://emoklore.charasheet.jp)
@@ -21,13 +15,7 @@ tags:
 - [プレイレポ - Civilization6(Civ6 シヴィライゼーション6) 攻略Wiki](https://civ6wiki.info)
 - [ANNO1800（アノ1800）攻略](https://game.sakura.ne.jp)
 - [将棋ウォーズ](https://shogiwars.heroz.jp)
-- [Hearthstone Schedule](https://battlefy.com)
 - [ハースストーン メタ - HSReplay.net](https://hsreplay.net)
-- [Communities | Player.me](https://player.me)
 - [SteamDB](https://steamdb.info)
-- [LoRメタスナップショット＃5 | チームリバイアサンゲーム](https://teamleviathangaming.com)
 - [雀魂 -じゃんたま-| 麻雀を無料で気軽に](https://game.mahjongsoul.com)
 - [レシピ一覧/必要設備台数 - Satisfactory日本語 Wiki*](https://wikiwiki.jp)
-- [トリップアドバイザ](https://www.tripadvisor.de)
-- [最近使ったタブ](https://hodai.globis.co.jp)
-- [Valor® 3000 Compact Scale, V31XW301JP | OHAUS](http://japan.ohaus.com)
