@@ -115,32 +115,29 @@ nav:
   - 公開ツール: bookmarks/Service/Sites/index.md
   - ブックマーク:
       - bookmarks/index.md
-      - 開発:
+      - 開発・AI:
           - bookmarks/Dev/index.md
-          - AI: bookmarks/Dev/AI/index.md
-          - データ: bookmarks/Dev/Data/index.md
+          - AI・翻訳: bookmarks/Dev/AI/index.md
           - 開発ツール: bookmarks/Dev/Tool/index.md
+          - データ分析・学習: bookmarks/Dev/Data/index.md
+      - 調査・学習:
+          - bookmarks/Academic/index.md
+          - 論文・研究・学習: bookmarks/Academic/Research/index.md
+          - 図書・辞書: bookmarks/Academic/Library/index.md
+      - 金融・経済:
+          - bookmarks/Finance/index.md
+          - 市場・投資・暗号資産: bookmarks/Finance/Market/index.md
+      - 制作・発信:
+          - bookmarks/Media/index.md
+          - VR・3D制作: bookmarks/Media/VR/index.md
+          - 動画制作: bookmarks/Media/Video/index.md
+          - 音声・音楽制作: bookmarks/Media/Music/index.md
       - ゲーム:
           - bookmarks/Game/index.md
-          - VR: bookmarks/Game/VR/index.md
           - ボードゲーム: bookmarks/Game/Board/index.md
-          - デジタルゲーム: bookmarks/Game/Digital/index.md
-      - 金融:
-          - bookmarks/Finance/index.md
-          - 市場: bookmarks/Finance/Market/index.md
-          - 暗号資産: bookmarks/Finance/Crypto/index.md
-      - サービス:
+          - デジタルゲーム・TRPG: bookmarks/Game/Digital/index.md
+      - サービス・生活:
           - bookmarks/Service/index.md
-          - クラウド: bookmarks/Service/Cloud/index.md
-          - SNS: bookmarks/Service/Social/index.md
-      - メディア:
-          - bookmarks/Media/index.md
-          - 動画: bookmarks/Media/Video/index.md
-          - 音楽: bookmarks/Media/Music/index.md
-      - 学術:
-          - bookmarks/Academic/index.md
-          - 図書館: bookmarks/Academic/Library/index.md
-          - 研究資料: bookmarks/Academic/Research/index.md
-      - 生活:
-          - bookmarks/Life/index.md
-      - その他: bookmarks/Other/index.md
+          - クラウド・仕事: bookmarks/Service/Cloud/index.md
+          - SNS・交流: bookmarks/Service/Social/index.md
+          - 自作公開サイト: bookmarks/Service/Sites/index.md
