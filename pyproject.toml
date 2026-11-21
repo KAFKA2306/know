@@ -1,25 +1,14 @@
 [project]
 name = "know"
 version = "0.1.0"
-description = "Multi-Knowledge Base"
+description = "Searchable evidence-based knowledge base"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "mkdocs",
     "mkdocs-material",
-    "requests>=2.32.5",
+    "pyyaml",
+    "jsonschema",
 ]
 
-[dependency-groups]
-dev = ["ruff", "pyyaml", "jsonschema"]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.ruff]
-target-version = "py311"
-line-length = 120
-
-[tool.ruff.lint]
-select = ["E", "F", "I", "W"]
+[tool.uv]
+package = false

@@ -58,21 +58,3 @@ CIが示すのは、**宣言したcontractに対して機械検査が通った�
 ## Data boundary
 
 public `know` repositoryへ顧客のprivate source、prompt、credential、個人情報、business dataを保存しません。公開fixtureはsynthetic / public sourceだけを対象にします。
-
-## Funnelの記録
-
-実際に観測したものだけを次の別状態で記録します。
-
-- `starter_opened`
-- `template_copied`
-- `integration_inquiry_started`
-- `qualified_inquiry`
-- `mapping_session_completed`
-- `paid_pilot`
-- `multi_repo_expansion_requested`
-
-`audit/evidence-contract-kpi.json` では、計測手段自体が未導入のmetricを `measurement_state: not_instrumented` / `count: null` とします。これは**実測0件とは別状態**です。
-
-`measurement_state: measured` に変更する場合は、0件であっても測定が実施されたことを示す公開・非機密のevidence参照を必須にします。正の件数、特にinquiry / mapping session / paid pilot / expansionは、公開可能な証拠がない限り計上しません。顧客private dataを証拠化する必要がある場合はpublic `know` へ保存せず、顧客環境側に留めます。
-
-未観測イベントや未計装metricを実績として補完しません。

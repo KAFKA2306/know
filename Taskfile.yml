@@ -6,9 +6,7 @@ tasks:
     cmd: uv run mkdocs serve
 
   build:
-    desc: Build static site (strict)
-    cmd: uv run mkdocs build --strict
-
-  deploy:
-    desc: Deploy to GitHub Pages
-    cmd: uv run mkdocs gh-deploy --force
+    desc: Validate knowledge schema and build static site
+    cmds:
+      - uv run python scripts/validate_knowledge_schema.py
+      - uv run mkdocs build --strict

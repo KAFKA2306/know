@@ -7,10 +7,6 @@ tags:
 
 # Knowledge Base Bookmarks
 
-This index is automatically generated from the bookmarks export.
-
-# Bookmarks
-
 - [Academic](Academic/index.md)
     - [Library](Academic/Library/index.md)
     - [Research](Academic/Research/index.md)
