@@ -1,17 +1,10 @@
 ---
 type: bookmark
-description: "「Other (Uncategorized)」のブックマークを探すための索引。"
+description: "旧・未分類リンクの移動案内。"
 tags:
   - know/bookmarks
 ---
-# Other (Uncategorized)
 
-- [Matterport 3D Archive](https://my.matterport.com)
-- [ポケモン図鑑](http://yakkun.com)
-- [Weblio 英和辞典](http://ejje.weblio.jp)
-- [ノイズレスサーチ](http://pasokatu.com)
-- [DeepL 翻訳](https://www.deepl.com)
-- [DaVinci Resolve 動画編集](https://www.blackmagicdesign.com)
-- [Immersed VRワーク](https://immersed.com)
-- [VOICEROID](https://www.ah-soft.com)
-- [世界株価 24時間チャート](https://sekai-kabuka.com)
+# その他（旧分類）
+
+未分類のリンクは[用途別ブックマーク](../index.md)に整理しました。
