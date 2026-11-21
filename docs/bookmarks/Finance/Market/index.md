@@ -11,6 +11,7 @@ tags:
 - [Yahoo Finance](https://finance.yahoo.com)
 - [【確定申告書等作成コーナー】-作成コーナートップ](https://www.keisan.nta.go.jp)
 - [Morningstar | Empowering Investor Success](https://www.morningstar.com)
+- [Earnings Whispers](https://www.earningswhispers.com)
 - [Economic Calendar - FXStreet](https://www.fxstreet.com)
 - [銘柄一覧（ETF） | 日本取引所グループ](https://www.jpx.co.jp)
 - [US Treasury Yield Curve Chart](https://www.slickcharts.com)
