@@ -12,7 +12,7 @@ tags:
 - [VOICEROID](https://www.ah-soft.com)
 - [音声素材（DIMENSHOP）](https://oblsk.sakura.ne.jp)
 - [Audio Joiner（音声結合）](https://audio-joiner.com)
-- [RVC音声変換の解説（bilibili）](https://www.bilibili.com)
+- [RVC（音声変換・公式実装）](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
 
 ## 音楽素材・生成
 
