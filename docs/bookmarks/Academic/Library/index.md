@@ -1,11 +1,13 @@
 ---
 type: bookmark
-description: "「Library」のブックマークを探すための索引。"
+description: "本・電子書籍・辞書を探すリンク集。"
 tags:
   - know/bookmarks
 ---
 
-# Library
+# 図書・辞書
 
-- [東京都の図書館横断検索 | カーリル](https://calil.jp)
+- [カーリル（図書館横断検索）](https://calil.jp)
+- [青空文庫](https://www.aozora.gr.jp)
 - [Kindle](https://read.amazon.co.jp)
+- [Weblio 英和辞典](http://ejje.weblio.jp)
