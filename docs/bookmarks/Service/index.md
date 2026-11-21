@@ -1,19 +1,19 @@
 ---
 type: bookmark
-description: "「Service」のブックマークを探すための索引。"
+description: "仕事、生活、SNS、公開サービスを使うリンク集。"
 tags:
   - know/bookmarks
 ---
-# Service
 
-- [自作公開サイト](Sites/index.md) - GitHub Pages、Cloudflare Pages、Vercel
-- [Cloud](Cloud/index.md) - クラウド、ストレージ
-- [Social](Social/index.md) - SNS、コミュニケーション
+# サービス・生活
 
-## Other
+- [自作公開サイト](Sites/index.md) - 作ったサイトと公開API
+- [クラウド・仕事](Cloud/index.md) - ファイル、アプリ連携、公開・ネットワーク
+- [SNS・交流](Social/index.md) - メッセージ、コミュニティ
 
+## 日常・調べもの
+
+- [国税庁 確定申告書等作成コーナー](https://www.keisan.nta.go.jp)
+- [Internet Archive（過去のWebページ）](https://web.archive.org/)
+- [VirusTotal（URLの安全性の調査）](https://www.virustotal.com/gui/home/url)
 - [TopCashback](https://www.topcashback.com)
-- [FredBoat Commands](https://fredboat.com)
-- [Audio Joiner](https://audio-joiner.com)
-- [DOVA-SYNDROME しゃろう](https://dova-s.jp)
-- [Jockie Music](https://www.jockiemusic.com)
