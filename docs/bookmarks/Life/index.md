@@ -1,14 +1,10 @@
 ---
 type: bookmark
-description: "「Life」のブックマークを探すための索引。"
+description: "生活系リンクの移動案内。"
 tags:
   - know/bookmarks
 ---
 
-# Life
+# 生活
 
-
-## Other
-
-- [DIMENSHOP 音声素材](https://oblsk.sakura.ne.jp)
-- [化学工学会 過去問題](http://www.scej.org)
+生活のサービス・公的手続きは[サービス・生活](../Service/index.md)に統合しました。
