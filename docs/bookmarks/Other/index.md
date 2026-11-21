@@ -3,7 +3,6 @@
 - [Matterport 3D Archive](https://my.matterport.com)
 - [ヒタイオール](https://preview--hitaiallconnect.lovable.app)
 - [退学 Advent Calendar 2015](http://www.adventar.org)
-- [クソログ ブログ](http://www.sekaihaasobiba.com)
 - [ぷよぷよ攻略](http://www2e.biglobe.ne.jp)
 - [ポケモン図鑑](http://yakkun.com)
 - [ひろゆき日記](http://hiro.asks.jp)

@@ -10,7 +10,6 @@
 - [Progate](https://prog-8.com)
 - [Google 検索オプション](https://www.google.co.jp)
 - [Marketplace - Microsoft Azure](https://portal.azure.com)
-- [JointApps](http://www.jointapps.net)
 - [ARK Graph](https://arkk.vercel.app)
 - [TRPG便利ツール](https://sites.google.com)
 - [ようこそ - ML - Visual Studio Code](https://vscode.dev)

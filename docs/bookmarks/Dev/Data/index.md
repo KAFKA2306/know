@@ -9,6 +9,5 @@
 - [kaggler-ja slack Log Viewer](https://kaggler-ja-slack-archive.appspot.com)
 - [Pandas Profiling :: Anaconda Cloud](https://anaconda.org)
 - [【Pandas】diffメソッドで行・列の差分を計算 | 技術雑記](https://algorithm.joho.info)
-- [データサイエンス100本ノック（構造化データ加工編）を試してみた | Qrunch（クランチ）](https://qrunch.net)
 - [Quantum Computing | D-Wave Systems](https://www.dwavesys.com)
 - [AI Academy | Python・機械学習・AIを実践的に学べるプログラミング学習サービス](https://aiacademy.jp)
