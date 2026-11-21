@@ -1,12 +1,13 @@
 ---
 type: bookmark
-description: "「Game」のブックマークを探すための索引。"
+description: "ボードゲーム・デジタルゲーム・TRPGのプレイと攻略に使うリンク集。"
 tags:
   - know/bookmarks
 ---
 
-# Game
+# ゲーム
 
-- [VR](VR/index.md) - VRChat, Resonite, BOOTH
-- [Board](Board/index.md) - ボードゲーム、BGA
-- [Digital](Digital/index.md) - デジタルゲーム、TRPG
+- [ボードゲーム](Board/index.md) - ルール、BGA、データベース
+- [デジタルゲーム・TRPG](Digital/index.md) - オンラインゲーム、攻略、キャラクターシート
+
+2026年注目: [SteamDBの2026年発売作評価](https://steamdb.info/stats/gameratings/2026/) で新作を比較できます。
