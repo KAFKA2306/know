@@ -25,7 +25,7 @@ tags:
 4. **正しく書く（正確性最優先）**
    - 曖昧な表現を避ける
    - 「〜らしい」「〜かも」は禁止
-   - 分からないことは書かない
+   - 未確認の点は未確認と記し、確認済みの事実と混同しない
 
 5. **出典を明記する**
    - 公式ドキュメントへのリンクを必ず含める
@@ -44,28 +44,30 @@ tags:
 
 ```markdown
 ---
+type: knowledge
+description: GitHubの公開情報を確認して再利用条件を記録する。
 tags:
-  - タグ1
-  - タグ2
+  - know/dev
+sources:
+  - id: github-docs
+    resource: https://docs.github.com/
 ---
 
 # タイトル
 
-概要（1-2文）
+## 判断
 
-## 本質
+何をどの条件で判断できるか。
 
-この技術/ツールが解決する問題
+## 根拠
 
-## 基本
+確認できた事実と、未確認の点を分ける。[^github-docs]
 
-- 要点1
-- 要点2
-- 要点3
+## 再確認条件
 
-## 参照
+版や仕様が変わったら原典を読み直す。
 
-- [公式ドキュメント](URL)
+[^github-docs]: [GitHub Docs](https://docs.github.com/)
 ```
 
 ## タグ運用ルール
@@ -83,4 +85,4 @@ tags:
 - [ ] `uv run python scripts/validate_knowledge_schema.py` が通った
 - [ ] 公式ドキュメントへのリンクを含めた
 - [ ] `mkdocs.yml` の `nav` に追加した（必要な場合）
-- [ ] ローカルで `uv run mkdocs build --strict` が通る
+- [ ] ローカルで `task build` が通る
