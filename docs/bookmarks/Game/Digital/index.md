@@ -19,7 +19,6 @@ tags:
 - [CCFOLIA](https://ccfolia.com)
 - [いあきゃら](https://iachara.com)
 - [エモクロアTRPG キャラクターシート](https://emoklore.charasheet.jp)
-- [TRPG便利ツール](https://sites.google.com)
 
 ## ゲームの発見・評価
 
@@ -34,4 +33,4 @@ tags:
 - [HSReplay（ハースストーン）](https://hsreplay.net)
 - [Civilization VI 攻略Wiki](https://civ6wiki.info)
 - [ANNO 1800 攻略](https://game.sakura.ne.jp)
-- [Satisfactory Wiki](https://wikiwiki.jp)
+- [Satisfactory日本語 Wiki](https://wikiwiki.jp/sf-jp/)
