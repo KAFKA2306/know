@@ -1,10 +1,10 @@
 ---
 type: bookmark
-description: "「Crypto」のブックマークを探すための索引。"
+description: "暗号資産関連リンクの移動案内。"
 tags:
   - know/bookmarks
 ---
 
-# Crypto
+# 暗号資産
 
-- [みんかぶ暗号資産](https://cc.minkabu.jp)
+暗号資産のリンクは[市場・投資・暗号資産](../Market/index.md)に統合しました。
