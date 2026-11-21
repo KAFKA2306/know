@@ -1,21 +1,37 @@
 ---
 type: bookmark
-description: "「Digital」のブックマークを探すための索引。"
+description: "デジタルゲーム、TRPG、攻略資料、2026年のゲーム評価を探す。"
 tags:
   - know/bookmarks
 ---
-# Digital
+
+# デジタルゲーム・TRPG
+
+## オンラインゲーム
 
 - [ポーカーチェイス](https://game.poker-chase.com)
-- [[Reynad] Malygos Druid - Hearthstone Decks](http://www.hearthpwn.com)
-- [Shock | MTG Arena Card Library](https://mtgarena.pro)
+- [将棋ウォーズ](https://shogiwars.heroz.jp)
+- [雀魂](https://game.mahjongsoul.com)
+- [unityroom（ブラウザゲーム）](https://unityroom.com)
+
+## TRPG
+
+- [CCFOLIA](https://ccfolia.com)
 - [いあきゃら](https://iachara.com)
 - [エモクロアTRPG キャラクターシート](https://emoklore.charasheet.jp)
-- [CCFOLIA 1.22.5 - TRPGオンラインセッションツール](https://ccfolia.com)
-- [プレイレポ - Civilization6(Civ6 シヴィライゼーション6) 攻略Wiki](https://civ6wiki.info)
-- [ANNO1800（アノ1800）攻略](https://game.sakura.ne.jp)
-- [将棋ウォーズ](https://shogiwars.heroz.jp)
-- [ハースストーン メタ - HSReplay.net](https://hsreplay.net)
+- [TRPG便利ツール](https://sites.google.com)
+
+## ゲームの発見・評価
+
+- [SteamDB（2026年発売作品のユーザー評価）](https://steamdb.info/stats/gameratings/2026/)
+- [Steam（プレイヤー数ランキング）](https://store.steampowered.com/charts/mostplayed/)
 - [SteamDB](https://steamdb.info)
-- [雀魂 -じゃんたま-| 麻雀を無料で気軽に](https://game.mahjongsoul.com)
-- [レシピ一覧/必要設備台数 - Satisfactory日本語 Wiki*](https://wikiwiki.jp)
+
+## 攻略・データベース
+
+- [ポケモン図鑑](http://yakkun.com)
+- [MTG Arena Card Library](https://mtgarena.pro)
+- [HSReplay（ハースストーン）](https://hsreplay.net)
+- [Civilization VI 攻略Wiki](https://civ6wiki.info)
+- [ANNO 1800 攻略](https://game.sakura.ne.jp)
+- [Satisfactory Wiki](https://wikiwiki.jp)
